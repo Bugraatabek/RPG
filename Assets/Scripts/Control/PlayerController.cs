@@ -20,6 +20,8 @@ namespace RPG.Control
         [SerializeField] float maxNavMeshProjectionDistance = 1f;
         [SerializeField] CursorMapping[] cursorMappings;
         Dictionary<CursorType, CursorMapping> cursorDict;
+
+        bool isDragging = false;
         
 
     
@@ -49,11 +51,21 @@ namespace RPG.Control
     
         private bool InteractWithUI()
         {
+            if(Input.GetMouseButtonUp(0))
+            {
+                isDragging = false;
+            }
             if(EventSystem.current.IsPointerOverGameObject()) //IsPointerOverGameObject() is saying if its over a ui object 
             {
                 SetCursor(CursorType.UI);
+                if(Input.GetMouseButtonDown(0))
+                {
+                    isDragging = true;
+                }
                 return true;
             }
+
+            if(isDragging == true) return true;
             return false;
         }
 
@@ -77,7 +89,7 @@ namespace RPG.Control
 
         RaycastHit[] RaycastAllSorted() // Calculates the ray distances and sorts them.
         {
-            RaycastHit[] hits = Physics.RaycastAll(GetMouseRay()); // if want a cursor with bigger radius just use SphereCastAll(GetMouseRay(), radius)
+            RaycastHit[] hits = Physics.SphereCastAll(GetMouseRay(), 0.5f); // if want a cursor with bigger radius just use SphereCastAll(GetMouseRay(), radius) or Raycastall(GetMouseRay()) for single ray
             float[] distances = new float[hits.Length];
             for (int i = 0; i < hits.Length; i++)
             {
@@ -109,7 +121,6 @@ namespace RPG.Control
     
         private bool InteractWithMovement()
         {
-            
             Vector3 target;
             bool hasHit = RaycastNavMesh(out target);
             if (hasHit == true)

@@ -4,7 +4,7 @@ using RPG.Core;
 using RPG.Movement;
 using System;
 using RPG.Attributes;
-using GameDevTV.Utils;
+using RPG.Utils;
 
 namespace RPG.Control
 {

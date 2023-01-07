@@ -1,5 +1,5 @@
 using System;
-using GameDevTV.Utils;
+using RPG.Utils;
 using RPG.Core;
 using RPG.Saving;
 using RPG.Stats;
@@ -41,6 +41,7 @@ namespace RPG.Attributes
         private void Update()
         {
             HealHack();
+            maxHealth.value = baseStats.GetStat(Stat.Health);
         }
 
         private float GetInitialHealth()
@@ -50,7 +51,6 @@ namespace RPG.Attributes
 
         private void OnEnable() 
         {
-            
             baseStats.onLevelUp += RegenerateHealth;
         }
 
@@ -71,6 +71,7 @@ namespace RPG.Attributes
                 die.Invoke();
                 AwardExperience(instigator);
             }
+
             if(takeDamageSFXCount == 3 && currentHealth.value > 0)
             {
                 takeDamageSFX.Invoke();

@@ -7,7 +7,7 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace GameDevTV.Saving
+namespace RPG.Saving
 {
     /// <summary>
     /// This component provides the interface to the saving system. It provides
@@ -54,7 +54,7 @@ namespace GameDevTV.Saving
 
         // PRIVATE
 
-        private void Load(string saveFile)
+        public void Load(string saveFile)
         {
             RestoreState(LoadFile(saveFile));
         }
