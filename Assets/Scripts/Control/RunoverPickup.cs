@@ -4,6 +4,7 @@ using UnityEngine.AI;
 
 namespace RPG.Control
 {
+    [RequireComponent(typeof(Pickup))]
     public class RunoverPickup : MonoBehaviour,IRaycastable
     {
         GameObject player;

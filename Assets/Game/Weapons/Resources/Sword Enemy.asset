@@ -12,10 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8674b52e838685446a77969fe40ecf22, type: 3}
   m_Name: Sword Enemy
   m_EditorClassIdentifier: 
+  itemID: 5e1c91cd-813a-40a7-aaaf-6ce2ed13f0bb
+  displayName: 
+  description: 
+  icon: {fileID: 0}
+  pickup: {fileID: 0}
+  stackable: 0
+  allowedEquipLocation: 5
+  additiveModifiers: []
+  percentageModifiers: []
   animatorOverride: {fileID: 22100000, guid: 7a503a29dde5a6f49b78d80429c2eb66, type: 2}
   equippedPrefab: {fileID: -7720764073055542944, guid: 696daf7a5750a2c438cfd1b73c9635fc, type: 3}
-  weaponDamage: 5
   weaponRange: 2
-  weaponPercentageBonus: 20
   isRightHanded: 1
   projectile: {fileID: 0}

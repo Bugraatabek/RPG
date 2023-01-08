@@ -179,7 +179,6 @@ GameObject:
   - component: {fileID: 1641707003179559636}
   - component: {fileID: -7825750709658828838}
   - component: {fileID: 2908623681849247774}
-  - component: {fileID: -3476174276473296385}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -231,6 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9f52bea9c2bee42aa6b5de49f2ec3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxNavPathLength: 40
 --- !u!114 &7984152393686730856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d640ec279ea57a64fbffac0334f414ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healAmount: 100
+  hackHealAmount: 100
   takeDamage:
     m_PersistentCalls:
       m_Calls:
@@ -390,20 +390,6 @@ MonoBehaviour:
   progression: {fileID: 11400000, guid: 9559a307023950e4995b5333853a356c, type: 2}
   levelUpEffect: {fileID: 0}
   shouldUseModifiers: 0
---- !u!114 &-3476174276473296385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8933562121961966867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfc600b321bea6845a1d32978079e3f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  experiencePoints: 0
-  keyEExpAmount: 20000
 --- !u!1 &8951297235838171461
 GameObject:
   m_ObjectHideFlags: 0

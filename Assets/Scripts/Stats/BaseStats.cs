@@ -14,7 +14,7 @@ namespace RPG.Stats
         [SerializeField] bool shouldUseModifiers = false;
 
         public event Action onLevelUp;
-        Experience experience;
+        Experience experience = null;
         LazyValue<int> currentLevel;
 
         
@@ -107,7 +107,7 @@ namespace RPG.Stats
 
         public int GetLevel()
         {
-            if(experience == null) {return level;}
+            if( experience == null) {return level;}
             return currentLevel.value;
             // if (currentLevel < 1) before lazy value currentLevel was set to 0. so against any race conditions in case the currentLevel wasn't set, this is a safeguard.
             // the progression is calling [level - 1] so level gets calculated as (0 - 1 = -1) and this is out of bounds of the array so it was throwing an exception 
@@ -122,7 +122,7 @@ namespace RPG.Stats
 
         public int CalculateLevel()
         {
-            if(experience == null) { return level; } 
+            if(experience == null) { return level;} 
             float currentXp = experience.GetXP();
             int penultimateLevel = progression.GetLevels(Stat.ExperienceToLevelUp, characterClass);
             for (int level = 1; level <= penultimateLevel; level++)

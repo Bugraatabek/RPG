@@ -71,7 +71,8 @@ PrefabInstance:
       propertyPath: weaponPickup
       value: 
       objectReference: {fileID: 11400000, guid: b12bd05363827354cb69a798f082afe2, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8615357990402941762, guid: dac12cb0b1b3ac2438ff32cb9ac3f23a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dac12cb0b1b3ac2438ff32cb9ac3f23a, type: 3}
 --- !u!4 &6571322121333690518 stripped
 Transform:
