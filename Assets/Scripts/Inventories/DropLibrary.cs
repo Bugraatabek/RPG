@@ -34,6 +34,7 @@ namespace RPG.Inventories
 
         public struct Dropped
         {
+            
             public InventoryItem item;
             public int number;
         }

@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
       propertyPath: die.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.size
@@ -20,16 +20,32 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: die.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
       propertyPath: die.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: -5191681094279493142}
+    - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: die.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2639727442501556877}
     - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
       propertyPath: die.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: die.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
       propertyPath: die.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: RandomDrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: die.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: DropGlobes
       objectReference: {fileID: 0}
     - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -52,11 +68,19 @@ PrefabInstance:
       value: RPG.Inventories.RandomDropper, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: die.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: RPG.Globes.GlobeDropper, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: RPG.Control.AIController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
       propertyPath: die.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: die.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
@@ -153,6 +177,21 @@ MonoBehaviour:
   scatterDistance: 1
   dropLibrary: {fileID: 11400000, guid: c1fa2d5b46723c8419a594bfff2b80ac, type: 2}
   numberOfDrops: 2
+--- !u!114 &2639727442501556877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3599174029025407474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbace1512d7954e46a7bb49145c9b461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scatterDistance: 5
+  dropChance: 100
+  globeDropLibrary: {fileID: 11400000, guid: 7fcc1718fa985e04d9caed013a81e902, type: 2}
 --- !u!114 &4935639309934770060
 MonoBehaviour:
   m_ObjectHideFlags: 0
