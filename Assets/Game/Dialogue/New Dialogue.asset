@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - uniqueID: a
-    text: Hello
+    text: Hello.
     childeren:
     - b
     - c
   - uniqueID: b
-    text: Hello there adventurer.
+    text: asdasdasdvvvvvvvvv
     childeren: []
   - uniqueID: c
     text: Go away!

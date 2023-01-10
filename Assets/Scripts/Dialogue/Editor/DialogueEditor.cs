@@ -55,12 +55,17 @@ namespace RPG.Dialogue.Editor
                 
                 foreach (DialogueNode node in selectedDialogue.GetAllNodes())
                 {
-                    var defaultNodeText = node.text;
-                    node.text = EditorGUILayout.TextField(node.text);
+                    EditorGUI.BeginChangeCheck();
+                    EditorGUILayout.LabelField("Node:");
+                    var defaultNodeText = EditorGUILayout.TextField(node.text);
+                    var newUniqueID = EditorGUILayout.TextField(node.uniqueID);
                     
-                    if(defaultNodeText != node.text)
+                    if(EditorGUI.EndChangeCheck())
                     {
-                        EditorUtility.SetDirty(selectedDialogue); // safeguard in case Unity doesn't save the scriptableObject (as sam says this is the way with scriptableObjects)
+                        Undo.RecordObject(selectedDialogue, "Update Dialogue Text");
+                        
+                        node.uniqueID = newUniqueID;
+                        node.text = defaultNodeText;
                     }
                     
                 }
