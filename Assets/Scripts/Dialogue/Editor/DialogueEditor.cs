@@ -52,9 +52,17 @@ namespace RPG.Dialogue.Editor
             }
             else
             {
+                
                 foreach (DialogueNode node in selectedDialogue.GetAllNodes())
                 {
-                    EditorGUILayout.LabelField(node.text);
+                    var defaultNodeText = node.text;
+                    node.text = EditorGUILayout.TextField(node.text);
+                    
+                    if(defaultNodeText != node.text)
+                    {
+                        EditorUtility.SetDirty(selectedDialogue); // safeguard in case Unity doesn't save the scriptableObject (as sam says this is the way with scriptableObjects)
+                    }
+                    
                 }
             }
         }
