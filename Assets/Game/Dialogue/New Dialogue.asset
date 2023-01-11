@@ -19,7 +19,7 @@ MonoBehaviour:
     - b
     - c
   - uniqueID: b
-    text: asdasdasdvvvvvvvvv
+    text: Hello there adventurer.
     childeren: []
   - uniqueID: c
     text: Go away!
