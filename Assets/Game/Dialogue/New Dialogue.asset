@@ -13,14 +13,52 @@ MonoBehaviour:
   m_Name: New Dialogue
   m_EditorClassIdentifier: 
   nodes:
-  - uniqueID: a
-    text: Hello.
-    childeren:
-    - b
-    - c
-  - uniqueID: b
-    text: Hello there adventurer.
-    childeren: []
-  - uniqueID: c
+  - uniqueID: Player
+    text: Hello
+    children:
+    - Guard
+    - Guard(1)
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 197
+      width: 200
+      height: 150
+  - uniqueID: Guard
+    text: Hi there, Adventurer.
+    children: []
+    rect:
+      serializedVersion: 2
+      x: 415
+      y: 118
+      width: 200
+      height: 100
+  - uniqueID: Guard(1)
     text: Go away!
-    childeren: []
+    children:
+    - Player2
+    - Player2(1)
+    rect:
+      serializedVersion: 2
+      x: 410
+      y: 308
+      width: 200
+      height: 150
+  - uniqueID: Player2
+    text: What if i don't
+    children: []
+    rect:
+      serializedVersion: 2
+      x: 727
+      y: 246
+      width: 200
+      height: 100
+  - uniqueID: Player2(1)
+    text: I am sorry, I'll be on my way.
+    children: []
+    rect:
+      serializedVersion: 2
+      x: 732
+      y: 455
+      width: 200
+      height: 100
