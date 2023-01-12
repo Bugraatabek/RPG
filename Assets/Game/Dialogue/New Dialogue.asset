@@ -20,17 +20,17 @@ MonoBehaviour:
     - Guard(1)
     rect:
       serializedVersion: 2
-      x: 103
-      y: 197
+      x: 7
+      y: 212
       width: 200
-      height: 150
+      height: 100
   - uniqueID: Guard
     text: Hi there, Adventurer.
     children: []
     rect:
       serializedVersion: 2
-      x: 415
-      y: 118
+      x: 296
+      y: 111
       width: 200
       height: 100
   - uniqueID: Guard(1)
@@ -40,17 +40,18 @@ MonoBehaviour:
     - Player2(1)
     rect:
       serializedVersion: 2
-      x: 410
-      y: 308
+      x: 300
+      y: 364
       width: 200
-      height: 150
+      height: 100
   - uniqueID: Player2
     text: What if i don't
-    children: []
+    children:
+    - 56affccc-de1d-4c3d-9f52-bab8f36683be
     rect:
       serializedVersion: 2
-      x: 727
-      y: 246
+      x: 598
+      y: 214
       width: 200
       height: 100
   - uniqueID: Player2(1)
@@ -58,7 +59,16 @@ MonoBehaviour:
     children: []
     rect:
       serializedVersion: 2
-      x: 732
-      y: 455
+      x: 611
+      y: 452
+      width: 200
+      height: 100
+  - uniqueID: 56affccc-de1d-4c3d-9f52-bab8f36683be
+    text: 
+    children: []
+    rect:
+      serializedVersion: 2
+      x: 880
+      y: 176
       width: 200
       height: 100

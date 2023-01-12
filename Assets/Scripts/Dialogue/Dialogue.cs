@@ -19,6 +19,7 @@ namespace RPG.Dialogue
             {
                 var defaultNode = new DialogueNode();
                 nodes.Add(defaultNode);
+                defaultNode.uniqueID = System.Guid.NewGuid().ToString();
             }
             OnValidate();
         }
@@ -56,6 +57,48 @@ namespace RPG.Dialogue
                     yield return nodeLookup[child];
                 }
             }
+        }
+        
+        public void AddNode(DialogueNode parent)
+        {
+            string newUniqueID = System.Guid.NewGuid().ToString();
+            var newNode = new DialogueNode();
+            newNode.uniqueID = newUniqueID;
+            parent.children.Add(newUniqueID);
+            nodes.Add(newNode);
+            nodeLookup.Add(newUniqueID, newNode); // if any problems just use OnValidate();
+        }
+
+        public void RemoveNode(DialogueNode deletingNode)
+        {
+            nodes.Remove(deletingNode);
+            nodeLookup.Remove(deletingNode.uniqueID); // if any problems just use OnValidate();
+            CleanDanglingChildren(deletingNode);
+        }
+
+        private void CleanDanglingChildren(DialogueNode deletingNode)
+        {
+            foreach (var node in nodes)
+            {
+                if (node.children.Contains(deletingNode.uniqueID))
+                {
+                    node.children.Remove(deletingNode.uniqueID);
+                }
+            }
+        }
+
+        public void Link(DialogueNode linkingParentNode, DialogueNode linkingChildNode)
+        {
+            if(linkingParentNode.uniqueID == linkingChildNode.uniqueID) 
+            {
+                return;
+            }    
+            linkingParentNode.children.Add(linkingChildNode.uniqueID);
+        }
+
+        public void Unlink(DialogueNode linkingParentNode, DialogueNode unlinkingChildNode)
+        {
+            linkingParentNode.children.Remove(unlinkingChildNode.uniqueID);
         }
     }
 }
