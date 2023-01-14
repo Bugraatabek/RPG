@@ -1,26 +1,21 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 namespace RPG.Dialogue
 {
     [CreateAssetMenu(fileName = "New Dialogue", menuName = "RPG/Dialogue")]
-    public class Dialogue : ScriptableObject
+    public class Dialogue : ScriptableObject, ISerializationCallbackReceiver
     {
         [SerializeField] List<DialogueNode> nodes = new List<DialogueNode>();
         Dictionary<string, DialogueNode> nodeLookup = new Dictionary<string, DialogueNode>();
+       
         
 #if UNITY_EDITOR
         private void Awake() 
         {
-            
-            if(nodes.Count == 0)
-            {
-                var defaultNode = new DialogueNode();
-                nodes.Add(defaultNode);
-                defaultNode.uniqueID = System.Guid.NewGuid().ToString();
-            }
             OnValidate();
         }
 #endif
@@ -41,9 +36,9 @@ namespace RPG.Dialogue
 
         private void BuildLookupDict()
         {
-            foreach (DialogueNode node in nodes)
+            foreach (DialogueNode node in GetAllNodes())
             {
-                nodeLookup[node.uniqueID] = node;
+                nodeLookup[node.name] = node;
             }
         }
 
@@ -59,46 +54,75 @@ namespace RPG.Dialogue
             }
         }
         
-        public void AddNode(DialogueNode parent)
+        public void CreateNode(DialogueNode parent)
         {
             string newUniqueID = System.Guid.NewGuid().ToString();
-            var newNode = new DialogueNode();
-            newNode.uniqueID = newUniqueID;
-            parent.children.Add(newUniqueID);
+            var newNode = CreateInstance<DialogueNode>();
+            newNode.name = newUniqueID;
+            Undo.RegisterCreatedObjectUndo(newNode, "Creating a new node");
+            if (parent != null)
+            {
+                parent.children.Add(newUniqueID);
+            }
             nodes.Add(newNode);
-            nodeLookup.Add(newUniqueID, newNode); // if any problems just use OnValidate();
+            OnValidate(); // if any problems just use OnValidate();
+
         }
+
 
         public void RemoveNode(DialogueNode deletingNode)
         {
             nodes.Remove(deletingNode);
-            nodeLookup.Remove(deletingNode.uniqueID); // if any problems just use OnValidate();
+            OnValidate();// if any problems just use OnValidate();
             CleanDanglingChildren(deletingNode);
+            Undo.DestroyObjectImmediate(deletingNode);
         }
 
         private void CleanDanglingChildren(DialogueNode deletingNode)
         {
-            foreach (var node in nodes)
+            foreach (var node in GetAllNodes())
             {
-                if (node.children.Contains(deletingNode.uniqueID))
+                if (node.children.Contains(deletingNode.name))
                 {
-                    node.children.Remove(deletingNode.uniqueID);
+                    node.children.Remove(deletingNode.name);
                 }
             }
         }
 
         public void Link(DialogueNode linkingParentNode, DialogueNode linkingChildNode)
         {
-            if(linkingParentNode.uniqueID == linkingChildNode.uniqueID) 
+            if(linkingParentNode.name == linkingChildNode.name) 
             {
                 return;
             }    
-            linkingParentNode.children.Add(linkingChildNode.uniqueID);
+            linkingParentNode.children.Add(linkingChildNode.name);
         }
 
         public void Unlink(DialogueNode linkingParentNode, DialogueNode unlinkingChildNode)
         {
-            linkingParentNode.children.Remove(unlinkingChildNode.uniqueID);
+            linkingParentNode.children.Remove(unlinkingChildNode.name);
+        }
+
+        public void OnBeforeSerialize()
+        {
+            if(AssetDatabase.GetAssetPath(this) != "")
+            {
+                foreach (DialogueNode node in GetAllNodes())
+                {
+                    if(AssetDatabase.GetAssetPath(node) == "")
+                    {
+                        AssetDatabase.AddObjectToAsset(node ,this);
+                    }
+                }
+            }
+            if(nodes.Count == 0)
+            {
+                CreateNode(null);
+            }
+        }
+
+        public void OnAfterDeserialize()
+        {
         }
     }
 }

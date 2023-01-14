@@ -1,5 +1,25 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8776638120785789231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: da713bf3-40ed-4d76-ad4b-655a10c9bea3
+  m_EditorClassIdentifier: 
+  text: 
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 654
+    y: 44
+    width: 200
+    height: 100
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13,62 +33,48 @@ MonoBehaviour:
   m_Name: New Dialogue
   m_EditorClassIdentifier: 
   nodes:
-  - uniqueID: Player
-    text: Hello
-    children:
-    - Guard
-    - Guard(1)
-    rect:
-      serializedVersion: 2
-      x: 7
-      y: 212
-      width: 200
-      height: 100
-  - uniqueID: Guard
-    text: Hi there, Adventurer.
-    children: []
-    rect:
-      serializedVersion: 2
-      x: 296
-      y: 111
-      width: 200
-      height: 100
-  - uniqueID: Guard(1)
-    text: Go away!
-    children:
-    - Player2
-    - Player2(1)
-    rect:
-      serializedVersion: 2
-      x: 300
-      y: 364
-      width: 200
-      height: 100
-  - uniqueID: Player2
-    text: What if i don't
-    children:
-    - 56affccc-de1d-4c3d-9f52-bab8f36683be
-    rect:
-      serializedVersion: 2
-      x: 598
-      y: 214
-      width: 200
-      height: 100
-  - uniqueID: Player2(1)
-    text: I am sorry, I'll be on my way.
-    children: []
-    rect:
-      serializedVersion: 2
-      x: 611
-      y: 452
-      width: 200
-      height: 100
-  - uniqueID: 56affccc-de1d-4c3d-9f52-bab8f36683be
-    text: 
-    children: []
-    rect:
-      serializedVersion: 2
-      x: 880
-      y: 176
-      width: 200
-      height: 100
+  - {fileID: 1579836932876900798}
+  - {fileID: 3651624486405413048}
+  - {fileID: -8776638120785789231}
+--- !u!114 &1579836932876900798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: b838b3d3-9375-41b3-bbda-4fbcf40c3311
+  m_EditorClassIdentifier: 
+  text: 
+  children:
+  - b2c60a2f-ba16-4d5d-a595-8b7abd7b059f
+  rect:
+    serializedVersion: 2
+    x: 46
+    y: 41
+    width: 200
+    height: 100
+--- !u!114 &3651624486405413048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: b2c60a2f-ba16-4d5d-a595-8b7abd7b059f
+  m_EditorClassIdentifier: 
+  text: 
+  children:
+  - da713bf3-40ed-4d76-ad4b-655a10c9bea3
+  rect:
+    serializedVersion: 2
+    x: 344
+    y: 493
+    width: 200
+    height: 100
