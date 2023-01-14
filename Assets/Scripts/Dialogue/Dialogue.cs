@@ -44,7 +44,7 @@ namespace RPG.Dialogue
 
         public IEnumerable<DialogueNode> GetAllChildren(DialogueNode parent)
         {
-            var childeren = parent.children;
+            var childeren = parent.GetChildren();
             foreach (String child in childeren)
             {
                 if(nodeLookup.ContainsKey(child))
@@ -62,8 +62,9 @@ namespace RPG.Dialogue
             Undo.RegisterCreatedObjectUndo(newNode, "Creating a new node");
             if (parent != null)
             {
-                parent.children.Add(newUniqueID);
+                parent.AddChild(newUniqueID);
             }
+            Undo.RecordObject(this, "Created Dialogue Node");
             nodes.Add(newNode);
             OnValidate(); // if any problems just use OnValidate();
 
@@ -72,6 +73,7 @@ namespace RPG.Dialogue
 
         public void RemoveNode(DialogueNode deletingNode)
         {
+            Undo.RecordObject(this , "Deleted Dialogue Node");
             nodes.Remove(deletingNode);
             OnValidate();// if any problems just use OnValidate();
             CleanDanglingChildren(deletingNode);
@@ -82,9 +84,9 @@ namespace RPG.Dialogue
         {
             foreach (var node in GetAllNodes())
             {
-                if (node.children.Contains(deletingNode.name))
+                if (node.ContainsChild(deletingNode.name))
                 {
-                    node.children.Remove(deletingNode.name);
+                    node.RemoveChild(deletingNode.name);
                 }
             }
         }
@@ -94,13 +96,13 @@ namespace RPG.Dialogue
             if(linkingParentNode.name == linkingChildNode.name) 
             {
                 return;
-            }    
-            linkingParentNode.children.Add(linkingChildNode.name);
+            } 
+            linkingParentNode.AddChild(linkingChildNode.name);
         }
 
         public void Unlink(DialogueNode linkingParentNode, DialogueNode unlinkingChildNode)
         {
-            linkingParentNode.children.Remove(unlinkingChildNode.name);
+            linkingParentNode.RemoveChild(unlinkingChildNode.name);
         }
 
         public void OnBeforeSerialize()
