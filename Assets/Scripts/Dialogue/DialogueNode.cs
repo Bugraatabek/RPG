@@ -16,18 +16,35 @@ namespace RPG.Dialogue
             return text;
         }
 
-        public void SetText(string newText)
-        {
-            Undo.RecordObject(this, "Update Dialogue Text");
-            text = newText;
-        }
-
         public IEnumerable<string> GetChildren()
         {
             foreach (string child in children)
             {
                 yield return child;
             }
+        }
+
+        public bool ContainsChild(string name)
+        {
+            if(children.Contains(name)) return true;
+            else return false;
+        }
+
+        public Rect GetRect()
+        {
+            return rect;
+        }
+#if UNITY_EDITOR
+        public void SetRectPosition(Vector2 newPosition)
+        {
+            Undo.RecordObject(this, "Update Dialogue Rect");
+            rect.position = newPosition;
+        }
+
+        public void SetText(string newText)
+        {
+            Undo.RecordObject(this, "Update Dialogue Text");
+            text = newText;
         }
 
         public void AddChild(string name)
@@ -41,22 +58,6 @@ namespace RPG.Dialogue
             Undo.RecordObject(this, "Removed Dialogue Child");
             children.Remove(name);
         }
-
-        public bool ContainsChild(string name)
-        {
-            if(children.Contains(name)) return true;
-            else return false;
-        }
-
-        public Rect GetRect()
-        {
-            return rect;
-        }
-
-        public void SetRectPosition(Vector2 newPosition)
-        {
-            Undo.RecordObject(this, "Update Dialogue Rect");
-            rect.position = newPosition;
-        }
+#endif
     }
 }

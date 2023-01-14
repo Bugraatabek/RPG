@@ -187,15 +187,10 @@ namespace RPG.Dialogue.Editor
         private void DrawNode(DialogueNode node)
         {
             GUILayout.BeginArea(node.GetRect(), nodeStyle);
-            EditorGUI.BeginChangeCheck();
-
             var defaultNodeText = EditorGUILayout.TextField(node.GetText());
 
-            if (EditorGUI.EndChangeCheck())
-            {
-                node.SetText(defaultNodeText);
-            }
-
+            node.SetText(defaultNodeText);
+            
             GUILayout.BeginHorizontal();
             DrawAddRemoveButtons(node);
             GUILayout.EndHorizontal();
