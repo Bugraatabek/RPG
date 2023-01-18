@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2360916635241600523
+--- !u!114 &-8756547751750914165
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,14 +10,81 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
-  m_Name: 9da376ba-ecc5-46e0-8239-0400d7719a1f
+  m_Name: 050a8b29-3142-4532-b5a1-3406121e6146
   m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 
+  children:
+  - 816f3ae0-e4d6-4365-84bd-4aaf6d0fca7e
+  - 56c40f08-fd97-4b3d-a7ad-a4b8865f456c
+  rect:
+    serializedVersion: 2
+    x: 350
+    y: 278
+    width: 200
+    height: 100
+--- !u!114 &-7473923184732405080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 816f3ae0-e4d6-4365-84bd-4aaf6d0fca7e
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
   text: 
   children: []
   rect:
     serializedVersion: 2
-    x: 276
-    y: 171
+    x: 642
+    y: 108
+    width: 200
+    height: 100
+--- !u!114 &-1767544466323798086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 66e8f12e-55f6-4c2e-8b3b-a6ca497010af
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: 
+  children:
+  - 050a8b29-3142-4532-b5a1-3406121e6146
+  rect:
+    serializedVersion: 2
+    x: 50
+    y: 278
+    width: 200
+    height: 100
+--- !u!114 &-1243091416877200738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 56c40f08-fd97-4b3d-a7ad-a4b8865f456c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: 
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 641
+    y: 445
     width: 200
     height: 100
 --- !u!114 &11400000
@@ -33,4 +100,8 @@ MonoBehaviour:
   m_Name: New Dialogue 1
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: -2360916635241600523}
+  - {fileID: -1767544466323798086}
+  - {fileID: -8756547751750914165}
+  - {fileID: -7473923184732405080}
+  - {fileID: -1243091416877200738}
+  newNodeOffset: 300
