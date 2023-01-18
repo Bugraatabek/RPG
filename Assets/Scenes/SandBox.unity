@@ -8312,6 +8312,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 973175674375411405, guid: 3232a6bdc43df9e4793fcde91ddff8aa, type: 3}
+      propertyPath: m_text
+      value: Hey! Stop right there you criminal scum.
+      objectReference: {fileID: 0}
     - target: {fileID: 1178446953999761945, guid: 3232a6bdc43df9e4793fcde91ddff8aa, type: 3}
       propertyPath: m_Name
       value: UI Canvas
@@ -8406,7 +8410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1387692220688953341, guid: 3232a6bdc43df9e4793fcde91ddff8aa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -420.7495
+      value: -644.80023
       objectReference: {fileID: 0}
     - target: {fileID: 1388035165072389821, guid: 3232a6bdc43df9e4793fcde91ddff8aa, type: 3}
       propertyPath: m_AnchorMax.x
@@ -9676,7 +9680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8407035485959502245, guid: 3232a6bdc43df9e4793fcde91ddff8aa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000061035156
+      value: 0.00012207031
       objectReference: {fileID: 0}
     - target: {fileID: 8424730256978290474, guid: 3232a6bdc43df9e4793fcde91ddff8aa, type: 3}
       propertyPath: m_AnchorMax.y
