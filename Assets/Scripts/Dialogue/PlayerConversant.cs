@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,12 +8,26 @@ namespace RPG.Dialogue
 {
     public class PlayerConversant : MonoBehaviour
     {
-        [SerializeField] Dialogue currentDialogue;
+        [SerializeField] Dialogue testDialogue;
+        Dialogue currentDialogue;
         DialogueNode currentNode;
+        bool isChoosing = false;
 
-        private void Awake() 
+        public event Action onConversationUpdated;
+
+        // private void Awake() 
+        // {
+        //     currentNode = currentDialogue.GetRootNode();
+        // }
+
+        IEnumerator Start()
         {
-            currentNode = currentDialogue.GetRootNode();
+            yield return new WaitForSeconds(2);
+            if(testDialogue != null)
+            {
+                StartDialogue(testDialogue);
+            }
+            
         }
 
         public string GetText()
@@ -24,16 +39,55 @@ namespace RPG.Dialogue
             }
         }
 
+        public void SelectChoice(DialogueNode chosenNode)
+        {
+            isChoosing = false;
+            currentNode = chosenNode;
+            Next();             
+        }
+
+        public void StartDialogue(Dialogue newDialogue)
+        {
+            currentDialogue = newDialogue;
+            currentNode = currentDialogue.GetRootNode();
+            onConversationUpdated();
+
+        }
+
+        public bool IsActive()
+        {
+            return currentDialogue != null;
+        }
+
         public void Next()
         {
-            var childeren = currentDialogue.GetAllChildren(currentNode).ToArray();
-            int randomIndex = Random.Range(0, childeren.Length);
-            currentNode = childeren[randomIndex];   
+            int numberOfPlayerResponses = currentDialogue.GetPlayerChildren(currentNode).Count();
+            if(numberOfPlayerResponses > 0)
+            {
+                isChoosing = true;
+                onConversationUpdated();
+                return;   
+            }
+            var children = currentDialogue.GetAIChildren(currentNode).ToArray();
+            int randomIndex = UnityEngine.Random.Range(0, children.Length);
+            currentNode = children[randomIndex];
+            onConversationUpdated();   
         }
 
         public void Quit()
         {
+            currentDialogue = null;
+            currentNode = null;
+            isChoosing = false;
+            onConversationUpdated();
+        }
 
+        public IEnumerable<DialogueNode> GetChoices()
+        {
+            foreach (var node in currentDialogue.GetPlayerChildren(currentNode))
+            {
+                yield return node;
+            } 
         }
 
         public bool HasNext()
@@ -44,6 +98,11 @@ namespace RPG.Dialogue
                 return false;
             }
             return true;
+        }
+
+        public bool IsChoosing()
+        {
+            return isChoosing;
         }
     }
 }
