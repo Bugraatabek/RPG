@@ -13,8 +13,8 @@ namespace RPG.Dialogue
         [SerializeField] List<string> children = new List<string>();
         [SerializeField] Rect rect = new Rect(10,10,200,100);
         
-        [SerializeField] string onEnterAction;
-        [SerializeField] string onExitAction;
+        [SerializeField] TriggerType onEnterAction;
+        [SerializeField] TriggerType onExitAction;
 
         public string GetText()
         {
@@ -45,12 +45,12 @@ namespace RPG.Dialogue
             return isPlayerSpeaking;
         }
 
-        public string GetOnEnterAction()
+        public TriggerType GetOnEnterAction()
         {
             return onEnterAction;
         }
 
-        public string GetOnExitAction()
+        public TriggerType GetOnExitAction()
         {
             return onExitAction;
         }

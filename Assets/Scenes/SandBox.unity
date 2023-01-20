@@ -6658,7 +6658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb859705b1235e94e9a04a71ff75bd05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  action: Attack
+  action: 1
   onTrigger:
     m_PersistentCalls:
       m_Calls:
@@ -8660,7 +8660,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1387692220688953341, guid: 3232a6bdc43df9e4793fcde91ddff8aa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -644.8001
+      value: -420.74963
       objectReference: {fileID: 0}
     - target: {fileID: 1388035165072389821, guid: 3232a6bdc43df9e4793fcde91ddff8aa, type: 3}
       propertyPath: m_AnchorMax.x
