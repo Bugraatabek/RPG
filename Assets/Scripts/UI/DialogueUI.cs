@@ -13,6 +13,8 @@ namespace RPG.UI
     {
         PlayerConversant playerConversant;
         [SerializeField] TextMeshProUGUI AIText;
+        [SerializeField] TextMeshProUGUI conversantName;
+        
         [SerializeField] Button nextButton;
         [SerializeField] Button quitButton;
         [SerializeField] Button choiceButton;
@@ -38,10 +40,11 @@ namespace RPG.UI
                 gameObject.SetActive(false);
                 return;
             }
-
+            
             gameObject.SetActive(true);
             choiceButtonsTab.gameObject.SetActive(false);
             AIText.gameObject.SetActive(true);
+            conversantName.text = playerConversant.GetCurrentConversantName();
             AIText.text = playerConversant.GetText();
             nextButton.gameObject.SetActive(playerConversant.HasNext());
             
@@ -56,6 +59,7 @@ namespace RPG.UI
             choiceButtonsTab.gameObject.SetActive(true);
             AIText.gameObject.SetActive(false);
             nextButton.gameObject.SetActive(false);
+            conversantName.text = playerConversant.GetCurrentConversantName();
 
             foreach (Transform button in choiceButtonsTab)
             {
