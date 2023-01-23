@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bd5a9af3c037aa49b059256580ef232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testDialogue: {fileID: 0}
+  playerName: 
 --- !u!114 &1281634398384004500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,6 +331,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventorySize: 16
+--- !u!114 &5231360085226159282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4254904522072450903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78579d4be737af94aada535bd023a18d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statuses:
+  - quest: {fileID: 11400000, guid: 4a86f5355723b3e4d99e564e193b69a1, type: 2}
+    completedObjectives:
+    - Go kill some boars.
+    - Gather some apples.
+    - Gather some wood.
+  - quest: {fileID: 11400000, guid: 83ab17eaeb682014c8de952c8424ce37, type: 2}
+    completedObjectives:
+    - Travel to market place.
+    - Ask people about the dog.
 --- !u!4 &8927914046813846304 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4255977455995998564, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}

@@ -101,9 +101,12 @@ namespace RPG.Dialogue
         {
             string newUniqueID = System.Guid.NewGuid().ToString();
             var newNode = CreateInstance<DialogueNode>();
-            if(!parent.IsPlayerSpeaking())
+            if(parent != null)
             {
-                newNode.SetPlayerSpeaking(true);
+                if(!parent.IsPlayerSpeaking())
+                {
+                    newNode.SetPlayerSpeaking(true);
+                }
             }
             newNode.name = newUniqueID;
             if (parent != null)

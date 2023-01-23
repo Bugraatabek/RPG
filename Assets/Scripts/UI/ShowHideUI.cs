@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace RPG.UI
 {
@@ -8,11 +9,12 @@ namespace RPG.UI
     {
         [SerializeField] KeyCode toggleKey = KeyCode.Escape;
         [SerializeField] GameObject uiContainer = null;
+        [SerializeField] bool activeOnStart = false;
 
         // Start is called before the first frame update
         void Start()
         {
-            uiContainer.SetActive(false);
+            uiContainer.SetActive(activeOnStart);
         }
 
         // Update is called once per frame
@@ -20,8 +22,13 @@ namespace RPG.UI
         {
             if (Input.GetKeyDown(toggleKey))
             {
-                uiContainer.SetActive(!uiContainer.activeSelf);
+                Toggle();
             }
+        }
+
+        public void Toggle()
+        {
+            uiContainer.SetActive(!uiContainer.activeSelf);
         }
     }
 }

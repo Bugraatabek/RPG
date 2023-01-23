@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8235599519072513019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: ed1bc989-63c1-46c4-bc77-9d15ae345250
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Good job!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 683
+    y: 79
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 3
+--- !u!114 &-2602411066015364472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 374f982d-c8ae-4271-928a-a428d74b89e2
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Yes, here is the meat.
+  children:
+  - ed1bc989-63c1-46c4-bc77-9d15ae345250
+  rect:
+    serializedVersion: 2
+    x: 383
+    y: 79
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e7c9cbb15392934b829cad6aff9f298, type: 3}
+  m_Name: Kill 3 Boars
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 8858830633942791704}
+  - {fileID: -2602411066015364472}
+  - {fileID: 5839662457917124881}
+  - {fileID: -8235599519072513019}
+  - {fileID: 970513955828432054}
+  newNodeOffset: 300
+--- !u!114 &970513955828432054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 260a7041-aa68-4abd-b2a3-12a1b5e7f043
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: We are counting on you.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 675
+    y: 287
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+--- !u!114 &5839662457917124881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 54da0403-188a-4220-b6d5-3711ce420953
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Still working on it.
+  children:
+  - 260a7041-aa68-4abd-b2a3-12a1b5e7f043
+  rect:
+    serializedVersion: 2
+    x: 386
+    y: 289
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+--- !u!114 &8858830633942791704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: f2d7c237-fa3e-46f4-b2c3-7c66a745e2df
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Did you kill the boars?
+  children:
+  - 374f982d-c8ae-4271-928a-a428d74b89e2
+  - 54da0403-188a-4220-b6d5-3711ce420953
+  rect:
+    serializedVersion: 2
+    x: 54
+    y: 179
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0

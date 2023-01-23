@@ -7,6 +7,16 @@ namespace RPG.Dialogue
     public enum TriggerType
     {
         Empty,
-        Attack
+        Attack,
+        GiveQuest,
+        Objective1,
+        Objective2,
+        Objective3,
+        Objective4,
+        Objective5,
+        Objective6,
+        Objective7,
+        Objective8,
+        Objective9,
     }
 }

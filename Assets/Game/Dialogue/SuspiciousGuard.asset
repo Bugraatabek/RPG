@@ -18,8 +18,8 @@ MonoBehaviour:
   - a2e032c8-425c-4729-b216-b1707f9d6708
   rect:
     serializedVersion: 2
-    x: 259
-    y: 326
+    x: 260
+    y: 330
     width: 200
     height: 100
   onEnterAction: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 509
-    y: 378
+    y: 381
     width: 200
     height: 100
   onEnterAction: 0
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e7c9cbb15392934b829cad6aff9f298, type: 3}
-  m_Name: New In Town
+  m_Name: SuspiciousGuard
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: -1767544466323798086}
