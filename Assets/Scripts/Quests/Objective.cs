@@ -10,10 +10,6 @@ namespace RPG.Quests
         {
             public TriggerType triggerType;
             public string text;
-
-            public Objective(string text)
-            {
-                this.text = text;
-            }
+            public string reference;
         }
 }

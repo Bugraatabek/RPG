@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-
+using RPG.Inventories;
 using UnityEngine;
 
 namespace RPG.Quests
@@ -10,7 +10,33 @@ namespace RPG.Quests
     public class Quest : ScriptableObject
     {
         [SerializeField] List<Objective> objectives = new List<Objective>();
+        Dictionary<string,Objective> objectiveLookup = null;
 
+        [SerializeField]List<Reward> rewards = new List<Reward>();
+
+        [System.Serializable]
+        class Reward
+        {
+            public int number;
+            public InventoryItem item;
+        }
+
+        public void BuildLookup()
+        {
+            if(objectiveLookup != null) return;
+            objectiveLookup = new Dictionary<string, Objective>();
+            foreach (var objective in objectives)
+            {
+                objectiveLookup.Add(objective.reference, objective);
+            }
+        }
+
+        public Objective ObjectiveLookup(string objectiveReference)
+        {
+            BuildLookup();
+            return objectiveLookup[objectiveReference];
+        }
+        
         public string GetTitle()
         {
             return name;
@@ -29,6 +55,18 @@ namespace RPG.Quests
         public bool HasObjective(Objective objective)
         {
             return objectives.Contains(objective);
+        }
+
+        public static Quest GetByName(string questName)
+        {
+            foreach(Quest quest in Resources.LoadAll<Quest>(""))
+            {
+                if(quest.name == questName)
+                {
+                    return quest;
+                }
+            }
+            return null;
         }
     }
 }

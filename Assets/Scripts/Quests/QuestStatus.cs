@@ -40,5 +40,39 @@ namespace RPG.Quests
         {
             return completedObjectives.Contains(objective);
         }
+// Saving 
+        [System.Serializable]
+        class QuestStatusRecord
+        {
+            public string questName;
+            public List<string> completedObjectives = new List<string>();
+        }
+
+        public QuestStatus(object objectState)
+        {
+            QuestStatusRecord state = objectState as QuestStatusRecord;
+            quest = Quest.GetByName(state.questName);
+            
+            List<string> completedObjectiveRefs = new List<string>();
+            completedObjectiveRefs = state.completedObjectives;
+
+            foreach (var objectiveReference in completedObjectiveRefs)
+            {
+                Objective completedObjective = quest.ObjectiveLookup(objectiveReference);
+                completedObjectives.Add(completedObjective);
+            }
+        }
+
+        public object CaptureState()
+        {
+            quest.BuildLookup();
+            var state = new QuestStatusRecord();
+            state.questName = quest.GetTitle();
+            foreach (var objective in completedObjectives)
+            {
+                state.completedObjectives.Add(objective.reference);
+            }
+            return state;
+        }
     }
 }
