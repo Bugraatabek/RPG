@@ -17,14 +17,10 @@ MonoBehaviour:
     text: Hunt down 3 boars.
     reference: 1
   - triggerType: 4
-    text: Cut down 2 trees.
-    reference: 2
-  - triggerType: 5
-    text: Start a cooking fire.
-    reference: 3
-  - triggerType: 6
     text: Cook the meat.
-    reference: 4
+    reference: 2
   rewards:
-  - number: 1
+  - number: 5
+    item: {fileID: 11400000, guid: b12bd05363827354cb69a798f082afe2, type: 2}
+  - number: 2
     item: {fileID: 11400000, guid: 01a2a9ee1da7e7943b97e53b8ca9df04, type: 2}

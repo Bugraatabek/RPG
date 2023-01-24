@@ -15,9 +15,9 @@ namespace RPG.Quests
         [SerializeField]List<Reward> rewards = new List<Reward>();
 
         [System.Serializable]
-        class Reward
+        public class Reward
         {
-            public int number;
+            [Min(1)] public int number;
             public InventoryItem item;
         }
 
@@ -30,6 +30,8 @@ namespace RPG.Quests
                 objectiveLookup.Add(objective.reference, objective);
             }
         }
+
+        //GETTERS//
 
         public Objective ObjectiveLookup(string objectiveReference)
         {
@@ -52,6 +54,11 @@ namespace RPG.Quests
             return objectives;
         }
 
+        public IEnumerable<Reward> GetRewards()
+        {
+            return rewards;
+        }
+
         public bool HasObjective(Objective objective)
         {
             return objectives.Contains(objective);
@@ -68,5 +75,7 @@ namespace RPG.Quests
             }
             return null;
         }
+
+        //GETTERS//
     }
 }

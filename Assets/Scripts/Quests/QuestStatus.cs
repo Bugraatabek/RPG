@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace RPG.Quests
@@ -9,6 +11,8 @@ namespace RPG.Quests
     {
         Quest quest;
         List<Objective> completedObjectives = new List<Objective>();
+
+        //SETTERS//
 
         public QuestStatus(Quest quest)
         {
@@ -22,6 +26,10 @@ namespace RPG.Quests
                 completedObjectives.Add(objective);
             }
         }
+
+        //SETTERS//
+
+        //GETTERS//
 
         public Quest GetQuest()
         {
@@ -40,7 +48,29 @@ namespace RPG.Quests
         {
             return completedObjectives.Contains(objective);
         }
-// Saving 
+
+        public bool IsComplete()
+        {
+            foreach (var objective in quest.GetObjectives())
+            {
+                if(!completedObjectives.Contains(objective))
+                {
+                    return false;
+                }
+            }
+            return true;
+            
+            // if(GetQuest().GetObjectiveCount() == completedObjectives.Count())
+            // {
+            //     return true;
+            // }
+            // return false;
+        }
+        
+        //GETTERS//
+        
+        //SAVING//
+
         [System.Serializable]
         class QuestStatusRecord
         {
@@ -74,5 +104,9 @@ namespace RPG.Quests
             }
             return state;
         }
+    
+        //SAVING//
     }
+
+    
 }

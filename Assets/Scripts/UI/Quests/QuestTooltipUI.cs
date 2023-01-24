@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using RPG.Quests;
 using TMPro;
 using UnityEngine;
@@ -8,6 +10,7 @@ namespace RPG.UI.Quests
 {
     public class QuestTooltipUI : MonoBehaviour
     {
+        [SerializeField] TextMeshProUGUI rewardText;
         [SerializeField] TextMeshProUGUI title;
         [SerializeField] Transform objectiveList;
         [SerializeField] GameObject objectivePrefab;
@@ -36,6 +39,31 @@ namespace RPG.UI.Quests
                     objectiveInstance.GetComponentInChildren<TextMeshProUGUI>().text = objective.text; 
                 }
             }
+                rewardText.text = GetRewardText(quest);
+           
+        }
+
+        private string GetRewardText(Quest quest)
+        {
+            string rewardText = "";
+            foreach (var reward in quest.GetRewards())
+            {
+                if(rewardText != "")
+                {
+                    rewardText += ", ";
+                }
+                if(reward.number > 1)
+                {
+                    rewardText += reward.number + " ";
+                }
+                rewardText += reward.item.GetDisplayName();
+            }
+            if(rewardText == "")
+            {
+                rewardText = "No Reward";
+            }
+            rewardText += ".";
+            return rewardText;
         }
     }
 

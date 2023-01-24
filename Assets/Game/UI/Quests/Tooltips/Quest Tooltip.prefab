@@ -700,6 +700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c62de190d7eee42991b1879875f48a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rewardText: {fileID: 6639604145091871385}
   title: {fileID: 91652428474296677}
   objectiveList: {fileID: 399566292868076075}
   objectivePrefab: {fileID: 7935670310573679725, guid: 8832ee1f43f98174ebe517d3879e50f4, type: 3}
@@ -962,7 +963,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4115992461571955375, guid: 8832ee1f43f98174ebe517d3879e50f4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 5.6127777
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4115992461571955375, guid: 8832ee1f43f98174ebe517d3879e50f4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1163,7 +1164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8856386332572169630, guid: 94ad35d964914c14e9c2fb896dca2322, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 5.6127777
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8856386332572169630, guid: 94ad35d964914c14e9c2fb896dca2322, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1297,7 +1298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4115992461571955375, guid: 8832ee1f43f98174ebe517d3879e50f4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 5.6127777
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4115992461571955375, guid: 8832ee1f43f98174ebe517d3879e50f4, type: 3}
       propertyPath: m_AnchoredPosition.y
