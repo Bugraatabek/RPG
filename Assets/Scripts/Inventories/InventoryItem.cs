@@ -16,7 +16,7 @@ namespace RPG.Inventories
     {
         // CONFIG DATA
         [Tooltip("Auto-generated UUID for saving/loading. Clear this field if you want to generate a new one.")]
-        [SerializeField] string itemID = null;
+        [SerializeField] string itemID = "";
         [Tooltip("Item name to be displayed in UI.")]
         [SerializeField] string displayName = null;
         [Tooltip("Item description to be displayed in UI.")]
@@ -29,7 +29,7 @@ namespace RPG.Inventories
         [SerializeField] bool stackable = false;
 
         // STATE
-        static Dictionary<string, InventoryItem> itemLookupCache;
+        static Dictionary<string, InventoryItem> itemLookupCache = null;
 
         // PUBLIC
 

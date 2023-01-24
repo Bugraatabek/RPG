@@ -18,5 +18,6 @@ namespace RPG.Dialogue
         Objective7,
         Objective8,
         Objective9,
+        GiveReward,
     }
 }

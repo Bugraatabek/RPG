@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using RPG.Core;
 using UnityEditor;
 using UnityEngine;
 
@@ -15,6 +16,8 @@ namespace RPG.Dialogue
         
         [SerializeField] TriggerType onEnterAction;
         [SerializeField] TriggerType onExitAction;
+
+        [SerializeField] Condition condition;
 
         public string GetText()
         {
@@ -53,6 +56,11 @@ namespace RPG.Dialogue
         public TriggerType GetOnExitAction()
         {
             return onExitAction;
+        }
+
+        public bool CheckCondition(IEnumerable<IPredicateEvaluator> evaluators)
+        {
+            return condition.Check(evaluators);
         }
 
 

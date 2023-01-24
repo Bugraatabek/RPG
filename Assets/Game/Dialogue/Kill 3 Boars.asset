@@ -23,6 +23,8 @@ MonoBehaviour:
     height: 100
   onEnterAction: 0
   onExitAction: 3
+  condition:
+    and: []
 --- !u!114 &-2602411066015364472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41,12 +43,19 @@ MonoBehaviour:
   - ed1bc989-63c1-46c4-bc77-9d15ae345250
   rect:
     serializedVersion: 2
-    x: 383
-    y: 79
+    x: 385
+    y: 82
     width: 200
     height: 100
   onEnterAction: 0
   onExitAction: 0
+  condition:
+    and:
+    - or:
+      - predicate: HasInventoryItem
+        parameters:
+        - 8eda62d8-b7c6-42e4-a0d8-23ea91002bc1
+        negate: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,6 +98,8 @@ MonoBehaviour:
     height: 100
   onEnterAction: 0
   onExitAction: 0
+  condition:
+    and: []
 --- !u!114 &5839662457917124881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,12 +118,19 @@ MonoBehaviour:
   - 260a7041-aa68-4abd-b2a3-12a1b5e7f043
   rect:
     serializedVersion: 2
-    x: 386
-    y: 289
+    x: 387
+    y: 288
     width: 200
     height: 100
   onEnterAction: 0
   onExitAction: 0
+  condition:
+    and:
+    - or:
+      - predicate: HasInventoryItem
+        parameters:
+        - 8eda62d8-b7c6-42e4-a0d8-23ea91002bc1
+        negate: 1
 --- !u!114 &8858830633942791704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,3 +156,5 @@ MonoBehaviour:
     height: 100
   onEnterAction: 0
   onExitAction: 0
+  condition:
+    and: []

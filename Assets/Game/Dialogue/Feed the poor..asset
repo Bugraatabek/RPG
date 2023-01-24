@@ -1,5 +1,111 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8323483222216147607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 7632ca7a-806d-43d9-91b4-63d9fe221fe4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: God bless you!!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 728
+    y: 497
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and: []
+--- !u!114 &-8298057703434726369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 5b74715f-772b-4cff-b925-ff9d2081e334
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I've found the secret ingridient
+  children:
+  - 70b4ea9b-4b61-4ac6-8e62-4da4875e2735
+  rect:
+    serializedVersion: 2
+    x: 397
+    y: 659
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Feed the poor.
+        negate: 0
+    - or:
+      - predicate: HasInventoryItem
+        parameters:
+        - f837f1b8-c6cb-4c0d-868a-c7d6e8accd08
+        negate: 0
+    - or:
+      - predicate: CompletedQuest
+        parameters:
+        - Feed the poor.
+        negate: 1
+--- !u!114 &-6027638162152320134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 70b4ea9b-4b61-4ac6-8e62-4da4875e2735
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Oh well, this will make anything to a feast. This is even better than the
+    meat. Villagers will be so happy. Good job young man.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 735
+    y: 661
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Feed the poor.
+        negate: 0
+    - or:
+      - predicate: CompletedQuest
+        parameters:
+        - Feed the poor.
+        negate: 0
+      - predicate: HasInventoryItem
+        parameters:
+        - f837f1b8-c6cb-4c0d-868a-c7d6e8accd08
+        negate: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18,6 +124,12 @@ MonoBehaviour:
   - {fileID: 7184063689965629239}
   - {fileID: 1352603748006314108}
   - {fileID: 3115956034746491862}
+  - {fileID: 3850797919262814396}
+  - {fileID: 2486843935209114651}
+  - {fileID: 1856276025317874373}
+  - {fileID: -8323483222216147607}
+  - {fileID: -8298057703434726369}
+  - {fileID: -6027638162152320134}
   newNodeOffset: 300
 --- !u!114 &1352603748006314108
 MonoBehaviour:
@@ -42,6 +154,69 @@ MonoBehaviour:
     height: 100
   onEnterAction: 0
   onExitAction: 2
+  condition:
+    and: []
+--- !u!114 &1856276025317874373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 2bfe5866-94bc-4ed3-a831-2619dbe380ea
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I've feeded the poor villagers!
+  children:
+  - 7632ca7a-806d-43d9-91b4-63d9fe221fe4
+  rect:
+    serializedVersion: 2
+    x: 399
+    y: 496
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Feed the poor.
+        negate: 0
+    - or:
+      - predicate: CompletedQuest
+        parameters:
+        - Feed the poor.
+        negate: 0
+--- !u!114 &2486843935209114651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: b0dd39e1-be5b-4700-a482-a24a9811a556
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Oops, bad memory.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 726
+    y: 355
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and: []
 --- !u!114 &3115956034746491862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,12 +234,50 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 709
-    y: 265
+    x: 719
+    y: 200
     width: 200
     height: 100
   onEnterAction: 0
   onExitAction: 0
+  condition:
+    and: []
+--- !u!114 &3850797919262814396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 53d6c434-31bc-4aa8-9b38-875ff129f423
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I am already on the case.
+  children:
+  - b0dd39e1-be5b-4700-a482-a24a9811a556
+  rect:
+    serializedVersion: 2
+    x: 402
+    y: 355
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Feed the poor.
+        negate: 0
+    - or:
+      - predicate: CompletedQuest
+        parameters:
+        - Feed the poor.
+        negate: 1
 --- !u!114 &4018055364547241723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,12 +296,19 @@ MonoBehaviour:
   - eea9c993-4f23-48d3-98d9-ee15cfd96f16
   rect:
     serializedVersion: 2
-    x: 411
+    x: 415
     y: 72
     width: 200
     height: 100
   onEnterAction: 0
   onExitAction: 0
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Feed the poor.
+        negate: 1
 --- !u!114 &6554258495112276155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,6 +326,9 @@ MonoBehaviour:
   children:
   - ddc7feef-a8e1-4ff5-a8c9-36fb5d323851
   - 6ebdc4c7-54a5-41e8-9791-850ed0317e04
+  - 53d6c434-31bc-4aa8-9b38-875ff129f423
+  - 2bfe5866-94bc-4ed3-a831-2619dbe380ea
+  - 5b74715f-772b-4cff-b925-ff9d2081e334
   rect:
     serializedVersion: 2
     x: 56
@@ -114,6 +337,8 @@ MonoBehaviour:
     height: 100
   onEnterAction: 0
   onExitAction: 0
+  condition:
+    and: []
 --- !u!114 &7184063689965629239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,9 +357,16 @@ MonoBehaviour:
   - ba4b4661-6159-41b3-be59-93d31f9fd7c0
   rect:
     serializedVersion: 2
-    x: 410
-    y: 272
+    x: 408
+    y: 197
     width: 200
     height: 100
   onEnterAction: 0
   onExitAction: 0
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Feed the poor.
+        negate: 1

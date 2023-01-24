@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using RPG.Core;
 
 namespace RPG.Dialogue
 {
@@ -28,7 +29,7 @@ namespace RPG.Dialogue
 
         public void Next()
         {
-            int numberOfPlayerResponses = currentDialogue.GetPlayerChildren(currentNode).Count();
+            int numberOfPlayerResponses = FilterOnCondition(currentDialogue.GetPlayerChildren(currentNode)).Count();
             if(numberOfPlayerResponses > 0)
             {
                 isChoosing = true;
@@ -36,7 +37,7 @@ namespace RPG.Dialogue
                 onConversationUpdated();
                 return;   
             }
-            var children = currentDialogue.GetAIChildren(currentNode).ToArray();
+            var children = FilterOnCondition(currentDialogue.GetAIChildren(currentNode)).ToArray();
             int randomIndex = UnityEngine.Random.Range(0, children.Length);
             TriggerExitAction();
             currentNode = children[randomIndex];
@@ -88,7 +89,7 @@ namespace RPG.Dialogue
             }
         }
 
-        //Getters
+        //Getters//
 
         public bool IsChoosing()
         {
@@ -100,14 +101,30 @@ namespace RPG.Dialogue
             return currentDialogue != null;
         }
 
-         public bool HasNext()
+        public bool HasNext()
         {
-            var childeren = currentDialogue.GetAllChildren(currentNode).ToArray();
+            var childeren = FilterOnCondition(currentDialogue.GetAllChildren(currentNode)).ToArray();
             if (childeren.Length <= 0)
             {
                 return false;
             }
             return true;
+        }
+
+        private IEnumerable<DialogueNode> FilterOnCondition(IEnumerable<DialogueNode> inputNode)
+        {
+            foreach (var node in inputNode)
+            {
+                if(node.CheckCondition(GetEvaluators()))
+                {
+                    yield return node;
+                }
+            }
+        }
+
+        private IEnumerable<IPredicateEvaluator> GetEvaluators()
+        {
+            return GetComponents<IPredicateEvaluator>();
         }
 
         public string GetText()
@@ -121,7 +138,7 @@ namespace RPG.Dialogue
         
         public IEnumerable<DialogueNode> GetChoices()
         {
-            foreach (var node in currentDialogue.GetPlayerChildren(currentNode))
+            foreach (var node in FilterOnCondition(currentDialogue.GetPlayerChildren(currentNode)))
             {
                 yield return node;
             } 
@@ -139,5 +156,7 @@ namespace RPG.Dialogue
             }
             
         }
+
+        //Getters//
     }
 }
