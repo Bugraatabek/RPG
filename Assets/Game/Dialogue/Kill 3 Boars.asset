@@ -54,6 +54,7 @@ MonoBehaviour:
     - or:
       - predicate: 3
         parameters:
+        - Feed the poor.
         - 8eda62d8-b7c6-42e4-a0d8-23ea91002bc1
         negate: 0
 --- !u!114 &11400000
@@ -129,6 +130,7 @@ MonoBehaviour:
     - or:
       - predicate: 3
         parameters:
+        - Feed the poor.
         - 8eda62d8-b7c6-42e4-a0d8-23ea91002bc1
         negate: 1
 --- !u!114 &8858830633942791704

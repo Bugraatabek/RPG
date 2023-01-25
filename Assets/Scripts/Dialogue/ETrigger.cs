@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace RPG.Dialogue
 {
-    public enum TriggerType
+    public enum ETrigger
     {
-        Empty,
+        Select,
         Attack,
         GiveQuest,
         Objective1,

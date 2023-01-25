@@ -7,10 +7,10 @@ namespace RPG.Dialogue
 {
     public class DialogueTrigger : MonoBehaviour
     {
-        [SerializeField] TriggerType action;
+        [SerializeField] ETrigger action;
         [SerializeField] UnityEvent onTrigger;
 
-        public void Trigger(TriggerType actionToTrigger)
+        public void Trigger(ETrigger actionToTrigger)
         {
             if(actionToTrigger == action)
             {

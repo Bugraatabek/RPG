@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using RPG.Core;
+using RPG.Utils;
 using RPG.Inventories;
 using RPG.Saving;
 using UnityEngine;
@@ -57,14 +57,14 @@ namespace RPG.Quests
             }
         }
 
-        public bool? Evaluate(Predicate predicate, string[] parameters)
+        public bool? Evaluate(EPredicate predicate, string[] parameters)
         {
             switch(predicate)
             {
-                case Predicate.HasQuest:
+                case EPredicate.HasQuest:
                 return HasQuest(Quest.GetByName(parameters[0]));
 
-                case Predicate.CompletedQuest:
+                case EPredicate.CompletedQuest:
                 return GetQuestStatus(Quest.GetByName(parameters[0])).IsComplete();
             }
 

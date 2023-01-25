@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using RPG.Core;
+using RPG.Utils;
 
 namespace RPG.Dialogue
 {
@@ -79,9 +79,9 @@ namespace RPG.Dialogue
             }
         }
 
-        private void TriggerAction(TriggerType action)
+        private void TriggerAction(ETrigger action)
         {
-            if(action == TriggerType.Empty) return;
+            if(action == ETrigger.Select) return;
 
             foreach(DialogueTrigger trigger in currentConversant.GetComponents<DialogueTrigger>())
             {

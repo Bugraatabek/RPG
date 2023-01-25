@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace RPG.Core
+namespace RPG.Utils
 {
     [System.Serializable]
     public class Condition
@@ -40,9 +40,9 @@ namespace RPG.Core
         }
 
         [System.Serializable]
-        class Predicate
+        public class Predicate
         {
-            [SerializeField] RPG.Core.Predicate predicate;
+            [SerializeField] EPredicate predicate;
             [SerializeField] string[] parameters;
             [SerializeField] bool negate = false;
 

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using RPG.Saving;
-using RPG.Core;
+using RPG.Utils;
 
 namespace RPG.Inventories
 {
@@ -97,11 +97,11 @@ namespace RPG.Inventories
             return false;
         }
 
-        public bool? Evaluate(Predicate predicate, string[] parameters)
+        public bool? Evaluate(EPredicate predicate, string[] parameters)
         {
             switch (predicate)
             {
-                case Predicate.HasInventoryItem:
+                case EPredicate.HasItem:
                 return HasItem(InventoryItem.GetFromID(parameters[0]));
             }
             return null;

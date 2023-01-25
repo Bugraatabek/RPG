@@ -8,7 +8,7 @@ namespace RPG.Quests
     public class QuestCompletion : MonoBehaviour
     {
         [SerializeField] Quest quest;
-        [SerializeField] TriggerType objectiveTrigger;
+        [SerializeField] ETrigger objectiveTrigger;
         Objective objective;
 
         private void Start() 

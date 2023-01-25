@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using RPG.Core;
+using RPG.Utils;
 using UnityEditor;
 using UnityEngine;
 
@@ -14,8 +15,8 @@ namespace RPG.Dialogue
         [SerializeField] List<string> children = new List<string>();
         [SerializeField] Rect rect = new Rect(10,10,200,100);
         
-        [SerializeField] TriggerType onEnterAction;
-        [SerializeField] TriggerType onExitAction;
+        [SerializeField] ETrigger onEnterAction;
+        [SerializeField] ETrigger onExitAction;
 
         [SerializeField] Condition condition;
 
@@ -48,12 +49,12 @@ namespace RPG.Dialogue
             return isPlayerSpeaking;
         }
 
-        public TriggerType GetOnEnterAction()
+        public ETrigger GetOnEnterAction()
         {
             return onEnterAction;
         }
 
-        public TriggerType GetOnExitAction()
+        public ETrigger GetOnExitAction()
         {
             return onExitAction;
         }
