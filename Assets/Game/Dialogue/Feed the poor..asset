@@ -52,17 +52,17 @@ MonoBehaviour:
   condition:
     and:
     - or:
-      - predicate: HasQuest
+      - predicate: 1
         parameters:
         - Feed the poor.
         negate: 0
     - or:
-      - predicate: HasInventoryItem
+      - predicate: 3
         parameters:
         - f837f1b8-c6cb-4c0d-868a-c7d6e8accd08
         negate: 0
     - or:
-      - predicate: CompletedQuest
+      - predicate: 2
         parameters:
         - Feed the poor.
         negate: 1
@@ -93,16 +93,16 @@ MonoBehaviour:
   condition:
     and:
     - or:
-      - predicate: HasQuest
+      - predicate: 0
         parameters:
         - Feed the poor.
         negate: 0
     - or:
-      - predicate: CompletedQuest
+      - predicate: 0
         parameters:
         - Feed the poor.
         negate: 0
-      - predicate: HasInventoryItem
+      - predicate: 0
         parameters:
         - f837f1b8-c6cb-4c0d-868a-c7d6e8accd08
         negate: 0
@@ -183,12 +183,12 @@ MonoBehaviour:
   condition:
     and:
     - or:
-      - predicate: HasQuest
+      - predicate: 1
         parameters:
         - Feed the poor.
         negate: 0
     - or:
-      - predicate: CompletedQuest
+      - predicate: 2
         parameters:
         - Feed the poor.
         negate: 0
@@ -260,7 +260,7 @@ MonoBehaviour:
   - b0dd39e1-be5b-4700-a482-a24a9811a556
   rect:
     serializedVersion: 2
-    x: 402
+    x: 401
     y: 355
     width: 200
     height: 100
@@ -269,12 +269,12 @@ MonoBehaviour:
   condition:
     and:
     - or:
-      - predicate: HasQuest
+      - predicate: 1
         parameters:
         - Feed the poor.
         negate: 0
     - or:
-      - predicate: CompletedQuest
+      - predicate: 2
         parameters:
         - Feed the poor.
         negate: 1
@@ -305,7 +305,7 @@ MonoBehaviour:
   condition:
     and:
     - or:
-      - predicate: HasQuest
+      - predicate: 1
         parameters:
         - Feed the poor.
         negate: 1
@@ -366,7 +366,7 @@ MonoBehaviour:
   condition:
     and:
     - or:
-      - predicate: HasQuest
+      - predicate: 1
         parameters:
         - Feed the poor.
         negate: 1

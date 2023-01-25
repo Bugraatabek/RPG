@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using RPG.Attributes;
 using RPG.Control;
 using UnityEngine;
 
@@ -23,6 +24,11 @@ namespace RPG.Dialogue
 
         public bool HandleRaycast(PlayerController callingController)
         {
+            if(GetComponent<Health>().IsDead() == true) 
+            {
+                return false;
+            }
+            
             if(dialogue == null)
             {
                 return false;

@@ -42,7 +42,7 @@ namespace RPG.Core
         [System.Serializable]
         class Predicate
         {
-            [SerializeField] string predicate;
+            [SerializeField] RPG.Core.Predicate predicate;
             [SerializeField] string[] parameters;
             [SerializeField] bool negate = false;
 

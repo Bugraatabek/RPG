@@ -25,8 +25,7 @@ MonoBehaviour:
   onEnterAction: 0
   onExitAction: 0
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-6968903894139193798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,8 +51,7 @@ MonoBehaviour:
   onEnterAction: 0
   onExitAction: 0
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-3403663416507945265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,8 +76,7 @@ MonoBehaviour:
   onEnterAction: 0
   onExitAction: 0
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-2204335713763127571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,8 +102,7 @@ MonoBehaviour:
   onEnterAction: 0
   onExitAction: 0
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-1767544466323798086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,8 +129,7 @@ MonoBehaviour:
   onEnterAction: 0
   onExitAction: 0
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-937358798260474416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,8 +156,7 @@ MonoBehaviour:
   onEnterAction: 0
   onExitAction: 0
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,8 +207,7 @@ MonoBehaviour:
   onEnterAction: 0
   onExitAction: 0
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &1308379196300349442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,8 +233,7 @@ MonoBehaviour:
   onEnterAction: 0
   onExitAction: 0
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &6510910616901471152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,8 +258,7 @@ MonoBehaviour:
   onEnterAction: 0
   onExitAction: 1
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &7109449223874902967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,8 +284,7 @@ MonoBehaviour:
   onEnterAction: 0
   onExitAction: 0
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &8780263258582163393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,5 +311,4 @@ MonoBehaviour:
   onEnterAction: 0
   onExitAction: 0
   condition:
-    predicate: 
-    parameters: []
+    and: []

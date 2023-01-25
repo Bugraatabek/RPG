@@ -97,15 +97,13 @@ namespace RPG.Inventories
             return false;
         }
 
-        public bool? Evaluate(string predicate, string[] parameters)
+        public bool? Evaluate(Predicate predicate, string[] parameters)
         {
-            
             switch (predicate)
             {
-                case "HasInventoryItem":
+                case Predicate.HasInventoryItem:
                 return HasItem(InventoryItem.GetFromID(parameters[0]));
             }
-
             return null;
         }
 

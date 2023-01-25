@@ -52,7 +52,7 @@ MonoBehaviour:
   condition:
     and:
     - or:
-      - predicate: HasInventoryItem
+      - predicate: 3
         parameters:
         - 8eda62d8-b7c6-42e4-a0d8-23ea91002bc1
         negate: 0
@@ -118,8 +118,8 @@ MonoBehaviour:
   - 260a7041-aa68-4abd-b2a3-12a1b5e7f043
   rect:
     serializedVersion: 2
-    x: 387
-    y: 288
+    x: 383
+    y: 295
     width: 200
     height: 100
   onEnterAction: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   condition:
     and:
     - or:
-      - predicate: HasInventoryItem
+      - predicate: 3
         parameters:
         - 8eda62d8-b7c6-42e4-a0d8-23ea91002bc1
         negate: 1
