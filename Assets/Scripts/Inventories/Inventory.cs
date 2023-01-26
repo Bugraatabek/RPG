@@ -13,6 +13,11 @@ namespace RPG.Inventories
     /// </summary>
     public class Inventory : MonoBehaviour, ISaveable, IPredicateEvaluator
     {
+        // public bool? Evaluate(EPredicate predicate, string[] parameters)
+        // {
+            
+        // }
+
         // CONFIG DATA
         [Tooltip("Allowed size")]
         [SerializeField] int inventorySize = 16;
@@ -95,19 +100,6 @@ namespace RPG.Inventories
                 }
             }
             return false;
-        }
-
-        public bool? Evaluate(EPredicate predicate, string[] parameters)
-        {
-            switch (predicate)
-            {
-                case EPredicate.HasItem:
-                Debug.Log("parameter0" + parameters[0]);
-                Debug.Log("parameter1" + parameters[1]);
-                Debug.Log(HasItem(InventoryItem.GetFromID(parameters[0])));
-                return HasItem(InventoryItem.GetFromID(parameters[0]));
-            }
-            return null;
         }
 
         /// <summary>
@@ -266,6 +258,17 @@ namespace RPG.Inventories
             {
                 inventoryUpdated();
             }
+        }
+
+        public bool? Evaluate(EPredicate predicate, string[] parameters)
+        {
+            Debug.Log("Inventory" + " " + predicate);
+            switch (predicate)
+            {
+                case EPredicate.HasItem:
+                return HasItem(InventoryItem.GetFromID(parameters[0]));
+            }
+            return null;
         }
     }
 }

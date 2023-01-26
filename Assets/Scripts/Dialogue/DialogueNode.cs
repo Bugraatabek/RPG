@@ -12,6 +12,9 @@ namespace RPG.Dialogue
     { 
         [SerializeField] bool isPlayerSpeaking = false;
         [SerializeField] string text;
+        [SerializeField] bool isARootNode = false;
+        [Tooltip("Shows the priority of the node. 0 means most prior. If 2 nodes meets the conditions to be the Root Node. Priority will decide. Updates Automatically.")]
+        [SerializeField] int rootNodePriority;
         [SerializeField] List<string> children = new List<string>();
         [SerializeField] Rect rect = new Rect(10,10,200,100);
         
@@ -19,7 +22,7 @@ namespace RPG.Dialogue
         [SerializeField] ETrigger onExitAction;
 
         [SerializeField] Condition condition;
-
+        
         public string GetText()
         {
             return text;
@@ -59,10 +62,26 @@ namespace RPG.Dialogue
             return onExitAction;
         }
 
-        public bool CheckCondition(IEnumerable<IPredicateEvaluator> evaluators)
+        public bool CheckCondition(List<IPredicateEvaluator> evaluators)
         {
             return condition.Check(evaluators);
         }
+
+        public bool GetIsARootNode()
+        {
+            return isARootNode;
+        }
+
+        public void SetRootNode(bool rootNode)
+        {
+            isARootNode = rootNode;
+        }
+
+        public void SetRootNodePriority(int number)
+        {
+            rootNodePriority = number;
+        }
+
 
 
 #if UNITY_EDITOR

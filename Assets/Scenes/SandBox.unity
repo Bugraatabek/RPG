@@ -1748,7 +1748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4357378707522591478, guid: 19928ff990350834c9eb373275040e2d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5329087263693298824, guid: 19928ff990350834c9eb373275040e2d, type: 3}
       propertyPath: chaseDistance
@@ -1764,7 +1764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8976416509344073345, guid: 19928ff990350834c9eb373275040e2d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.226494
+      value: -17.3
       objectReference: {fileID: 0}
     - target: {fileID: 8976416509344073345, guid: 19928ff990350834c9eb373275040e2d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1772,7 +1772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8976416509344073345, guid: 19928ff990350834c9eb373275040e2d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.552042
+      value: -10.88
       objectReference: {fileID: 0}
     - target: {fileID: 8976416509344073345, guid: 19928ff990350834c9eb373275040e2d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6225,6 +6225,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 416864, guid: d66c89601ce96d4419ce36a4dce3c401, type: 3}
   m_PrefabInstance: {fileID: 1274058956}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1620628604 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4357378707522591478, guid: 19928ff990350834c9eb373275040e2d, type: 3}
+  m_PrefabInstance: {fileID: 465936393}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1620628618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620628604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ce6d68ef2296b4dabd7049d047b571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AIName: TestingGuy
+  dialogue: {fileID: 11400000, guid: 090335d62f0dbd54ca8420d7aa04c474, type: 2}
 --- !u!4 &1629314647 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8149529801921998213, guid: 9e407101b7a77784fb6743bf6e7bde3a, type: 3}
@@ -10199,7 +10218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1387692220688953341, guid: 3232a6bdc43df9e4793fcde91ddff8aa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -420.7497
+      value: -303.895
       objectReference: {fileID: 0}
     - target: {fileID: 1388035165072389821, guid: 3232a6bdc43df9e4793fcde91ddff8aa, type: 3}
       propertyPath: m_AnchorMax.x

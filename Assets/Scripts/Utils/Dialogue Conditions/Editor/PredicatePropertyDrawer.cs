@@ -14,7 +14,8 @@ namespace RPG.Utils.Editor
         
         private Dictionary<string, Quest> quests;
         private Dictionary<string, InventoryItem> items;
-        
+
+       
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
             SerializedProperty predicate = property.FindPropertyRelative("predicate");
@@ -35,6 +36,8 @@ namespace RPG.Utils.Editor
             }
             SerializedProperty parameterZero = parameters.GetArrayElementAtIndex(0);
             SerializedProperty parameterOne = parameters.GetArrayElementAtIndex(1);
+            Debug.Log(parameterZero.stringValue);
+            Debug.Log(parameterOne.stringValue);
             if (selectedPredicate == EPredicate.HasQuest || selectedPredicate == EPredicate.CompletedQuest || selectedPredicate == EPredicate.CompletedObjective)
             {
                 position.y += propHeight;
@@ -123,13 +126,14 @@ namespace RPG.Utils.Editor
             BuildInventoryItemsList();
             
             List<string> ids = items.Keys.ToList();
-            if (stackable) 
+            if (stackable == true) 
             {
                 ids = ids.Where(s => items[s].IsStackable()).ToList();
             }    
-            if (equipment)
+            
+            if (equipment == true)
             {   
-                ids = ids.Where(s => items[s] is EquipableItem e).ToList();
+                ids = ids.Where(s => items[s] is EquipableItem equipableItem).ToList();
             } 
 
             List<string> displayNames = new List<string>();

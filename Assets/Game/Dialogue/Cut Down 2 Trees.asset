@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
   text: Good job, now we can start a fire going.
+  isARootNode: 0
+  rootNodePriority: 0
   children: []
   rect:
     serializedVersion: 2
@@ -39,6 +41,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
   text: Yes, here are 2 trees.
+  isARootNode: 0
+  rootNodePriority: 0
   children:
   - 315cd762-5c9d-4c81-8f59-b524e8727ef0
   rect:
@@ -65,6 +69,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
   text: Did you get the wood?
+  isARootNode: 1
+  rootNodePriority: 0
   children:
   - 27a8516e-b800-4371-a3c4-23e74f54ae9e
   - 7073a2a9-16db-4fb4-b32b-8b4607cf17ce
@@ -98,6 +104,8 @@ MonoBehaviour:
   - {fileID: -5969811673704510375}
   - {fileID: 7574665273032518462}
   - {fileID: 5337348358141879662}
+  rootNodes:
+  - {fileID: -286962348263196693}
   newNodeOffset: 300
 --- !u!114 &3284688463172597141
 MonoBehaviour:
@@ -113,6 +121,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
   text: No, i am still working on it.
+  isARootNode: 0
+  rootNodePriority: 0
   children:
   - 36dd15e2-257f-41dd-9d06-972906e8b5b4
   rect:
@@ -139,6 +149,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
   text: Let's cook the meat!!
+  isARootNode: 0
+  rootNodePriority: 0
   children: []
   rect:
     serializedVersion: 2
@@ -164,6 +176,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
   text: We are counting on you.
+  isARootNode: 0
+  rootNodePriority: 0
   children: []
   rect:
     serializedVersion: 2

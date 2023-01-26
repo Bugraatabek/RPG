@@ -22,9 +22,23 @@ namespace RPG.Dialogue
         {
             currentConversant = newConversant;
             currentDialogue = newDialogue;
-            currentNode = currentDialogue.GetRootNode();
+            currentNode = GetFirstAvailableRootNode();
             TriggerEnterAction();
             onConversationUpdated();
+        }
+
+        private DialogueNode GetFirstAvailableRootNode()
+        {
+            List<DialogueNode> rootNodes = currentDialogue.GetRootNodes() as List<DialogueNode>;
+
+            for (int i = 0; i < rootNodes.Count(); i++)
+            {
+                if(rootNodes[i].CheckCondition(GetEvaluators()) == true)
+                {
+                    return rootNodes[i];
+                }
+            }
+            return currentDialogue.GetRootNode();
         }
 
         public void Next()
@@ -122,9 +136,9 @@ namespace RPG.Dialogue
             }
         }
 
-        private IEnumerable<IPredicateEvaluator> GetEvaluators()
+        private List<IPredicateEvaluator> GetEvaluators()
         {
-            return GetComponents<IPredicateEvaluator>();
+            return GetComponents<IPredicateEvaluator>().ToList<IPredicateEvaluator>();
         }
 
         public string GetText()

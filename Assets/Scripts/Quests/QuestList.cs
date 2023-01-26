@@ -71,7 +71,6 @@ namespace RPG.Quests
                 // var status = GetQuestStatus(Quest.GetByName(parameters[0]));
                 // return status.IsObjectiveCompleted(Quest.GetByName(parameters[0]).ObjectiveLookup(parameters[1]));
             }
-
             return null;
         }
 

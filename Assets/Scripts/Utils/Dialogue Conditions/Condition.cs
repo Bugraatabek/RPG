@@ -9,7 +9,7 @@ namespace RPG.Utils
     {
         [SerializeField] Disjunction[] and;
 
-        public bool Check(IEnumerable<IPredicateEvaluator> evaluators)
+        public bool Check(List<IPredicateEvaluator> evaluators)
             {
                 foreach (Disjunction disjunction in and)
                 {
@@ -26,7 +26,7 @@ namespace RPG.Utils
         {
             [SerializeField] Predicate[] or;
             
-            public bool Check(IEnumerable<IPredicateEvaluator> evaluators)
+            public bool Check(List<IPredicateEvaluator> evaluators)
             {
                 foreach (Predicate predicate in or)
                 {
@@ -46,7 +46,7 @@ namespace RPG.Utils
             [SerializeField] string[] parameters;
             [SerializeField] bool negate = false;
 
-            public bool Check(IEnumerable<IPredicateEvaluator> evaluators)
+            public bool Check(List<IPredicateEvaluator> evaluators)
             {
                 foreach (var evaluator in evaluators)
                 {

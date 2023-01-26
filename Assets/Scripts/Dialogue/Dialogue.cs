@@ -10,6 +10,7 @@ namespace RPG.Dialogue
     public class Dialogue : ScriptableObject, ISerializationCallbackReceiver
     {
         [SerializeField] List<DialogueNode> nodes = new List<DialogueNode>();
+        [SerializeField] List<DialogueNode> rootNodes = new List<DialogueNode>();
         Dictionary<string, DialogueNode> nodeLookup = new Dictionary<string, DialogueNode>();
         [SerializeField] float newNodeOffset = 300;
        
@@ -26,7 +27,12 @@ namespace RPG.Dialogue
 
         public DialogueNode GetRootNode()
         {
-            return nodes[0];
+            return rootNodes[0];
+        }
+        
+        public IEnumerable<DialogueNode> GetRootNodes()
+        {
+            return rootNodes;
         }
 
         private void BuildLookupDict()
@@ -94,7 +100,6 @@ namespace RPG.Dialogue
         {
             nodes.Add(newNode);
             OnValidate();
-            
         }
 
         private DialogueNode MakeNode(DialogueNode parent)
@@ -148,12 +153,39 @@ namespace RPG.Dialogue
 
         public void OnBeforeSerialize()
         {
-#if UNITY_EDITOR            
+#if UNITY_EDITOR
+            
             if(nodes.Count == 0)
             {
                 DialogueNode newNode = MakeNode(null);
                 AddNode(newNode);
+                rootNodes.Add(newNode);
+                newNode.SetRootNode(true);
             }
+
+            foreach (DialogueNode node in nodes)
+            {
+                if(node.GetIsARootNode() == true)
+                {
+                    if(!rootNodes.Contains(node))
+                    {
+                        rootNodes.Add(node);
+                    }
+                }
+                if(node.GetIsARootNode() == false)
+                {
+                    if(rootNodes.Contains(node))
+                    {
+                        rootNodes.Remove(node);
+                    }
+                }
+            }
+
+            for (int i = 0; i < rootNodes.Count; i++)
+            {
+                rootNodes[i].SetRootNodePriority(i);
+            }
+            
 #endif    
             if(AssetDatabase.GetAssetPath(this) != "")
             {
@@ -170,5 +202,7 @@ namespace RPG.Dialogue
         public void OnAfterDeserialize()
         {
         }
+
+        
     }
 }

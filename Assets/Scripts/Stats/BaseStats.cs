@@ -130,14 +130,14 @@ namespace RPG.Stats
 
         public bool? Evaluate(EPredicate predicate, string[] parameters)
         {
-            if(predicate == EPredicate.Select) return null;
-            if(predicate == EPredicate.HasLevel)
+            switch(predicate)
             {
+                case EPredicate.HasLevel:
                 var playerLevel = GetLevel();
                 int levelToCheck = Int32.Parse(parameters[0]);
                 return playerLevel >= levelToCheck;
             }
-            return false;
+            return null;
         }
     }
 }

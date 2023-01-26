@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
   text: God bless you!!
+  isARootNode: 0
+  rootNodePriority: 0
   children: []
   rect:
     serializedVersion: 2
@@ -39,6 +41,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
   text: I've found the secret ingridient
+  isARootNode: 0
+  rootNodePriority: 0
   children:
   - 70b4ea9b-4b61-4ac6-8e62-4da4875e2735
   rect:
@@ -78,6 +82,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   text: Oh well, this will make anything to a feast. This is even better than the
     meat. Villagers will be so happy. Good job young man.
+  isARootNode: 0
+  rootNodePriority: 0
   children: []
   rect:
     serializedVersion: 2
@@ -113,6 +119,8 @@ MonoBehaviour:
   - {fileID: -8323483222216147607}
   - {fileID: -8298057703434726369}
   - {fileID: -6027638162152320134}
+  rootNodes:
+  - {fileID: 6554258495112276155}
   newNodeOffset: 300
 --- !u!114 &1352603748006314108
 MonoBehaviour:
@@ -128,6 +136,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
   text: Thank you young man, here is what you need to do.
+  isARootNode: 0
+  rootNodePriority: 0
   children: []
   rect:
     serializedVersion: 2
@@ -153,6 +163,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
   text: I've feeded the poor villagers!
+  isARootNode: 0
+  rootNodePriority: 0
   children:
   - 7632ca7a-806d-43d9-91b4-63d9fe221fe4
   rect:
@@ -191,6 +203,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
   text: Oops, bad memory.
+  isARootNode: 0
+  rootNodePriority: 0
   children: []
   rect:
     serializedVersion: 2
@@ -216,6 +230,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
   text: God damn you!
+  isARootNode: 0
+  rootNodePriority: 0
   children: []
   rect:
     serializedVersion: 2
@@ -241,6 +257,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
   text: I am already on the case.
+  isARootNode: 0
+  rootNodePriority: 0
   children:
   - b0dd39e1-be5b-4700-a482-a24a9811a556
   rect:
@@ -273,6 +291,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
   text: Yes
+  isARootNode: 0
+  rootNodePriority: 0
   children:
   - eea9c993-4f23-48d3-98d9-ee15cfd96f16
   rect:
@@ -305,6 +325,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
   text: Can you help me to feed the poor?
+  isARootNode: 1
+  rootNodePriority: 0
   children:
   - ddc7feef-a8e1-4ff5-a8c9-36fb5d323851
   - 6ebdc4c7-54a5-41e8-9791-850ed0317e04
@@ -313,8 +335,8 @@ MonoBehaviour:
   - 5b74715f-772b-4cff-b925-ff9d2081e334
   rect:
     serializedVersion: 2
-    x: 56
-    y: 158
+    x: 25
+    y: 358
     width: 200
     height: 100
   onEnterAction: 0
@@ -335,6 +357,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
   text: No
+  isARootNode: 0
+  rootNodePriority: 0
   children:
   - ba4b4661-6159-41b3-be59-93d31f9fd7c0
   rect:

@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
   text: Good job!
+  isARootNode: 0
+  rootNodePriority: 0
   children: []
   rect:
     serializedVersion: 2
@@ -39,6 +41,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
   text: Yes, here is the meat.
+  isARootNode: 0
+  rootNodePriority: 0
   children:
   - ed1bc989-63c1-46c4-bc77-9d15ae345250
   rect:
@@ -69,6 +73,8 @@ MonoBehaviour:
   - {fileID: 5839662457917124881}
   - {fileID: -8235599519072513019}
   - {fileID: 970513955828432054}
+  rootNodes:
+  - {fileID: 8858830633942791704}
   newNodeOffset: 300
 --- !u!114 &970513955828432054
 MonoBehaviour:
@@ -84,6 +90,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
   text: We are counting on you.
+  isARootNode: 0
+  rootNodePriority: 0
   children: []
   rect:
     serializedVersion: 2
@@ -109,6 +117,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
   text: Still working on it.
+  isARootNode: 0
+  rootNodePriority: 0
   children:
   - 260a7041-aa68-4abd-b2a3-12a1b5e7f043
   rect:
@@ -135,6 +145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
   text: Did you kill the boars?
+  isARootNode: 1
+  rootNodePriority: 0
   children:
   - 374f982d-c8ae-4271-928a-a428d74b89e2
   - 54da0403-188a-4220-b6d5-3711ce420953
