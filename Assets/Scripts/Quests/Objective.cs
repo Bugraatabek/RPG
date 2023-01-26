@@ -8,8 +8,8 @@ namespace RPG.Quests
         [System.Serializable]
         public class Objective
         {
-            public ETrigger triggerType;
-            public string text;
+            public string description;
             public string reference;
+            public ETrigger triggerType;
         }
 }

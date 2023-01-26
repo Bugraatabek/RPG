@@ -43,7 +43,7 @@ MonoBehaviour:
   - 315cd762-5c9d-4c81-8f59-b524e8727ef0
   rect:
     serializedVersion: 2
-    x: 325
+    x: 328
     y: 80
     width: 200
     height: 100
@@ -68,6 +68,7 @@ MonoBehaviour:
   children:
   - 27a8516e-b800-4371-a3c4-23e74f54ae9e
   - 7073a2a9-16db-4fb4-b32b-8b4607cf17ce
+  - ee90526d-6281-4b2a-b40e-9554c9326563
   rect:
     serializedVersion: 2
     x: 24
@@ -96,6 +97,7 @@ MonoBehaviour:
   - {fileID: 3284688463172597141}
   - {fileID: -5969811673704510375}
   - {fileID: 7574665273032518462}
+  - {fileID: 5337348358141879662}
   newNodeOffset: 300
 --- !u!114 &3284688463172597141
 MonoBehaviour:
@@ -115,8 +117,33 @@ MonoBehaviour:
   - 36dd15e2-257f-41dd-9d06-972906e8b5b4
   rect:
     serializedVersion: 2
-    x: 325
-    y: 312
+    x: 328
+    y: 317
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and: []
+--- !u!114 &5337348358141879662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: ee90526d-6281-4b2a-b40e-9554c9326563
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Let's cook the meat!!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 342
+    y: 532
     width: 200
     height: 100
   onEnterAction: 0
@@ -140,8 +167,8 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 625
-    y: 312
+    x: 623
+    y: 316
     width: 200
     height: 100
   onEnterAction: 0

@@ -102,6 +102,9 @@ namespace RPG.Inventories
             switch (predicate)
             {
                 case EPredicate.HasItem:
+                Debug.Log("parameter0" + parameters[0]);
+                Debug.Log("parameter1" + parameters[1]);
+                Debug.Log(HasItem(InventoryItem.GetFromID(parameters[0])));
                 return HasItem(InventoryItem.GetFromID(parameters[0]));
             }
             return null;

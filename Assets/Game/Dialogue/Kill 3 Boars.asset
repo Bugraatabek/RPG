@@ -17,8 +17,8 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 683
-    y: 79
+    x: 694
+    y: 144
     width: 200
     height: 100
   onEnterAction: 0
@@ -43,20 +43,14 @@ MonoBehaviour:
   - ed1bc989-63c1-46c4-bc77-9d15ae345250
   rect:
     serializedVersion: 2
-    x: 385
-    y: 82
+    x: 368
+    y: 148
     width: 200
     height: 100
   onEnterAction: 0
   onExitAction: 0
   condition:
-    and:
-    - or:
-      - predicate: 3
-        parameters:
-        - Feed the poor.
-        - 8eda62d8-b7c6-42e4-a0d8-23ea91002bc1
-        negate: 0
+    and: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,8 +87,8 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 675
-    y: 287
+    x: 709
+    y: 352
     width: 200
     height: 100
   onEnterAction: 0
@@ -119,20 +113,14 @@ MonoBehaviour:
   - 260a7041-aa68-4abd-b2a3-12a1b5e7f043
   rect:
     serializedVersion: 2
-    x: 383
-    y: 295
+    x: 366
+    y: 363
     width: 200
     height: 100
   onEnterAction: 0
   onExitAction: 0
   condition:
-    and:
-    - or:
-      - predicate: 3
-        parameters:
-        - Feed the poor.
-        - 8eda62d8-b7c6-42e4-a0d8-23ea91002bc1
-        negate: 1
+    and: []
 --- !u!114 &8858830633942791704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,8 +140,8 @@ MonoBehaviour:
   - 54da0403-188a-4220-b6d5-3711ce420953
   rect:
     serializedVersion: 2
-    x: 54
-    y: 179
+    x: 29
+    y: 281
     width: 200
     height: 100
   onEnterAction: 0

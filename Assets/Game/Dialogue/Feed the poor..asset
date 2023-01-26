@@ -43,8 +43,8 @@ MonoBehaviour:
   - 70b4ea9b-4b61-4ac6-8e62-4da4875e2735
   rect:
     serializedVersion: 2
-    x: 397
-    y: 659
+    x: 395
+    y: 661
     width: 200
     height: 100
   onEnterAction: 0
@@ -52,20 +52,17 @@ MonoBehaviour:
   condition:
     and:
     - or:
+      - predicate: 6
+        parameters:
+        - 62e7ebf7-f1e3-414c-8e80-5a7c5b2882a1
+        - 
+        negate: 0
+    - or:
       - predicate: 1
         parameters:
         - Feed the poor.
+        - 
         negate: 0
-    - or:
-      - predicate: 3
-        parameters:
-        - f837f1b8-c6cb-4c0d-868a-c7d6e8accd08
-        negate: 0
-    - or:
-      - predicate: 2
-        parameters:
-        - Feed the poor.
-        negate: 1
 --- !u!114 &-6027638162152320134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,21 +88,7 @@ MonoBehaviour:
   onEnterAction: 0
   onExitAction: 0
   condition:
-    and:
-    - or:
-      - predicate: 0
-        parameters:
-        - Feed the poor.
-        negate: 0
-    - or:
-      - predicate: 0
-        parameters:
-        - Feed the poor.
-        negate: 0
-      - predicate: 0
-        parameters:
-        - f837f1b8-c6cb-4c0d-868a-c7d6e8accd08
-        negate: 0
+    and: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,8 +157,8 @@ MonoBehaviour:
   - 7632ca7a-806d-43d9-91b4-63d9fe221fe4
   rect:
     serializedVersion: 2
-    x: 399
-    y: 499
+    x: 392
+    y: 498
     width: 200
     height: 100
   onEnterAction: 0
@@ -186,11 +169,13 @@ MonoBehaviour:
       - predicate: 1
         parameters:
         - Feed the poor.
+        - 
         negate: 0
     - or:
-      - predicate: 2
+      - predicate: 3
         parameters:
         - Feed the poor.
+        - 
         negate: 0
 --- !u!114 &2486843935209114651
 MonoBehaviour:
@@ -216,11 +201,7 @@ MonoBehaviour:
   onEnterAction: 0
   onExitAction: 0
   condition:
-    and:
-    - or:
-      - predicate: 0
-        parameters: []
-        negate: 0
+    and: []
 --- !u!114 &3115956034746491862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,11 +226,7 @@ MonoBehaviour:
   onEnterAction: 0
   onExitAction: 0
   condition:
-    and:
-    - or:
-      - predicate: 0
-        parameters: []
-        negate: 0
+    and: []
 --- !u!114 &3850797919262814396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,8 +245,8 @@ MonoBehaviour:
   - b0dd39e1-be5b-4700-a482-a24a9811a556
   rect:
     serializedVersion: 2
-    x: 401
-    y: 355
+    x: 393
+    y: 358
     width: 200
     height: 100
   onEnterAction: 0
@@ -277,17 +254,11 @@ MonoBehaviour:
   condition:
     and:
     - or:
-      - predicate: 7
+      - predicate: 1
         parameters:
         - Feed the poor.
-        - Feed the poor.
+        - 
         negate: 0
-    - or:
-      - predicate: 2
-        parameters:
-        - Feed the poor.
-        - Feed the poor.
-        negate: 1
 --- !u!114 &4018055364547241723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,8 +277,8 @@ MonoBehaviour:
   - eea9c993-4f23-48d3-98d9-ee15cfd96f16
   rect:
     serializedVersion: 2
-    x: 415
-    y: 72
+    x: 392
+    y: 68
     width: 200
     height: 100
   onEnterAction: 0
@@ -318,6 +289,7 @@ MonoBehaviour:
       - predicate: 1
         parameters:
         - Feed the poor.
+        - 
         negate: 1
 --- !u!114 &6554258495112276155
 MonoBehaviour:
@@ -367,8 +339,8 @@ MonoBehaviour:
   - ba4b4661-6159-41b3-be59-93d31f9fd7c0
   rect:
     serializedVersion: 2
-    x: 400
-    y: 197
+    x: 392
+    y: 209
     width: 200
     height: 100
   onEnterAction: 0
@@ -379,4 +351,5 @@ MonoBehaviour:
       - predicate: 1
         parameters:
         - Feed the poor.
+        - 
         negate: 1

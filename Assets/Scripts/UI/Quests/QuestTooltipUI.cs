@@ -31,12 +31,12 @@ namespace RPG.UI.Quests
                 if(questStatus.IsObjectiveCompleted(objective) == true)
                 {
                     var completedObjectiveInstance = Instantiate(completedObjectivePrefab, objectiveList);
-                    completedObjectiveInstance.GetComponentInChildren<TextMeshProUGUI>().text = objective.text;
+                    completedObjectiveInstance.GetComponentInChildren<TextMeshProUGUI>().text = objective.description;
                 }
                 else
                 {
                     var objectiveInstance = Instantiate(objectivePrefab, objectiveList);
-                    objectiveInstance.GetComponentInChildren<TextMeshProUGUI>().text = objective.text; 
+                    objectiveInstance.GetComponentInChildren<TextMeshProUGUI>().text = objective.description; 
                 }
             }
                 rewardText.text = GetRewardText(quest);

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace RPG.Stats
 {
-    public class BaseStats : MonoBehaviour
+    public class BaseStats : MonoBehaviour, IPredicateEvaluator
     {
         [Range(1,99)] [SerializeField] int level = 1;
         [SerializeField] CharacterClass characterClass;
@@ -109,15 +109,6 @@ namespace RPG.Stats
         {
             if( experience == null) {return level;}
             return currentLevel.value;
-            // if (currentLevel < 1) before lazy value currentLevel was set to 0. so against any race conditions in case the currentLevel wasn't set, this is a safeguard.
-            // the progression is calling [level - 1] so level gets calculated as (0 - 1 = -1) and this is out of bounds of the array so it was throwing an exception 
-            // {
-            //     currentLevel = CalculateLevel(); this will calculate the level and return the "wanted" value of currentLevel
-                    
-            // } 
-            // return currentLevel;
-            // with lazyvalue we are making sure that currentLevel is set to wanted value whenever its needed, so we don't use this safeguard anymore.
-
         }
 
         public int CalculateLevel()
@@ -137,6 +128,16 @@ namespace RPG.Stats
             return penultimateLevel + 1;
         }
 
-        
+        public bool? Evaluate(EPredicate predicate, string[] parameters)
+        {
+            if(predicate == EPredicate.Select) return null;
+            if(predicate == EPredicate.HasLevel)
+            {
+                var playerLevel = GetLevel();
+                int levelToCheck = Int32.Parse(parameters[0]);
+                return playerLevel >= levelToCheck;
+            }
+            return false;
+        }
     }
 }

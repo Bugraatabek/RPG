@@ -1,9 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace RPG.Utils
-{
+    [System.Serializable]
     public enum EPredicate
     {
         Select,   //0 - no handlers will be handling Select, it's a placeholder to remind us to choose a predicate
@@ -17,4 +12,3 @@ namespace RPG.Utils
         HasItemEquipped //1, Equipment needs the ID of the item.
 
     }
-}

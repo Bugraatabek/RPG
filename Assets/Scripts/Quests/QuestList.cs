@@ -66,6 +66,10 @@ namespace RPG.Quests
 
                 case EPredicate.CompletedQuest:
                 return GetQuestStatus(Quest.GetByName(parameters[0])).IsComplete();
+
+                // case EPredicate.CompletedObjective:
+                // var status = GetQuestStatus(Quest.GetByName(parameters[0]));
+                // return status.IsObjectiveCompleted(Quest.GetByName(parameters[0]).ObjectiveLookup(parameters[1]));
             }
 
             return null;

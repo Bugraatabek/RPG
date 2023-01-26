@@ -22,7 +22,7 @@ namespace RPG.Utils
             }
 
         [System.Serializable]
-        class Disjunction
+        public class Disjunction
         {
             [SerializeField] Predicate[] or;
             

@@ -29,7 +29,7 @@ namespace RPG.Inventories
         [SerializeField] bool stackable = false;
 
         // STATE
-        static Dictionary<string, InventoryItem> itemLookupCache = null;
+        static Dictionary<string, InventoryItem> itemLookupCache;
 
         // PUBLIC
 
@@ -44,7 +44,7 @@ namespace RPG.Inventories
         /// </returns>
         public static InventoryItem GetFromID(string itemID)
         {
-            
+            Debug.Log("GetfromID" + itemID);
             if (itemLookupCache == null)
             {
                 itemLookupCache = new Dictionary<string, InventoryItem>();
