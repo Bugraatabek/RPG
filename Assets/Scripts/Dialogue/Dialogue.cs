@@ -154,50 +154,70 @@ namespace RPG.Dialogue
         public void OnBeforeSerialize()
         {
 #if UNITY_EDITOR
-            
-            if(nodes.Count == 0)
+
+            if (nodes.Count == 0)
             {
                 DialogueNode newNode = MakeNode(null);
                 AddNode(newNode);
                 rootNodes.Add(newNode);
                 newNode.SetRootNode(true);
             }
+            UpdateRootNodes();
+            SetRootNodePriority();
 
+#endif
+            if (AssetDatabase.GetAssetPath(this) != "")
+            {
+                foreach (DialogueNode node in GetAllNodes())
+                {
+                    if (AssetDatabase.GetAssetPath(node) == "")
+                    {
+                        AssetDatabase.AddObjectToAsset(node, this);
+                    }
+                }
+            }
+        }
+
+        
+#if UNITY_EDITOR
+        private void SetRootNodePriority()
+        {
+            for (int i = 0; i < rootNodes.Count; i++)
+            {
+                rootNodes[i].SetRootNodePriority(i);
+            }
+        }
+
+        private void UpdateRootNodes()
+        {
+            
             foreach (DialogueNode node in nodes)
             {
-                if(node.GetIsARootNode() == true)
+                if(node.IsARootNode() == true && node.IsPlayerSpeaking())
                 {
-                    if(!rootNodes.Contains(node))
+                    node.SetRootNode(false);
+                }
+
+                if (node.IsARootNode() == true && !node.IsPlayerSpeaking())
+                {
+                    if (!rootNodes.Contains(node))
                     {
                         rootNodes.Add(node);
                     }
                 }
-                if(node.GetIsARootNode() == false)
+
+                if (node.IsARootNode() == false)
                 {
-                    if(rootNodes.Contains(node))
+                    if (rootNodes.Contains(node))
                     {
                         rootNodes.Remove(node);
                     }
                 }
             }
-
-            for (int i = 0; i < rootNodes.Count; i++)
-            {
-                rootNodes[i].SetRootNodePriority(i);
-            }
-            
-#endif    
-            if(AssetDatabase.GetAssetPath(this) != "")
-            {
-                foreach (DialogueNode node in GetAllNodes())
-                {
-                    if(AssetDatabase.GetAssetPath(node) == "")
-                    {
-                        AssetDatabase.AddObjectToAsset(node ,this);
-                    }
-                }
-            }        
         }
+#endif        
+
+        
 
         public void OnAfterDeserialize()
         {

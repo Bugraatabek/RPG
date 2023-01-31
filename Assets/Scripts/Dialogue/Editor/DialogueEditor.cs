@@ -201,7 +201,7 @@ namespace RPG.Dialogue.Editor
                 style = playerNodeStyle;
             }
 
-            if(node.GetIsARootNode() && !node.IsPlayerSpeaking())
+            if(node.IsARootNode() && !node.IsPlayerSpeaking())
             {
                 style = rootNodeStyle;
             }

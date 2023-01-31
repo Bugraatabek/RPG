@@ -62,12 +62,12 @@ namespace RPG.Dialogue
             return onExitAction;
         }
 
-        public bool CheckCondition(List<IPredicateEvaluator> evaluators)
+        public bool CheckCondition(IEnumerable<IPredicateEvaluator> evaluators)
         {
             return condition.Check(evaluators);
         }
 
-        public bool GetIsARootNode()
+        public bool IsARootNode()
         {
             return isARootNode;
         }

@@ -136,9 +136,9 @@ namespace RPG.Dialogue
             }
         }
 
-        private List<IPredicateEvaluator> GetEvaluators()
+        private IEnumerable<IPredicateEvaluator> GetEvaluators()
         {
-            return GetComponents<IPredicateEvaluator>().ToList<IPredicateEvaluator>();
+            return GetComponents<IPredicateEvaluator>();
         }
 
         public string GetText()

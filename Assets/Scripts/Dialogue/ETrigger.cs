@@ -9,6 +9,8 @@ namespace RPG.Dialogue
         Select,
         Attack,
         GiveQuest,
+        GiveReward,
+        CompleteQuest,
         Objective1,
         Objective2,
         Objective3,
@@ -18,6 +20,8 @@ namespace RPG.Dialogue
         Objective7,
         Objective8,
         Objective9,
-        GiveReward,
+
+        
+
     }
 }
