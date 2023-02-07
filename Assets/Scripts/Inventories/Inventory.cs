@@ -2,6 +2,7 @@
 using UnityEngine;
 using RPG.Saving;
 using RPG.Utils;
+using System.Collections.Generic;
 
 namespace RPG.Inventories
 {
@@ -55,6 +56,37 @@ namespace RPG.Inventories
             return FindSlot(item) >= 0;
         }
 
+        public bool HasSpaceFor(IEnumerable<InventoryItem> items)
+        {
+            int count = 0;
+            foreach (var item in items)
+            {
+                if(HasItem(item) && item.IsStackable())
+                {
+                    break;
+                }
+                
+                else
+                {
+                    count++;
+                }
+                
+            }
+            return count <= FreeSlots();
+        }
+
+        public int FreeSlots()
+        {
+            int count = 0;
+            foreach (InventorySlot slot in slots)
+            {
+                if(slot.number == 0)
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
         /// <summary>
         /// How many slots are in the inventory?
         /// </summary>
@@ -62,6 +94,7 @@ namespace RPG.Inventories
         {
             return slots.Length;
         }
+
 
         /// <summary>
         /// Attempt to add the items to the first available slot.

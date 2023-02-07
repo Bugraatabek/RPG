@@ -27,6 +27,9 @@ namespace RPG.Inventories
         [SerializeField] Pickup pickup = null;
         [Tooltip("If true, multiple items of this type can be stacked in the same inventory slot.")]
         [SerializeField] bool stackable = false;
+        [SerializeField] float price;
+        [Tooltip("Where are we allowed to put this item in Shop")]
+        [SerializeField] ItemCategory shopCategory = ItemCategory.None;
 
         // STATE
         static Dictionary<string, InventoryItem> itemLookupCache;
@@ -44,7 +47,6 @@ namespace RPG.Inventories
         /// </returns>
         public static InventoryItem GetFromID(string itemID)
         {
-            Debug.Log("GetfromID" + itemID);
             if (itemLookupCache == null)
             {
                 itemLookupCache = new Dictionary<string, InventoryItem>();
@@ -79,6 +81,11 @@ namespace RPG.Inventories
             return pickup;
         }
 
+        public float GetPrice()
+        {
+            return price;
+        }
+
         public Sprite GetIcon()
         {
             return icon;
@@ -102,6 +109,11 @@ namespace RPG.Inventories
         public string GetDescription()
         {
             return description;
+        }
+
+        public ItemCategory GetItemCategory()
+        {
+            return shopCategory;
         }
 
         // PRIVATE

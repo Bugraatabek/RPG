@@ -12,10 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8674b52e838685446a77969fe40ecf22, type: 3}
   m_Name: Bow Enemy
   m_EditorClassIdentifier: 
+  itemID: 4199a767-56ea-4bc1-8ce2-aa79c317ae5e
+  displayName: 
+  description: 
+  icon: {fileID: 0}
+  pickup: {fileID: 0}
+  stackable: 0
+  price: 20
+  allowedEquipLocation: 5
+  additiveModifiers: []
+  percentageModifiers: []
   animatorOverride: {fileID: 22100000, guid: 65717682391eca94293ca2f76a8ef542, type: 2}
   equippedPrefab: {fileID: 490998698011861989, guid: b2d0b0233119e50448210cc3fc500346, type: 3}
-  weaponDamage: 5
   weaponRange: 10
-  weaponPercentageBonus: 20
   isRightHanded: 0
   projectile: {fileID: 1489204088058330386, guid: ea60edf112ea29f4e885a78f2ecd753b, type: 3}

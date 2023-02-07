@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Fireball
   m_EditorClassIdentifier: 
   itemID: dfbf2e2b-1347-49b1-bd19-5ea0c176dde5
-  displayName: 
+  displayName: Fireball
   description: 
   icon: {fileID: 21300000, guid: f82dfc5fc3c5a8f4080a3550427019c8, type: 3}
   pickup: {fileID: 4514242014125550805, guid: bdc218042868cec4089788a9d3a030e5, type: 3}
   stackable: 0
+  price: 20
+  shopCategory: 5
   allowedEquipLocation: 5
   additiveModifiers: []
   percentageModifiers: []

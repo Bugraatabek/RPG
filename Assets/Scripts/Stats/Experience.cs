@@ -12,10 +12,13 @@ namespace RPG.Stats
         public event Action onExperienceGained;
 
         
+
+        
         private void Update() 
         {
             GainExperienceWithKey();
         }
+        
         public void GainExperience(float experience)
         {  
             experiencePoints += experience;

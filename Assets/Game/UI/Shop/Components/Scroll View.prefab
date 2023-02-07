@@ -249,7 +249,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2338021137184077622}
   m_HandleRect: {fileID: 5498097175954479089}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -451,7 +451,6 @@ GameObject:
   - component: {fileID: 2892305554855141117}
   - component: {fileID: 3366214579111785506}
   - component: {fileID: 3277009516666736572}
-  - component: {fileID: 5536377424261667414}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -519,16 +518,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
---- !u!114 &5536377424261667414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7498393653123537595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05f49ec0ce4a6b5419bccf19ae67b5ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questPrefab: {fileID: 6711106297071397044, guid: 8a72dc2236196f24c919535fc0d753e9, type: 3}
