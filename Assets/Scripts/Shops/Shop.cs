@@ -12,9 +12,10 @@ namespace RPG.Shops
     public class Shop : MonoBehaviour, IRaycastable, ISaveable
     {
         [SerializeField] string shopName = "";
-        [SerializeField] StockItemConfig[] stockConfig;
         [Tooltip("buyingPrice - (buyingPrice * sellingDiscount/100)")]
         [SerializeField] float sellingDiscountPercentage = 10;
+        [SerializeField] float maximumBarterDiscount = 80;
+        [SerializeField] StockItemConfig[] stockConfig;
 
         [System.Serializable]
         class StockItemConfig
@@ -228,7 +229,7 @@ namespace RPG.Shops
             Dictionary<InventoryItem, float> prices = new Dictionary<InventoryItem, float>();
             foreach (StockItemConfig config in GetAvailableConfigs())
             {
-                float defaultPrice = config.item.GetPrice();
+                float defaultPrice = config.item.GetPrice() * GetBarterDiscount();
                 float shopPrice = defaultPrice - (defaultPrice * config.buyingDiscountPercentage / 100);
                 
                 if(!prices.ContainsKey(config.item))
@@ -245,6 +246,12 @@ namespace RPG.Shops
                 }
             }
             return prices;
+        }
+
+        private float GetBarterDiscount()
+        {
+            float discountPercentage = currentShopper.GetComponent<BaseStats>().GetStat(Stat.BuyingDiscountPercentage);
+            return (1 - Mathf.Min(discountPercentage, maximumBarterDiscount) / 100);
         }
 
         private IEnumerable<StockItemConfig> GetAvailableConfigs()

@@ -13,10 +13,23 @@ namespace RPG.Stats
         public float GetStat(Stat stat, CharacterClass characterClass, int level)
         {
             BuildLookup(); // building
+            
+            if(!lookupTable[characterClass].ContainsKey(stat))
+            {
+                Debug.Log($"Progression LookupDict Doesn't Contains The Key : {stat}");
+                return 0;
+            }
+            
             float[] levels = lookupTable[characterClass][stat]; // using dictionary instead of foreach loop because dictionaries are more efficent than loops especially nested loops
-            if(levels.Length < level) 
+            
+            if(levels.Length == 0)
             {
                 return 0;
+            }
+            
+            if(levels.Length < level) 
+            {
+                return levels[levels.Length - 1];
             }
             if(level <= 0)
             {
