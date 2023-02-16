@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e59e5d102a8f17043bf21d6d0ba8e79c, type: 3}
+  m_Name: Spawn Fireball
+  m_EditorClassIdentifier: 
+  projectileToSpawn: {fileID: -490913146649976542, guid: 40d5f6cfd0cd5994eba238d5ef2ae3fa, type: 3}
+  damage: 10
+  isRightHand: 0
+  useTargetPoint: 1

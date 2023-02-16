@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 949e075c175726a458d05bf60123d33c, type: 3}
+  m_Name: Ability Super Mega Splash
+  m_EditorClassIdentifier: 
+  itemID: 4dc7430f-5b7c-440c-a00d-11eea57274f7
+  displayName: Super Mega Splash
+  description: 
+  icon: {fileID: 21300000, guid: a1ec2c0ddc0da634b85f0f465fec2d0d, type: 3}
+  pickup: {fileID: 1231055717625040050, guid: 3d16b5ff209866543beace423afc8a79, type: 3}
+  stackable: 0
+  price: 200
+  shopCategory: 5
+  consumable: 0
+  targetingStrategy: {fileID: 11400000, guid: 5a318871fdb0a6b4688220302cab3e7a, type: 2}
+  filterStrategies:
+  - {fileID: 11400000, guid: 46efa02d56b516b4883fe31f562f2ba1, type: 2}
+  effectStrategies:
+  - {fileID: 11400000, guid: 8c0272f2ba9aef14e93103f308b0f323, type: 2}
+  - {fileID: 11400000, guid: 48da2814c24b9934983720a8e41f8f18, type: 2}
+  - {fileID: 11400000, guid: da08dac4dcadd6d4e922404d79b77982, type: 2}
+  cooldown: 3
+  manaCost: 20

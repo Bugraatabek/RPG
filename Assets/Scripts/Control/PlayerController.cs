@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using System;
 using UnityEngine.AI;
+using RPG.Inventories;
 
 namespace RPG.Control
 {
@@ -18,20 +19,26 @@ namespace RPG.Control
             public Vector2 hotspot;
         }
         [SerializeField] float maxNavMeshProjectionDistance = 1f;
+        
         [SerializeField] CursorMapping[] cursorMappings;
         Dictionary<CursorType, CursorMapping> cursorDict;
 
+        [SerializeField] int numberOfAbilities = 6;
+        ActionStore actionStore;
+
         bool isDragging = false;
         
-
-    
+        private void Awake() 
+        {
+            actionStore = GetComponent<ActionStore>();
+        }
         
         private void Start() 
         {
             BuildCursorMappingDict();
         }
         
-        void Update()
+        private void Update()
         {
             if(InteractWithUI()) return;
             
@@ -40,15 +47,17 @@ namespace RPG.Control
                 SetCursor(CursorType.None);
                 return;
             }
+
+            UseAbilities();
+
             if(InteractWithComponent()) return;
-            
             if (InteractWithCombat()) return;
             if (InteractWithMovement()) return;
             
             SetCursor(CursorType.None);
         }
 
-    
+        
         private bool InteractWithUI()
         {
             if(Input.GetMouseButtonUp(0))
@@ -68,6 +77,19 @@ namespace RPG.Control
             if(isDragging == true) return true;
             return false;
         }
+
+        private void UseAbilities()
+        {
+            for (int i = 0; i < numberOfAbilities; i++)
+            {
+                if(Input.GetKeyDown(KeyCode.Alpha1 + i))
+                {
+                    actionStore.Use(i, gameObject);
+                }
+            }
+            
+        }
+
 
         private bool InteractWithComponent()
         {
@@ -128,7 +150,7 @@ namespace RPG.Control
                 if(!GetComponent<Mover>().CanMoveTo(target)) return false;
                 if (Input.GetMouseButton(0))
                 {
-                GetComponent<Mover>().StartMoveAction(target, 1f);
+                    GetComponent<Mover>().StartMoveAction(target, 1f);
                 }
                 SetCursor(CursorType.Movement);
                 return true; // so when we hover around or click if hashit == true then bool returns true
@@ -170,7 +192,7 @@ namespace RPG.Control
         }
 
 
-        private static Ray GetMouseRay()
+        public static Ray GetMouseRay()
         {
             return Camera.main.ScreenPointToRay(Input.mousePosition);
             

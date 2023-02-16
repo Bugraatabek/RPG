@@ -255,6 +255,7 @@ MonoBehaviour:
   - type: 7
     texture: {fileID: 2800000, guid: 96d4bfdb0d6d8c042bf8fccf6524d239, type: 3}
     hotspot: {x: 0, y: 0}
+  numberOfAbilities: 6
 --- !u!114 &99059538744369537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,6 +284,19 @@ MonoBehaviour:
   scatterDistance: 1
   dropLibrary: {fileID: 0}
   numberOfDrops: 2
+--- !u!114 &1818938385673768044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4254904522072450903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12c152bdf38ee4c4d90ad70cbacb76c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingBalance: 400
 --- !u!114 &3858263105848973151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,6 +359,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5d25683ff27c7c439bc89410098bb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6642858370342871881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4254904522072450903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7615750b66fcdb545b4d65fccc094758, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8075976936326387988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,7 +384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventorySize: 16
---- !u!114 &1818938385673768044
+--- !u!114 &3237151970444551171
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -367,10 +393,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4254904522072450903}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12c152bdf38ee4c4d90ad70cbacb76c6, type: 3}
+  m_Script: {fileID: 11500000, guid: fff648fd20a15824db94969cea41a660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingBalance: 400
+  maxMana: 200
 --- !u!4 &8927914046813846304 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4255977455995998564, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}

@@ -50,13 +50,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215ecac784a9d054ba08cffbb24b38a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLifeTime: 1
+  maxLifeTime: 1.7
   projectileSpeed: 10
   lifeAfterImpact: 0.3
   isHoming: 1
   target: {fileID: 0}
-  destronOnHit:
-  - {fileID: 7611126278039741238}
+  destroyOnHit: []
   hitEffect: {fileID: 2302457091093092515, guid: 69d1b1037536b504884c93bb73d662db, type: 3}
   onHit:
     m_PersistentCalls:

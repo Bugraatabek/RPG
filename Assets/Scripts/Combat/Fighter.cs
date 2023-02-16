@@ -108,6 +108,12 @@ namespace RPG.Combat
             
         }
 
+        public Transform GetHandTransform(bool isRightHand)
+        {
+            if(isRightHand) return rightHand;
+            return leftHand;
+        }
+
         private void AttackBehaviour()
         {
            transform.LookAt(target.transform.position);

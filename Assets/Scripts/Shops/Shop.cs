@@ -373,7 +373,6 @@ namespace RPG.Shops
             {
                 BaseStats stats = currentShopper.GetComponent<BaseStats>();
                 if(stats == null) return 0;
-                print(stats.GetLevel());
                 return stats.GetLevel();
             }
             return 0;
