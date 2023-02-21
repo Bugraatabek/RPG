@@ -13,11 +13,11 @@ namespace RPG.Attributes
     {
         [SerializeField] float hackHealAmount = 100;
         [SerializeField] UnityEvent<float> takeDamage;
-        [SerializeField] UnityEvent die;
+        public UnityEvent die;
         [SerializeField] UnityEvent takeDamageSFX;
 
         int takeDamageSFXCount = 2;
-        bool isDead = false;
+        bool wasDeadLastFrame = false;
         
 
         BaseStats baseStats;
@@ -66,9 +66,8 @@ namespace RPG.Attributes
             takeDamage.Invoke(damage); 
             currentHealth.value = Mathf.Max(currentHealth.value - damage, 0f);
             
-            if(currentHealth.value == 0 && isDead == false)
+            if(IsDead())
             {
-                Die();
                 die.Invoke();
                 AwardExperience(instigator);
             }
@@ -78,6 +77,7 @@ namespace RPG.Attributes
                 takeDamageSFX.Invoke();
                 takeDamageSFXCount = 0;
             }
+            UpdateState();
         }
 
         private void AwardExperience(GameObject instigator)
@@ -109,17 +109,27 @@ namespace RPG.Attributes
             return (currentHealth.value / maxHealth.value);
         }
 
-        private void Die()
+        private void UpdateState()
         {
-            isDead = true;
-            GetComponent<Animator>().SetTrigger("die");
-            GetComponent<ActionScheduler>().CancelCurrentAction();
+            if(!wasDeadLastFrame && IsDead())
+            {
+                GetComponent<Animator>().SetTrigger("die");
+                GetComponent<ActionScheduler>().CancelCurrentAction();
+            }
+
+            if(wasDeadLastFrame && !IsDead())
+            {
+                GetComponent<Animator>().Rebind();
+            }
+           
+
+            wasDeadLastFrame = IsDead();
         }
         
         
         public bool IsDead()
         {
-            return isDead;
+            return currentHealth.value <= 0;
         }
 
         public float GetCurrentHealth()
@@ -129,7 +139,7 @@ namespace RPG.Attributes
 
         public float GetMaxHealth()
         {
-            return maxHealth.value;
+            return GetComponent<BaseStats>().GetStat(Stat.Health);
         }
 
         private void HealHack()
@@ -145,6 +155,7 @@ namespace RPG.Attributes
             GameObject player = GameObject.FindWithTag("Player");   
             Health playerHealth = player.GetComponent<Health>();
             playerHealth.currentHealth.value = Mathf.Min(playerHealth.currentHealth.value + heal, playerHealth.maxHealth.value);
+            UpdateState();
         }
 
         public object CaptureState()
@@ -155,10 +166,7 @@ namespace RPG.Attributes
         public void RestoreState(object state)
         {
             currentHealth.value = (float)state;
-            if(currentHealth.value == 0 && isDead == false)
-            {
-                Die();
-            }
+            UpdateState();
         }
 
     }

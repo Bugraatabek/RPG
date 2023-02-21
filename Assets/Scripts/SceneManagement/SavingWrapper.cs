@@ -1,26 +1,68 @@
 using UnityEngine;
 using RPG.Saving;
 using System.Collections;
+using UnityEngine.SceneManagement;
+using System;
+using System.Collections.Generic;
 
 namespace RPG.Scenemanagement
 {
     public class SavingWrapper : MonoBehaviour
     {
-        const string defaultSaveFile = "save";
+        private const string currentSaveKey = "currentSaveName";
         [SerializeField] float fadeInOnStart = 0.5f;
+        [SerializeField] float fadeOutTime = 0.5f;
+        [SerializeField] int firstLevelBuildIndex = 1;
+        [SerializeField] int mainMenuSceneBuildIndex = 0;
 
-        private void Awake()
+        public void LoadMainMenu()
         {
-           StartCoroutine(LoadLastScene());        
+            StartCoroutine(LoadFirstScene());
+        }
+
+        public void SaveAndQuit()
+        {
+            Save();
+            LoadMainMenu();
+        }
+
+        public void ContinueGame()
+        {
+            if(!PlayerPrefs.HasKey(currentSaveKey)) return;
+            if(!GetComponent<SavingSystem>().SaveFileExists(GetCurrentSave())) return;
+            StartCoroutine(LoadLastScene());        
+        }
+
+        public void NewGame(string saveFile)
+        {
+            if(String.IsNullOrEmpty(saveFile)) return;
+            SetCurrentSave(saveFile);
+            StartCoroutine(StartNewGame(saveFile));  
+        }
+
+        public void LoadSelectedSave(string saveFile)
+        {
+            SetCurrentSave(saveFile);
+            ContinueGame();
+        }
+
+        private void SetCurrentSave(string saveFile)
+        {
+            PlayerPrefs.SetString(currentSaveKey, saveFile);
+        }
+
+        private string GetCurrentSave()
+        {
+            return PlayerPrefs.GetString(currentSaveKey);
         }
 
         private void Update() 
         {
-            if(Input.GetKeyDown(KeyCode.S))
+            if(Input.GetKeyDown(KeyCode.F5))
             {
                 Save();
             }
-            if (Input.GetKeyDown(KeyCode.L))
+            if (Input.GetKeyDown(KeyCode.F4))
             {
                 Load();
             }
@@ -32,24 +74,47 @@ namespace RPG.Scenemanagement
         
         private IEnumerator LoadLastScene()
         {
-            yield return GetComponent<SavingSystem>().LoadLastScene(defaultSaveFile);
-            FindObjectOfType<Fader>().FadeOutImmediate();
-            yield return FindObjectOfType<Fader>().FadeIn(fadeInOnStart);
+            Fader fader = FindObjectOfType<Fader>();
+            yield return fader.FadeOut(fadeOutTime);
+            yield return GetComponent<SavingSystem>().LoadLastScene(GetCurrentSave());
+            yield return fader.FadeIn(fadeInOnStart);
+        }
+
+        private IEnumerator StartNewGame(string saveFile)
+        {
+            Fader fader = FindObjectOfType<Fader>();
+            yield return fader.FadeOut(fadeOutTime);
+            yield return SceneManager.LoadSceneAsync(firstLevelBuildIndex);
+            yield return fader.FadeIn(fadeInOnStart);
+            GetComponent<SavingSystem>().Save(saveFile);
+        }
+
+        private IEnumerator LoadFirstScene()
+        {
+            Fader fader = FindObjectOfType<Fader>();
+            yield return fader.FadeOut(fadeOutTime);
+            yield return SceneManager.LoadSceneAsync(mainMenuSceneBuildIndex);
+            yield return fader.FadeIn(fadeInOnStart);
         }
 
         public void Load()
         {
-            GetComponent<SavingSystem>().Load(defaultSaveFile);
+            GetComponent<SavingSystem>().Load(GetCurrentSave());
         }
 
         public void Save()
         {
-            GetComponent<SavingSystem>().Save(defaultSaveFile);
+            GetComponent<SavingSystem>().Save(GetCurrentSave());
         }
 
         public void Delete()
         {
-            GetComponent<SavingSystem>().Delete(defaultSaveFile);
+            GetComponent<SavingSystem>().Delete(GetCurrentSave());
+        }
+
+        public IEnumerable<string> ListSaves()
+        {
+            return GetComponent<SavingSystem>().ListSaves();
         }
     }
 }

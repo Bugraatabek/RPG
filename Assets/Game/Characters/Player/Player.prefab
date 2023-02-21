@@ -82,6 +82,22 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: takeDamageSFX.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: takeDamageSFX.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: takeDamageSFX.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: takeDamageSFX.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2908623681849247774, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
       propertyPath: levelUpEffect
       value: 
@@ -297,6 +313,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingBalance: 400
+--- !u!114 &2021624202624576391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4254904522072450903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa4f139006c9c8948bb0e8c1f3845227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnLocation: {fileID: 0}
+  respawnDelay: 5
+  fadeInTime: 3
+  fadeOutTime: 1
+  respawnHealthPercentage: 100
+  enemyRespawnHealPercentage: 20
 --- !u!114 &3237151970444551171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,6 +367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61746d9defb721a408880f33466fa448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resetPricePerPoint: 50
   bonusConfig:
   - trait: 0
     stat: 3

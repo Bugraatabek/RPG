@@ -41,7 +41,7 @@ namespace RPG.Scenemanagement
 
         private IEnumerator FadeRoutine(float time, float target)
         {
-            float deltaAlpha = Time.deltaTime/time;
+            float deltaAlpha = Time.unscaledDeltaTime/time; // using unscaledDeltaTime because deltaTime won't work with Time.timescale = 0;
             while (!Mathf.Approximately(canvasGroup.alpha, target))
             {
                 canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, target, deltaAlpha);

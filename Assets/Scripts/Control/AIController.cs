@@ -5,6 +5,7 @@ using RPG.Movement;
 using System;
 using RPG.Attributes;
 using RPG.Utils;
+using UnityEngine.AI;
 
 namespace RPG.Control
 {
@@ -23,7 +24,6 @@ namespace RPG.Control
         
         [Range(0,1)] [SerializeField] float patrolSpeedFraction = 0.2f;
         
-
         float timeSpentAtWaypoint = Mathf.Infinity;
         float timeSinceLastSawPlayer = Mathf.Infinity;
         float timeSinceAggrevated = Mathf.Infinity;
@@ -45,12 +45,9 @@ namespace RPG.Control
             health = GetComponent<Health>();
             mover = GetComponent<Mover>();
             guardPosition = new LazyValue<Vector3>(GetGuardPosition);
-        }
-        
-        private void Start() 
-        {
             guardPosition.ForceInit();
         }
+        
         private void Update()
         {
             if (health.IsDead()) return;
@@ -179,7 +176,19 @@ namespace RPG.Control
             timeSinceAggrevated += Time.deltaTime;
             timeSinceLastSawPlayer += Time.deltaTime;
             timeSpentAtWaypoint += Time.deltaTime;
-        } 
+        }
+
+        public void Reset()
+        {
+            if(health.IsDead()) return;
+            GetComponent<NavMeshAgent>().Warp(guardPosition.value);
+            hasBeenAggroedRecently = false;
+            timeSpentAtWaypoint = Mathf.Infinity;
+            timeSinceLastSawPlayer = Mathf.Infinity;
+            timeSinceAggrevated = Mathf.Infinity;
+            currentWaypointIndex = 0;
+            
+        }
     }
 }
 
