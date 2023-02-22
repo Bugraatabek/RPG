@@ -98,6 +98,8 @@ namespace RPG.Inventories
                     equippedItems[pair.Key] = item;
                 }
             }
+
+            equipmentUpdated?.Invoke(); // ? means it will call the function if it is not null. Instead of writing a long code with an if statement "?" can be used
         }
     }
 }
