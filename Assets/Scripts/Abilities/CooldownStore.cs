@@ -48,8 +48,6 @@ namespace RPG.Abilities
             
             float cooldownPercantage = timeRemaining / cooldownTime;
             return cooldownPercantage;
-            
-            
         }
     }
 }

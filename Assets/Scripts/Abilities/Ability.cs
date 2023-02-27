@@ -18,16 +18,17 @@ namespace RPG.Abilities
         CooldownStore cooldownStore;
         Mana userMana;
         
-        public override void Use(GameObject user)
+        public override bool Use(GameObject user)
         {
             userMana = user.GetComponent<Mana>();
-            if(userMana.GetCurrentMana() < manaCost) return;
+            if(userMana.GetCurrentMana() < manaCost) return false;
 
             cooldownStore = user.GetComponent<CooldownStore>();
-            if(cooldownStore.GetTimeRemaining(this) > 0) return;
+            if(cooldownStore.GetTimeRemaining(this) > 0) return false;
 
             AbilityData data = new AbilityData(user);
             targetingStrategy.StartTargeting(data, () => {TargetAquired(data); });
+            return true;
         }
 
         private void TargetAquired(AbilityData data)
