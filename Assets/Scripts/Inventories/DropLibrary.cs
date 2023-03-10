@@ -34,7 +34,6 @@ namespace RPG.Inventories
 
         public struct Dropped
         {
-            
             public InventoryItem item;
             public int number;
         }
@@ -76,7 +75,7 @@ namespace RPG.Inventories
         DropConfig SelectRandomItem(int level)
         {
             float totalChance = GetTotalChance(level);
-            float randomRoll = UnityEngine.Random.Range(0, totalChance + 1);
+            float randomRoll = UnityEngine.Random.Range(0, totalChance);
             float chanceTotal = 0;
             foreach (var drop in potentialDrops)
             {

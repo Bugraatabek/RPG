@@ -40,6 +40,20 @@ namespace RPG.Control
         
         private void Update()
         {
+
+#if UNITY_EDITOR
+            if(Input.GetKeyDown(KeyCode.S))
+            {
+                Time.timeScale = 5;
+            }
+
+            if(Input.GetKeyDown(KeyCode.D))
+            {
+                Time.timeScale = 1;
+            }
+#endif
+
+
             if(InteractWithUI()) return;
             
             if (GetComponent<Health>().IsDead()) 

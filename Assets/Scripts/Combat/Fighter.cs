@@ -18,6 +18,7 @@ namespace RPG.Combat
         [SerializeField] Transform rightHand = null;
         [SerializeField] Transform leftHand = null;
         [SerializeField] WeaponConfig defaultWeapon = null;
+        [SerializeField] float autoAttackRange = 4f;
         
         
         
@@ -61,7 +62,11 @@ namespace RPG.Combat
             }
             else
             {
-                if(target.IsDead() == true) return;
+                if(target.IsDead() == true)
+                {
+                    target = FindNewTargetInRange();
+                    if(target == null) return;
+                }
                 _mover.Cancel();
                 AttackBehaviour();
                             
@@ -124,6 +129,37 @@ namespace RPG.Combat
             GetComponent<Animator>().SetTrigger("attack");
             timeSinceLastAttack = 0;
            }
+        }
+
+        private Health FindNewTargetInRange()
+        {
+            Health best = null;
+            float bestDistance = Mathf.Infinity;
+            foreach (var candidate in FindAllTargetsInRange())
+            {
+                float candidateDistance = Vector3.Distance(transform.position, candidate.transform.position);
+                if(candidateDistance < bestDistance)
+                {
+                    best = candidate;
+                    bestDistance = candidateDistance;
+                    return best;
+                }
+            }
+            return null;   
+            
+        }
+
+        private IEnumerable<Health> FindAllTargetsInRange()
+        {
+            RaycastHit[] raycastHits = Physics.SphereCastAll(transform.position, autoAttackRange, Vector3.up, 0);
+            foreach (var hit in raycastHits)
+            {
+                Health health = hit.transform.GetComponent<Health>();
+                if(health == null) continue;
+                if(health.IsDead()) continue;
+                if(health.gameObject == this.gameObject) continue;
+                yield return health;
+            }
         }
 
         void Hit() // Animation Event

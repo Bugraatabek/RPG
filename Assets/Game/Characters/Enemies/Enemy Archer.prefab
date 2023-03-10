@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2639727442501556877, guid: 9e407101b7a77784fb6743bf6e7bde3a, type: 3}
+      propertyPath: dropChance
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2649768682694849673, guid: 9e407101b7a77784fb6743bf6e7bde3a, type: 3}
       propertyPath: defaultWeapon
       value: 

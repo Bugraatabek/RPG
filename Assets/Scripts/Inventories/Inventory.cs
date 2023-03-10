@@ -301,7 +301,6 @@ namespace RPG.Inventories
 
         public bool? Evaluate(EPredicate predicate, string[] parameters)
         {
-            Debug.Log("Inventory" + " " + predicate);
             switch (predicate)
             {
                 case EPredicate.HasItem:

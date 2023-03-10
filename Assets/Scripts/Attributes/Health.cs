@@ -5,7 +5,7 @@ using RPG.Saving;
 using RPG.Stats;
 using UnityEngine;
 using UnityEngine.Events;
-
+using System.Collections;
 
 namespace RPG.Attributes
 {
@@ -15,6 +15,9 @@ namespace RPG.Attributes
         [SerializeField] UnityEvent<float> takeDamage;
         public UnityEvent die;
         [SerializeField] UnityEvent takeDamageSFX;
+        [Tooltip("This should be null unless this is the Player GameObject")]
+        [SerializeField] GameObject player = null;
+        Health playerHealth;
 
         int takeDamageSFXCount = 2;
         bool wasDeadLastFrame = false;
@@ -31,6 +34,10 @@ namespace RPG.Attributes
             baseStats = GetComponent<BaseStats>();
             currentHealth = new LazyValue<float>(GetInitialHealth);
             maxHealth = new LazyValue<float>(GetInitialHealth);
+            if(player != null)
+            {
+                playerHealth = player.GetComponent<Health>();
+            }
         }
 
         private void Start() 
@@ -41,8 +48,16 @@ namespace RPG.Attributes
 
         private void Update()
         {
-            HealHack();
+            if(player != null)
+            {
+                HealHack();
+            }
             maxHealth.value = baseStats.GetStat(Stat.Health);
+
+            if(player != null) 
+            {
+                StartCoroutine(RegenerateHealth());
+            }
         }
 
         private float GetInitialHealth()
@@ -50,14 +65,19 @@ namespace RPG.Attributes
             return baseStats.GetStat(Stat.Health);
         }
 
+        private float GetRegenRate()
+        {
+            return baseStats.GetStat(Stat.HealthRegenRate);
+        }
+
         private void OnEnable() 
         {
-            baseStats.onLevelUp += RegenerateHealth;
+            baseStats.onLevelUp += FillMissingHP;
         }
 
         private void OnDisable() 
         {
-            baseStats.onLevelUp -= RegenerateHealth;
+            baseStats.onLevelUp -= FillMissingHP;
         }
 
         public void TakeDamage(GameObject instigator, float damage)
@@ -93,10 +113,28 @@ namespace RPG.Attributes
             
         }
         
-        private void RegenerateHealth()
+        private void FillMissingHP()
         {
             maxHealth.value = GetComponent<BaseStats>().GetStat(Stat.Health);
             currentHealth.value = maxHealth.value;
+        }
+
+        public IEnumerator RegenerateHealth()
+        {
+            if(currentHealth.value <= 0)
+            {
+                yield return new WaitForSeconds(8);
+            }
+            if(currentHealth.value < GetMaxHealth())
+            {
+                currentHealth.value += Time.deltaTime * GetRegenRate();
+                yield return null;
+            }
+            if (currentHealth.value >= GetMaxHealth())
+            {
+                currentHealth.value = GetMaxHealth();
+                yield return null;
+            }
         }
 
         public float GetPercentage()
@@ -146,15 +184,13 @@ namespace RPG.Attributes
         {
             if (Input.GetKeyDown(KeyCode.H))
             {
-                Heal(hackHealAmount);
+                playerHealth.Heal(hackHealAmount);
             }
         }
 
         public void Heal(float heal)
-        {
-            GameObject player = GameObject.FindWithTag("Player");   
-            Health playerHealth = player.GetComponent<Health>();
-            playerHealth.currentHealth.value = Mathf.Min(playerHealth.currentHealth.value + heal, playerHealth.maxHealth.value);
+        { 
+            currentHealth.value = Mathf.Min(currentHealth.value + heal, maxHealth.value);
             UpdateState();
         }
 

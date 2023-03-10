@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 4dc7430f-5b7c-440c-a00d-11eea57274f7
   displayName: Super Mega Splash
-  description: 
+  description: "After a small delay, casts an AOE water splash at the targeted position.
+    \nDeals 50 AOE Damage.\nCosts 100 Mana.\nHas a 5 second cooldown."
   icon: {fileID: 21300000, guid: a1ec2c0ddc0da634b85f0f465fec2d0d, type: 3}
   pickup: {fileID: 1231055717625040050, guid: 3d16b5ff209866543beace423afc8a79, type: 3}
   stackable: 0
-  price: 200
+  price: 600
   shopCategory: 5
   consumable: 0
   targetingStrategy: {fileID: 11400000, guid: 5a318871fdb0a6b4688220302cab3e7a, type: 2}
@@ -28,5 +29,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8c0272f2ba9aef14e93103f308b0f323, type: 2}
   - {fileID: 11400000, guid: 48da2814c24b9934983720a8e41f8f18, type: 2}
   - {fileID: 11400000, guid: da08dac4dcadd6d4e922404d79b77982, type: 2}
-  cooldown: 3
-  manaCost: 20
+  cooldown: 5
+  manaCost: 100

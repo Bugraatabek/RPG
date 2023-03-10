@@ -54,6 +54,7 @@ namespace RPG.Quests
                 {
                     GetComponent<ItemDropper>().DropItem(reward.item, reward.number);
                 }
+                print("Rewarded");
             }
         }
 
@@ -67,9 +68,9 @@ namespace RPG.Quests
                 case EPredicate.CompletedQuest:
                 return GetQuestStatus(Quest.GetByName(parameters[0])).IsComplete();
 
-                // case EPredicate.CompletedObjective:
-                // var status = GetQuestStatus(Quest.GetByName(parameters[0]));
-                // return status.IsObjectiveCompleted(Quest.GetByName(parameters[0]).ObjectiveLookup(parameters[1]));
+                case EPredicate.CompletedObjective:
+                var status = GetQuestStatus(Quest.GetByName(parameters[0]));
+                return status.IsObjectiveCompleted(Quest.GetByName(parameters[0]).ObjectiveLookup(parameters[1]));
             }
             return null;
         }

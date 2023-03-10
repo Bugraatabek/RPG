@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc01a88d285abcf4d80fdc5d46ff6579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 0
+  amount: 200
   percantage: 1
-  gainByPercantage: 1
-  gainByAmount: 0
+  gainByPercantage: 0
+  gainByAmount: 1

@@ -17,9 +17,9 @@ MonoBehaviour:
     stats:
     - stat: 0
       levels:
-      - 200
-      - 240
-      - 280
+      - 400
+      - 600
+      - 1000
       - 320
       - 360
       - 400
@@ -176,14 +176,41 @@ MonoBehaviour:
       - 7
       - 8
       - 9
+    - stat: 9
+      levels:
+      - 0
+      - 0
+      - 1
+      - 2
+      - 3
+  - characterClass: 2
+    stats:
+    - stat: 0
+      levels:
+      - 200
+      - 250
+      - 900
+    - stat: 1
+      levels:
+      - 100
+      - 300
+      - 900
+      - 4700
+    - stat: 3
+      levels:
+      - 20
+      - 30
+      - 95
+  - characterClass: 3
+    stats: []
   - characterClass: 1
     stats:
     - stat: 0
       levels:
       - 60
       - 90
-      - 120
-      - 150
+      - 280
+      - 220
       - 180
       - 210
       - 240
@@ -198,28 +225,28 @@ MonoBehaviour:
       - 510
       - 540
       - 570
-      - 570
+      - 600
     - stat: 1
       levels:
       - 80
-      - 120
+      - 100
+      - 250
       - 160
-      - 200
-      - 240
-      - 280
+      - 192
+      - 224
+      - 256
+      - 288
       - 320
-      - 360
-      - 400
-      - 440
+      - 352
+      - 384
+      - 416
+      - 448
       - 480
-      - 520
-      - 560
-      - 600
-      - 640
-      - 680
-      - 720
-      - 760
-      - 760
+      - 512
+      - 544
+      - 576
+      - 608
+      - 608
     - stat: 2
       levels:
       - 10
@@ -244,8 +271,8 @@ MonoBehaviour:
       levels:
       - 5
       - 6
-      - 7
-      - 8
+      - 25
+      - 22
       - 9
       - 10
       - 11
@@ -260,51 +287,15 @@ MonoBehaviour:
       - 20
       - 21
       - 22
-      - 22
-  - characterClass: 2
-    stats:
-    - stat: 0
-      levels:
-      - 200
-      - 300
-      - 300
-    - stat: 1
-      levels:
-      - 20
-      - 40
-      - 40
-    - stat: 2
-      levels:
-      - 20
-      - 40
-    - stat: 3
-      levels:
-      - 20
-      - 40
-      - 40
-  - characterClass: 3
-    stats:
-    - stat: 0
-      levels: []
-    - stat: 1
-      levels: []
-    - stat: 2
-      levels:
-      - 10
-    - stat: 2
-      levels:
-      - 10
-    - stat: 3
-      levels:
-      - 10
+      - 23
   - characterClass: 4
     stats:
     - stat: 0
       levels:
       - 42
       - 63
-      - 84
-      - 105
+      - 160
+      - 175
       - 126
       - 147
       - 168
@@ -323,8 +314,8 @@ MonoBehaviour:
     - stat: 1
       levels:
       - 64
-      - 96
-      - 128
+      - 100
+      - 200
       - 160
       - 192
       - 224
@@ -365,8 +356,8 @@ MonoBehaviour:
       levels:
       - 4
       - 5
-      - 6
-      - 6
+      - 24
+      - 30
       - 7
       - 8
       - 9

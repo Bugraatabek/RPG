@@ -7,7 +7,7 @@
         {
             "name": "Unity Editor",
             "type": "unity",
-            "path": "/C:/Unity 3D/Inventory Systems Course/Library/EditorInstance.json",
+            "path": "C:\\Unity 3D\\RPG\\Library\\EditorInstance.json",
             "request": "launch"
         },
         {

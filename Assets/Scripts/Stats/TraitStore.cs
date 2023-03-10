@@ -112,9 +112,13 @@ namespace RPG.Stats
         public void Reset(Trait trait)
         {
             if(!assignedPoints.ContainsKey(trait)) return;
-            unassignedPoints += assignedPoints[trait];
+            
             float totalPrice = assignedPoints[trait] * resetPricePerPoint;
-            GetComponent<Purse>().UpdateBalance(-totalPrice);
+            Purse purse = GetComponent<Purse>();
+            if(totalPrice > purse.GetBalance()) return;
+            
+            unassignedPoints += assignedPoints[trait];
+            purse.UpdateBalance(-totalPrice);
             assignedPoints[trait] = 0;
         }
 
@@ -123,11 +127,13 @@ namespace RPG.Stats
             var totalPoints = 0;
             foreach (Trait trait in assignedPoints.Keys)
             {
-                unassignedPoints += assignedPoints[trait];
                 totalPoints += assignedPoints[trait];
             }
             float totalPrice = totalPoints * resetPricePerPoint;
-            GetComponent<Purse>().UpdateBalance(-totalPrice);
+            Purse purse = GetComponent<Purse>(); 
+            if(totalPrice > purse.GetBalance()) return;
+            unassignedPoints += totalPoints;
+            purse.UpdateBalance(-totalPrice);
             assignedPoints.Clear();
         }
 
