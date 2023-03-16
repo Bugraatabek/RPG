@@ -1,0 +1,641 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7114186954550859583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 4fc91a47-933f-4707-b533-75273302619a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Is there anything else I can do to prepare?
+  isARootNode: 0
+  rootNodePriority: 0
+  children:
+  - 9226489f-d7da-4d3d-a2a3-0325fa36a0f7
+  rect:
+    serializedVersion: 2
+    x: 346
+    y: 383
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and: []
+--- !u!114 &-7042785004049160154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 821eb6b2-3c5e-4984-be4f-f43e38417c1d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Proceed to the Garrison! Follow the road through town and find the Mysterious
+    Seer.
+  isARootNode: 1
+  rootNodePriority: 2
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 34
+    y: 873
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and:
+    - or:
+      - predicate: 3
+        parameters:
+        - Kill the Barbarians
+        - 
+        negate: 0
+--- !u!114 &-6483680963572760513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: bfffcc43-b8a0-436a-9b53-f9049173a8de
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Still Working on it.
+  isARootNode: 0
+  rootNodePriority: 0
+  children:
+  - e2791e6b-07aa-4d69-a3e0-98776f625bed
+  rect:
+    serializedVersion: 2
+    x: 345
+    y: 720
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and:
+    - or:
+      - predicate: 2
+        parameters:
+        - Kill the Barbarians
+        - 1
+        negate: 1
+      - predicate: 2
+        parameters:
+        - Kill the Barbarians
+        - 2
+        negate: 1
+--- !u!114 &-6180711235830200090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: a13fe145-6fdc-4116-b3ea-2822b3a1da33
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Here is your Reward.
+  isARootNode: 0
+  rootNodePriority: 0
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1235
+    y: 457
+    width: 200
+    height: 100
+  onEnterAction: 7
+  onExitAction: 4
+  condition:
+    and: []
+--- !u!114 &-3335040783013178055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 86b1c253-d4fa-4cfa-b74b-141239c07d03
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: First, I'll take on the Barbarians!
+  isARootNode: 0
+  rootNodePriority: 0
+  children:
+  - 988d100e-dda8-4387-a355-e1cd6dc02450
+  rect:
+    serializedVersion: 2
+    x: 944
+    y: 114
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 2
+  condition:
+    and: []
+--- !u!114 &-2978151283260567197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 3167b347-ced9-4a03-9149-e7769340ebbe
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I'll leave this task to someone else. Goodbye.
+  isARootNode: 0
+  rootNodePriority: 0
+  children:
+  - 52112d27-7d73-4efc-b99e-f430618f99f5
+  rect:
+    serializedVersion: 2
+    x: 353
+    y: 251
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and: []
+--- !u!114 &-1613310935174439049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 87939bb1-a7f1-42d1-b332-47054e46dcda
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: What can you tell me about them?
+  isARootNode: 0
+  rootNodePriority: 0
+  children:
+  - 97f482a9-b9aa-42c1-a464-f153031ce019
+  rect:
+    serializedVersion: 2
+    x: 333
+    y: 114
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and: []
+--- !u!114 &-968052193754855839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 97f482a9-b9aa-42c1-a464-f153031ce019
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: The barbarians are a fierce and brutal tribe. They value strength and combat
+    prowess above all else, and will not hesitate to kill anyone who opposes them.
+    The Death Knight is a powerful undead warrior who commands the forces of darkness.
+    He is not to be underestimated. If you are truly prepared to face them, then
+    may the gods be with you.
+  isARootNode: 0
+  rootNodePriority: 0
+  children:
+  - 86b1c253-d4fa-4cfa-b74b-141239c07d03
+  rect:
+    serializedVersion: 2
+    x: 641
+    y: 115
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and: []
+--- !u!114 &-183468252053791198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: e2791e6b-07aa-4d69-a3e0-98776f625bed
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Good Luck!
+  isARootNode: 0
+  rootNodePriority: 0
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 645
+    y: 720
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e7c9cbb15392934b829cad6aff9f298, type: 3}
+  m_Name: Kill the Barbarians.
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 7691836580161987788}
+  - {fileID: -1613310935174439049}
+  - {fileID: -7114186954550859583}
+  - {fileID: -968052193754855839}
+  - {fileID: 7802884547050167104}
+  - {fileID: -3335040783013178055}
+  - {fileID: 6524864210135209713}
+  - {fileID: 8473779154188268426}
+  - {fileID: 2428202897747567402}
+  - {fileID: -6483680963572760513}
+  - {fileID: 1255613472951758045}
+  - {fileID: 517884023152915083}
+  - {fileID: 4128903078192637367}
+  - {fileID: -6180711235830200090}
+  - {fileID: 2751725979841495594}
+  - {fileID: -183468252053791198}
+  - {fileID: -2978151283260567197}
+  - {fileID: 757117044903172004}
+  - {fileID: -7042785004049160154}
+  rootNodes:
+  - {fileID: 7691836580161987788}
+  - {fileID: 8473779154188268426}
+  - {fileID: -7042785004049160154}
+  newNodeOffset: 300
+--- !u!114 &517884023152915083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 630833e3-31a9-4c3c-b40a-e3457ae7fdb6
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Yes, Here it is.
+  isARootNode: 0
+  rootNodePriority: 0
+  children:
+  - a13fe145-6fdc-4116-b3ea-2822b3a1da33
+  rect:
+    serializedVersion: 2
+    x: 935
+    y: 457
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and:
+    - or:
+      - predicate: 6
+        parameters:
+        - 62e7ebf7-f1e3-414c-8e80-5a7c5b2882a1
+        - 
+        negate: 0
+--- !u!114 &757117044903172004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 52112d27-7d73-4efc-b99e-f430618f99f5
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Very well, but know that the longer you wait, the more innocent lives will
+    be lost. The fate of the town rests on your shoulders. May the gods guide you
+    on your journey.
+  isARootNode: 0
+  rootNodePriority: 0
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 623
+    y: 255
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and: []
+--- !u!114 &1255613472951758045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: f75db2d2-6e3f-4348-a499-b85c933f01ab
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Do you have the item?
+  isARootNode: 0
+  rootNodePriority: 0
+  children:
+  - 630833e3-31a9-4c3c-b40a-e3457ae7fdb6
+  - ad011f2c-16a7-4d25-a5d0-6e75992c70b9
+  rect:
+    serializedVersion: 2
+    x: 643
+    y: 504
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and: []
+--- !u!114 &2428202897747567402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 694d49ec-c1ef-49e6-9375-babf596ec284
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I've killed them.
+  isARootNode: 0
+  rootNodePriority: 0
+  children:
+  - f75db2d2-6e3f-4348-a499-b85c933f01ab
+  rect:
+    serializedVersion: 2
+    x: 346
+    y: 512
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and:
+    - or:
+      - predicate: 2
+        parameters:
+        - Kill the Barbarians
+        - 1
+        negate: 0
+    - or:
+      - predicate: 2
+        parameters:
+        - Kill the Barbarians
+        - 2
+        negate: 0
+--- !u!114 &2751725979841495594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: f0212258-9522-47f5-b40d-3fe5bce29ddc
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: I'll keep waiting
+  isARootNode: 0
+  rootNodePriority: 0
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1238
+    y: 621
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and: []
+--- !u!114 &4128903078192637367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: ad011f2c-16a7-4d25-a5d0-6e75992c70b9
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: No, i am working on it.
+  isARootNode: 0
+  rootNodePriority: 0
+  children:
+  - f0212258-9522-47f5-b40d-3fe5bce29ddc
+  rect:
+    serializedVersion: 2
+    x: 938
+    y: 621
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and:
+    - or:
+      - predicate: 6
+        parameters:
+        - 62e7ebf7-f1e3-414c-8e80-5a7c5b2882a1
+        - 
+        negate: 1
+--- !u!114 &6524864210135209713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 988d100e-dda8-4387-a355-e1cd6dc02450
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Good Luck. Adventurer.
+  isARootNode: 0
+  rootNodePriority: 0
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1244
+    y: 114
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and: []
+--- !u!114 &7691836580161987788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 85070fbc-4f1b-4342-aab9-499f2dfcc09c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Welcome, adventurer. I can sense the darkness that surrounds you. You seek
+    to rid the land of the hostile and violent barbarians who have taken over the
+    town and killed every soldier in the garrison. They have even killed some villagers
+    for fun. But be warned, they have a powerful ally in the form of a Death Knight
+    who is resurrecting the dead at the nearby graveyard. What do you plan to do?
+  isARootNode: 1
+  rootNodePriority: 0
+  children:
+  - 87939bb1-a7f1-42d1-b332-47054e46dcda
+  - 3167b347-ced9-4a03-9149-e7769340ebbe
+  rect:
+    serializedVersion: 2
+    x: 53
+    y: 251
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and:
+    - or:
+      - predicate: 1
+        parameters:
+        - Kill the Barbarians
+        - 
+        negate: 1
+--- !u!114 &7802884547050167104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 9226489f-d7da-4d3d-a2a3-0325fa36a0f7
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: There is a blacksmith in the nearby town who can forge you some powerful
+    weapons and armor to help you. Equipped with powerfull armor and weapons, you
+    stand a better chance of defeating the barbarians and the Death Knight.
+  isARootNode: 0
+  rootNodePriority: 0
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 642
+    y: 379
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and: []
+--- !u!114 &8473779154188268426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: c0050753-8f29-491b-b4be-f28c0d78f8b1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Ah, you have returned. I can sense the triumph in your heart. Tell me, how
+    did you fare?
+  isARootNode: 1
+  rootNodePriority: 1
+  children:
+  - 694d49ec-c1ef-49e6-9375-babf596ec284
+  - bfffcc43-b8a0-436a-9b53-f9049173a8de
+  - 4fc91a47-933f-4707-b533-75273302619a
+  rect:
+    serializedVersion: 2
+    x: 42
+    y: 590
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and:
+    - or:
+      - predicate: 1
+        parameters:
+        - Kill the Barbarians
+        - 
+        negate: 0
+    - or:
+      - predicate: 3
+        parameters:
+        - Kill the Barbarians
+        - 
+        negate: 1

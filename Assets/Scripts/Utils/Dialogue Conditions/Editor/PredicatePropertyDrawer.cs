@@ -36,8 +36,6 @@ namespace RPG.Utils.Editor
             }
             SerializedProperty parameterZero = parameters.GetArrayElementAtIndex(0);
             SerializedProperty parameterOne = parameters.GetArrayElementAtIndex(1);
-            Debug.Log(parameterZero.stringValue);
-            Debug.Log(parameterOne.stringValue);
             if (selectedPredicate == EPredicate.HasQuest || selectedPredicate == EPredicate.CompletedQuest || selectedPredicate == EPredicate.CompletedObjective)
             {
                 position.y += propHeight;

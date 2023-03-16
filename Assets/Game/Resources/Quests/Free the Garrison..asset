@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Free the Garrison.
   m_EditorClassIdentifier: 
   objectives:
-  - description: Kill every barbarian inside the Garrison.
+  - description: Kill the Barbarian Chief inside the Garrison.
     reference: 1
     triggerType: 5
   rewards:
-  - number: 3500
+  - number: 25000
     item: {fileID: 11400000, guid: 1decf509028130a44a050d7b819ae34d, type: 2}

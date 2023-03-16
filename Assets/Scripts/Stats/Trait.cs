@@ -4,8 +4,8 @@ namespace RPG.Stats
     {
         Strength,
         Constitution,
-        Dexterity,
-        Agility,
+        Charisma,
+        Defence,
         Intelligence,
         Wisdom
     }

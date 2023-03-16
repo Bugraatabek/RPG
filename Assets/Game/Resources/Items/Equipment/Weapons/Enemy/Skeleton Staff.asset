@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8674b52e838685446a77969fe40ecf22, type: 3}
+  m_Name: Skeleton Staff
+  m_EditorClassIdentifier: 
+  itemID: c682d466-b5b6-4b87-9729-dbf3c7579a4c
+  displayName: 
+  description: 
+  icon: {fileID: 0}
+  pickup: {fileID: 0}
+  stackable: 0
+  price: 0
+  shopCategory: 0
+  allowedEquipLocation: 5
+  additiveModifiers: []
+  percentageModifiers: []
+  animatorOverride: {fileID: 22100000, guid: c918a06a0d0946b47a0517bdeec30f40, type: 2}
+  equippedPrefab: {fileID: 8912183767755021323, guid: 1daa4793ed6373940a89f15ac66b92ae, type: 3}
+  weaponRange: 10
+  isRightHanded: 1
+  projectile: {fileID: -490913146649976542, guid: 15d3424e20ca9da4a881a7388d72b014, type: 3}

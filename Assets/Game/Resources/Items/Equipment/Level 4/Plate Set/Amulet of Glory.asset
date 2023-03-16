@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77293642fba679742bdfb196fca1b77e, type: 3}
+  m_Name: Amulet of Glory
+  m_EditorClassIdentifier: 
+  itemID: 12e2d757-9547-403d-a98b-285a46033998
+  displayName: Amulet of Glory
+  description: 'Increases Health by 200.
+
+    Increases Defence by 7.'
+  icon: {fileID: 21300000, guid: 5ee7b9426bc4cc445926a3b693d98d2a, type: 3}
+  pickup: {fileID: 1231055717625040050, guid: 3d16b5ff209866543beace423afc8a79, type: 3}
+  stackable: 0
+  price: 1250
+  shopCategory: 1
+  allowedEquipLocation: 1
+  additiveModifiers:
+  - stat: 0
+    value: 200
+  - stat: 8
+    value: 7
+  percentageModifiers: []

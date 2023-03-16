@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 7c4f1586-b58e-4e23-b317-247c6a895028
   displayName: Lesser Health Potion
-  description: Restores 20 Health
+  description: 'Restores 20 Health
+
+    2 second cooldown.'
   icon: {fileID: 21300000, guid: aba0f700d91d4fc4fa8c724899ab04ab, type: 3}
   pickup: {fileID: 1231055717625040050, guid: 3d16b5ff209866543beace423afc8a79, type: 3}
   stackable: 1

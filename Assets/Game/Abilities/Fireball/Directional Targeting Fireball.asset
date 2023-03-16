@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerMask:
     serializedVersion: 2
-    m_Bits: 9
+    m_Bits: 8
   groundOffset: 1

@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86153a4540226bc4daa345e6600dbe48, type: 3}
+  m_Name: Random Drops
+  m_EditorClassIdentifier: 
+  potentialDrops:
+  - item: {fileID: 11400000, guid: 1decf509028130a44a050d7b819ae34d, type: 2}
+    relativeChance:
+    - 40
+    minNumber: c8000000
+    maxNumber: 2c010000
+  - item: {fileID: 11400000, guid: 310c638139eb0c24bba1c9a9882a9e53, type: 2}
+    relativeChance:
+    - 1
+    minNumber: 01000000
+    maxNumber: 01000000
+  - item: {fileID: 11400000, guid: 99c262fb256ac8c48b3822c1baa86a88, type: 2}
+    relativeChance:
+    - 1
+    minNumber: 01000000
+    maxNumber: 01000000
+  - item: {fileID: 11400000, guid: ec4ba08f1f53b1842b8c4987349637e8, type: 2}
+    relativeChance:
+    - 1
+    minNumber: 01000000
+    maxNumber: 01000000
+  - item: {fileID: 11400000, guid: c4961c62da742c949806f64fc35b2b32, type: 2}
+    relativeChance:
+    - 1
+    minNumber: 01000000
+    maxNumber: 01000000
+  - item: {fileID: 11400000, guid: b655a0bb581fe78448b3364b68eb1e23, type: 2}
+    relativeChance:
+    - 1
+    minNumber: 01000000
+    maxNumber: 01000000
+  - item: {fileID: 11400000, guid: 62b76cc31c8c56047af981a4cfb62cef, type: 2}
+    relativeChance:
+    - 1
+    minNumber: 01000000
+    maxNumber: 01000000
+  - item: {fileID: 11400000, guid: c60d75ba41b0225448d10b583f18c3ab, type: 2}
+    relativeChance:
+    - 1
+    minNumber: 01000000
+    maxNumber: 01000000
+  - item: {fileID: 11400000, guid: ba592fbaa3107274db987f1e2b77dc45, type: 2}
+    relativeChance:
+    - 1
+    minNumber: 01000000
+    maxNumber: 01000000
+  - item: {fileID: 11400000, guid: d0361850fb54476438df5377b97b9de6, type: 2}
+    relativeChance:
+    - 1
+    minNumber: 01000000
+    maxNumber: 01000000
+  - item: {fileID: 11400000, guid: 5ca55fbde9da46b40a895a7435fe1d01, type: 2}
+    relativeChance:
+    - 1
+    minNumber: 01000000
+    maxNumber: 01000000
+  - item: {fileID: 11400000, guid: b6cb8692d4750514388af84624c5fe80, type: 2}
+    relativeChance:
+    - 1
+    minNumber: 01000000
+    maxNumber: 01000000
+  - item: {fileID: 11400000, guid: 1b145aea2c99af2498a8eb51615ca490, type: 2}
+    relativeChance:
+    - 1
+    minNumber: 01000000
+    maxNumber: 01000000
+  - item: {fileID: 11400000, guid: 6b3e4647f063a5842bce8f74069cdd3a, type: 2}
+    relativeChance:
+    - 1
+    minNumber: 01000000
+    maxNumber: 01000000
+  - item: {fileID: 11400000, guid: bf631901f6b21d644a68619f468cc99e, type: 2}
+    relativeChance:
+    - 1
+    minNumber: 01000000
+    maxNumber: 01000000
+  - item: {fileID: 11400000, guid: 02beacf5599bab84d8db08b2352ba0b3, type: 2}
+    relativeChance:
+    - 1
+    minNumber: 01000000
+    maxNumber: 01000000
+  - item: {fileID: 11400000, guid: 65b94f65f94590545a8cf1fff01d38ff, type: 2}
+    relativeChance:
+    - 1
+    minNumber: 01000000
+    maxNumber: 01000000
+  - item: {fileID: 11400000, guid: 2f31791a51d8b584f83d13b695a8f810, type: 2}
+    relativeChance:
+    - 1
+    minNumber: 01000000
+    maxNumber: 01000000
+  - item: {fileID: 11400000, guid: fec5b0c1446d208499d3ef73efe37434, type: 2}
+    relativeChance:
+    - 1
+    minNumber: 01000000
+    maxNumber: 01000000
+  - item: {fileID: 11400000, guid: 90ada90de4acdb146b88fa765d2b5907, type: 2}
+    relativeChance:
+    - 1
+    minNumber: 01000000
+    maxNumber: 01000000
+  - item: {fileID: 11400000, guid: 10bcd81c3c664704ab1018a4fe0e94de, type: 2}
+    relativeChance:
+    - 1
+    minNumber: 01000000
+    maxNumber: 01000000
+  - item: {fileID: 11400000, guid: 018e5923e1be5e94583f5ca7f2fce7ea, type: 2}
+    relativeChance:
+    - 1
+    minNumber: 01000000
+    maxNumber: 01000000
+  - item: {fileID: 11400000, guid: 978d1e2096beece48a3264c545d60fe5, type: 2}
+    relativeChance:
+    - 1
+    minNumber: 01000000
+    maxNumber: 01000000
+  - item: {fileID: 11400000, guid: 5ab593b8e406ba746b989ac8ded77224, type: 2}
+    relativeChance:
+    - 1
+    minNumber: 01000000
+    maxNumber: 01000000
+  - item: {fileID: 11400000, guid: 3aeb908685d27b14c851f7549387dc7a, type: 2}
+    relativeChance:
+    - 1
+    minNumber: 01000000
+    maxNumber: 01000000
+  dropChancePercentage:
+  - 80
+  minDrops: 01000000
+  maxDrops: 02000000

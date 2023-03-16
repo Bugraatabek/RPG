@@ -1,0 +1,374 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7178618751300145841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 393eb569-f036-4c73-a119-6b8f0419ef17
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Come talk to me when you freed the town from the barbarians and finished
+    "Kill the barbarians" quest.
+  isARootNode: 1
+  rootNodePriority: 0
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 59
+    y: 171
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and:
+    - or:
+      - predicate: 1
+        parameters:
+        - Kill the Barbarians
+        - 
+        negate: 1
+      - predicate: 3
+        parameters:
+        - Kill the Barbarians
+        - 
+        negate: 1
+--- !u!114 &-5623674851767479871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: a0315978-446a-462b-8144-7100881476b9
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Greetings, adventurer. I am the mysterious seer, and I have a quest for you.
+    Are you willing to hear me out?
+  isARootNode: 1
+  rootNodePriority: 1
+  children:
+  - 800f8fd1-f687-478f-a493-02b63f3fabf9
+  rect:
+    serializedVersion: 2
+    x: 55
+    y: 306
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and:
+    - or:
+      - predicate: 3
+        parameters:
+        - Kill the Barbarians
+        - 
+        negate: 0
+    - or:
+      - predicate: 1
+        parameters:
+        - Free the Garrison.
+        - 
+        negate: 1
+--- !u!114 &-5576708499517901036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 8e87c5d1-06b6-4440-8e3c-0586767de1ce
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Excellent! I knew I could count on you. The garrison is heavily guarded,
+    but if you can eliminate the barbarian captain, their army will fall into disarray.
+    Here's a map that shows the location of the garrison. Return to me when the deed
+    is done.
+  isARootNode: 0
+  rootNodePriority: 0
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1868
+    y: 222
+    width: 200
+    height: 100
+  onEnterAction: 2
+  onExitAction: 0
+  condition:
+    and: []
+--- !u!114 &-5506310506248126693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 04c313fc-0061-4619-a4d9-e05eff796032
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: If you are successful, I can offer you 10.000 gold and lot of experience
+    points.
+  isARootNode: 0
+  rootNodePriority: 0
+  children:
+  - 982f87a5-b921-4160-a98a-5f7990f6a0a8
+  - 5c4b62a7-4170-4958-9998-6074048a0f9a
+  rect:
+    serializedVersion: 2
+    x: 1272
+    y: 312
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and: []
+--- !u!114 &-1523177292813927192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 800f8fd1-f687-478f-a493-02b63f3fabf9
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Sure, what do you need me to do?
+  isARootNode: 0
+  rootNodePriority: 0
+  children:
+  - bd6ac75e-1d45-4734-b51d-382342f49eb6
+  rect:
+    serializedVersion: 2
+    x: 353
+    y: 314
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e7c9cbb15392934b829cad6aff9f298, type: 3}
+  m_Name: Free the Garrison
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -7178618751300145841}
+  - {fileID: -5623674851767479871}
+  - {fileID: -1523177292813927192}
+  - {fileID: 2109235867218818112}
+  - {fileID: 8418199761769098574}
+  - {fileID: -5506310506248126693}
+  - {fileID: 1051892521964045473}
+  - {fileID: 2783795870395521536}
+  - {fileID: -5576708499517901036}
+  - {fileID: 753648915674917588}
+  - {fileID: 1756941057009814139}
+  rootNodes:
+  - {fileID: -7178618751300145841}
+  - {fileID: -5623674851767479871}
+  - {fileID: 1756941057009814139}
+  newNodeOffset: 300
+--- !u!114 &753648915674917588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: faa7b2e0-963c-42e6-8f87-6fa2dd407a29
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: I understand. Thank you for considering it anyway. If you change your mind,
+    I'll be here.
+  isARootNode: 0
+  rootNodePriority: 0
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1876
+    y: 362
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and: []
+--- !u!114 &1051892521964045473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 982f87a5-b921-4160-a98a-5f7990f6a0a8
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Yes, I'll do it.
+  isARootNode: 0
+  rootNodePriority: 0
+  children:
+  - 8e87c5d1-06b6-4440-8e3c-0586767de1ce
+  rect:
+    serializedVersion: 2
+    x: 1569
+    y: 222
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and: []
+--- !u!114 &1756941057009814139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 0e51ba41-f25e-4ef9-9141-a7d3f26625c4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Proceed to the Graveyard!
+  isARootNode: 1
+  rootNodePriority: 2
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 71
+    y: 489
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and:
+    - or:
+      - predicate: 3
+        parameters:
+        - Free the Garrison.
+        - 
+        negate: 0
+--- !u!114 &2109235867218818112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: bd6ac75e-1d45-4734-b51d-382342f49eb6
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: The barbarians have invaded our town and are causing chaos and destruction.
+    We need to put an end to their leader, the barbarian captain, who is stationed
+    at the garrison. Are you willing to take on this dangerous task?
+  isARootNode: 0
+  rootNodePriority: 0
+  children:
+  - b206816c-63d2-494e-9641-2714cca03d6d
+  rect:
+    serializedVersion: 2
+    x: 672
+    y: 312
+    width: 200
+    height: 100
+  onEnterAction: 2
+  onExitAction: 0
+  condition:
+    and: []
+--- !u!114 &2783795870395521536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: 5c4b62a7-4170-4958-9998-6074048a0f9a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: No, I'm not interested.
+  isARootNode: 0
+  rootNodePriority: 0
+  children:
+  - faa7b2e0-963c-42e6-8f87-6fa2dd407a29
+  rect:
+    serializedVersion: 2
+    x: 1576
+    y: 387
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and: []
+--- !u!114 &8418199761769098574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed6c7f872165fb47aee2cf82458560a, type: 3}
+  m_Name: b206816c-63d2-494e-9641-2714cca03d6d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: What's in it for me?
+  isARootNode: 0
+  rootNodePriority: 0
+  children:
+  - 04c313fc-0061-4619-a4d9-e05eff796032
+  rect:
+    serializedVersion: 2
+    x: 972
+    y: 312
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onExitAction: 0
+  condition:
+    and: []

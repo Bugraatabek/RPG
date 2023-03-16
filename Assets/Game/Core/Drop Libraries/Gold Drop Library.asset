@@ -17,8 +17,8 @@ MonoBehaviour:
     relativeChance:
     - 1
     - 1
-    minNumber: 28000000aa000000
-    maxNumber: 46000000c8000000
+    minNumber: 28000000fa000000
+    maxNumber: 4600000018010000
   dropChancePercentage:
   - 100
   minDrops: 01000000

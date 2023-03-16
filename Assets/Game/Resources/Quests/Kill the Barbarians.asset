@@ -13,16 +13,17 @@ MonoBehaviour:
   m_Name: Kill the Barbarians
   m_EditorClassIdentifier: 
   objectives:
-  - description: Kill all the barbarians at the Watchtower From the Bandits
+  - description: Kill all the barbarians stationed at the Watchtower.
     reference: 1
     triggerType: 5
-  - description: Kill the barbarian captain at the Square of Torture
+  - description: Kill the barbarian captain at the Square of Torture.
     reference: 2
     triggerType: 6
-  - description: Bring back the secret ingridient from the Captain's House. You can
-      find the house behind the marketplace.
+  - description: The Captain holds the secret ingridient kill him and bring back
+      the secret ingridient from the Captain's House. Pass through the marketplace
+      at the behind you can find the Captain's house.
     reference: 3
     triggerType: 7
   rewards:
-  - number: 1000
+  - number: 10000
     item: {fileID: 11400000, guid: 1decf509028130a44a050d7b819ae34d, type: 2}

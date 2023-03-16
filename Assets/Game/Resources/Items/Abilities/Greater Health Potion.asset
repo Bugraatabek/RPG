@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 4bf0771c-2390-487e-bcd1-802b9476efe4
   displayName: Greater Health Potion
-  description: Restores 100 Health
+  description: 'Restores 120 Health
+
+    2 Second cooldown.'
   icon: {fileID: 21300000, guid: aba0f700d91d4fc4fa8c724899ab04ab, type: 3}
   pickup: {fileID: 1231055717625040050, guid: 3d16b5ff209866543beace423afc8a79, type: 3}
   stackable: 1

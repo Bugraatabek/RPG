@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using RPG.Saving;
 using RPG.Stats;
@@ -53,6 +54,11 @@ namespace RPG.Attributes
             return true;
         }
 
+        public void ChangeMana(float manaChange)
+        {
+            mana.value += manaChange;
+        }
+
         public IEnumerator RegenerateMana()
         {
             if(mana.value < GetMaxMana())
@@ -76,5 +82,7 @@ namespace RPG.Attributes
         {
             mana.value = (float)state;
         }
+
+        
     }
 }

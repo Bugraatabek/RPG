@@ -141,6 +141,18 @@ namespace RPG.Inventories
             return false;
         }
 
+        public bool HasItems(InventoryItem item, int number)
+        {
+            for (int i = 0; i < slots.Length; i++)
+            {
+                if (object.ReferenceEquals(slots[i].item, item))
+                {
+                    if(slots[i].number >= number) return true;
+                }
+            }
+            return false;
+        }
+
         /// <summary>
         /// Return the item type in the given slot.
         /// </summary>
@@ -305,6 +317,9 @@ namespace RPG.Inventories
             {
                 case EPredicate.HasItem:
                 return HasItem(InventoryItem.GetFromID(parameters[0]));
+
+                case EPredicate.HasItems:
+                return HasItems(InventoryItem.GetFromID(parameters[0]), int.Parse(parameters[1]));
             }
             return null;
         }

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 949e075c175726a458d05bf60123d33c, type: 3}
+  m_Name: Mana Potion
+  m_EditorClassIdentifier: 
+  itemID: e9a9d4e0-7b6b-4248-9dce-42a5d944f6b6
+  displayName: Mana Potion
+  description: "Restores 100 Mana. \n2 Second Cooldown."
+  icon: {fileID: 21300000, guid: f1dd815974b2d4240a6bc912d6585497, type: 3}
+  pickup: {fileID: 1231055717625040050, guid: 3d16b5ff209866543beace423afc8a79, type: 3}
+  stackable: 1
+  price: 80
+  shopCategory: 3
+  consumable: 1
+  targetingStrategy: {fileID: 11400000, guid: 35d2f8a1ba9fc4d46aa197243717c158, type: 2}
+  filterStrategies: []
+  effectStrategies:
+  - {fileID: 11400000, guid: f92ac7e8da6dcdc4299d6f47e69f854d, type: 2}
+  - {fileID: 11400000, guid: b2d57ba22118ef94f992da13cbb33cf4, type: 2}
+  cooldown: 2.01
+  manaCost: 0

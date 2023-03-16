@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77293642fba679742bdfb196fca1b77e, type: 3}
+  m_Name: Robe of Mana
+  m_EditorClassIdentifier: 
+  itemID: 08e23beb-50df-4811-9f18-1466ec54b3b1
+  displayName: Robe of Mana
+  description: 'Increases Defence by 2.
+
+    Increases Mana by 250.
+
+    Increases
+    Mana Regen by 1,5.'
+  icon: {fileID: 21300000, guid: 1db2aafa220bdac428f29f48a82e2b50, type: 3}
+  pickup: {fileID: 1231055717625040050, guid: 3d16b5ff209866543beace423afc8a79, type: 3}
+  stackable: 0
+  price: 1250
+  shopCategory: 1
+  allowedEquipLocation: 2
+  additiveModifiers:
+  - stat: 8
+    value: 2
+  - stat: 4
+    value: 250
+  - stat: 5
+    value: 1.5
+  percentageModifiers: []

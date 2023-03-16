@@ -1412,7 +1412,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2913689269798140284, guid: 80b2fca073dc8344c81c30142fc80ca8, type: 3}
       propertyPath: m_text
-      value: Agility
+      value: Defence
       objectReference: {fileID: 0}
     - target: {fileID: 3344545701960047456, guid: 80b2fca073dc8344c81c30142fc80ca8, type: 3}
       propertyPath: m_Pivot.x
@@ -1504,7 +1504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9014632553659335684, guid: 80b2fca073dc8344c81c30142fc80ca8, type: 3}
       propertyPath: m_Name
-      value: Agility Row
+      value: Defence Row
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80b2fca073dc8344c81c30142fc80ca8, type: 3}
@@ -1852,7 +1852,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2913689269798140284, guid: 80b2fca073dc8344c81c30142fc80ca8, type: 3}
       propertyPath: m_text
-      value: Dexterity
+      value: Charisma
       objectReference: {fileID: 0}
     - target: {fileID: 3344545701960047456, guid: 80b2fca073dc8344c81c30142fc80ca8, type: 3}
       propertyPath: m_Pivot.x
@@ -1944,7 +1944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9014632553659335684, guid: 80b2fca073dc8344c81c30142fc80ca8, type: 3}
       propertyPath: m_Name
-      value: 'Dexterity Row '
+      value: 'Charisma Row '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80b2fca073dc8344c81c30142fc80ca8, type: 3}

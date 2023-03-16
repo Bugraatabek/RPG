@@ -413,7 +413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224338124537362198, guid: 07dc30b6f1bbb4147acd5fd5555a18f5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -420.74997
+      value: -1454.9974
       objectReference: {fileID: 0}
     - target: {fileID: 224429638599135061, guid: 07dc30b6f1bbb4147acd5fd5555a18f5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -721,11 +721,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1693024143934773398, guid: 07dc30b6f1bbb4147acd5fd5555a18f5, type: 3}
       propertyPath: m_Size
-      value: 0.4999999
+      value: 0.49999997
       objectReference: {fileID: 0}
     - target: {fileID: 1693024143934773398, guid: 07dc30b6f1bbb4147acd5fd5555a18f5, type: 3}
       propertyPath: m_Value
-      value: 0.00000054483473
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1702661474151556356, guid: 07dc30b6f1bbb4147acd5fd5555a18f5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1405,6 +1405,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5013077718089583471, guid: 07dc30b6f1bbb4147acd5fd5555a18f5, type: 3}
       propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013077718089583471, guid: 07dc30b6f1bbb4147acd5fd5555a18f5, type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5013077718089583471, guid: 07dc30b6f1bbb4147acd5fd5555a18f5, type: 3}
@@ -2669,7 +2673,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1818938385673768044, guid: 72c737ab4898c294d864e653a9c4b171, type: 3}
       propertyPath: startingBalance
-      value: 100000
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2021624202624576391, guid: 72c737ab4898c294d864e653a9c4b171, type: 3}
       propertyPath: respawnLocation
@@ -2688,13 +2692,29 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4391183465580259396, guid: 72c737ab4898c294d864e653a9c4b171, type: 3}
+      propertyPath: bonusConfig.Array.data[0].additiveBonusPerPoint
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4391183465580259396, guid: 72c737ab4898c294d864e653a9c4b171, type: 3}
       propertyPath: bonusConfig.Array.data[3].additiveBonusPerPoint
-      value: 2
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4391183465580259396, guid: 72c737ab4898c294d864e653a9c4b171, type: 3}
+      propertyPath: bonusConfig.Array.data[0].percentageBonusPerPoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4391183465580259396, guid: 72c737ab4898c294d864e653a9c4b171, type: 3}
+      propertyPath: bonusConfig.Array.data[1].percentageBonusPerPoint
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 4391183465580259396, guid: 72c737ab4898c294d864e653a9c4b171, type: 3}
       propertyPath: bonusConfig.Array.data[3].percentageBonusPerPoint
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4612559362837333668, guid: 72c737ab4898c294d864e653a9c4b171, type: 3}
+      propertyPath: respawnLocation
+      value: 
+      objectReference: {fileID: 6568582255208567604}
     - target: {fileID: 8927914046813846304, guid: 72c737ab4898c294d864e653a9c4b171, type: 3}
       propertyPath: m_RootOrder
       value: 1
