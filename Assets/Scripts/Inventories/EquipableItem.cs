@@ -1,4 +1,5 @@
 using UnityEngine;
+using RPG.Utils;
 
 namespace RPG.Inventories
 {
@@ -12,12 +13,16 @@ namespace RPG.Inventories
         // CONFIG DATA
         [Tooltip("Where are we allowed to put this item.")]
         [SerializeField] EquipLocation allowedEquipLocation = EquipLocation.Weapon;
+        [SerializeField] Condition equipCondition;
 
         // PUBLIC
 
-        public EquipLocation GetAllowedEquipLocation()
+        public bool CanEquip(EquipLocation equipLocation, Equipment equipment)
         {
-            return allowedEquipLocation;
+            if(equipLocation != allowedEquipLocation) return false;
+
+            return equipCondition.Check(equipment.GetComponents<IPredicateEvaluator>());
+
         }
     }
 }

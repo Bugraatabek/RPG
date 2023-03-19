@@ -16,7 +16,10 @@ MonoBehaviour:
   displayName: Shield of Glory
   description: 'Increases Defence by 12.
 
-    Increases Health by 200
+    Increases Health by 200.
+
+    Requires
+    5 constitution and 5 defence.
 
 '
   icon: {fileID: 21300000, guid: 3835c44b835896d4fb62337ee6d41208, type: 3}
@@ -25,6 +28,20 @@ MonoBehaviour:
   price: 1250
   shopCategory: 1
   allowedEquipLocation: 6
+  equipCondition:
+    and:
+    - or:
+      - predicate: 5
+        parameters:
+        - Constitution
+        - 5
+        negate: 0
+    - or:
+      - predicate: 5
+        parameters:
+        - Defence
+        - 5
+        negate: 0
   additiveModifiers:
   - stat: 8
     value: 12

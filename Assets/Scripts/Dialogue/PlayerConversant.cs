@@ -38,7 +38,7 @@ namespace RPG.Dialogue
                     return rootNodes[i];
                 }
             }
-            return currentDialogue.GetRootNode();
+            return rootNodes[0];
         }
 
         public void Next()

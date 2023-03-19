@@ -5,6 +5,7 @@ using RPG.Quests;
 using System.Linq;
 using RPG.Inventories;
 using System;
+using RPG.Stats;
 
 namespace RPG.Utils.Editor
 {

@@ -16,13 +16,30 @@ MonoBehaviour:
   displayName: Axe of Glory
   description: 'Increases Damage by 30.
 
-    Increases Health Points by 200.'
+    Increases Health Points by 200.
+
+    Requires
+    5 defence and 5 constitution.'
   icon: {fileID: 21300000, guid: 6a20f4dbf06be284e860c0bf6799923a, type: 3}
   pickup: {fileID: 1231055717625040050, guid: 3d16b5ff209866543beace423afc8a79, type: 3}
   stackable: 0
   price: 1250
   shopCategory: 0
   allowedEquipLocation: 5
+  equipCondition:
+    and:
+    - or:
+      - predicate: 5
+        parameters:
+        - Constitution
+        - 5
+        negate: 0
+    - or:
+      - predicate: 5
+        parameters:
+        - Defence
+        - 5
+        negate: 0
   additiveModifiers:
   - stat: 0
     value: 200

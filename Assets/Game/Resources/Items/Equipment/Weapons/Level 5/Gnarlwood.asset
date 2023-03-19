@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8674b52e838685446a77969fe40ecf22, type: 3}
+  m_Name: Gnarlwood
+  m_EditorClassIdentifier: 
+  itemID: 95d9c313-7143-436f-adf3-e86065d6b140
+  displayName: Gnarlwood
+  description: 'Launces a Fireball that adds +30 to damage.
+
+    Increases Mana Regen
+    by 3.
+
+    Increases Mana by 300.
+
+    Requires 8 intelligence and 8 wisdom.'
+  icon: {fileID: 21300000, guid: 3fa53af4c50543b469421a6895537de8, type: 3}
+  pickup: {fileID: 1231055717625040050, guid: 3d16b5ff209866543beace423afc8a79, type: 3}
+  stackable: 0
+  price: 15000
+  shopCategory: 2
+  allowedEquipLocation: 5
+  equipCondition:
+    and:
+    - or:
+      - predicate: 5
+        parameters:
+        - Intelligence
+        - 8
+        negate: 0
+    - or:
+      - predicate: 5
+        parameters:
+        - Wisdom
+        - 8
+        negate: 0
+  additiveModifiers:
+  - stat: 5
+    value: 3
+  - stat: 4
+    value: 300
+  - stat: 3
+    value: 30
+  percentageModifiers: []
+  animatorOverride: {fileID: 22100000, guid: 7a503a29dde5a6f49b78d80429c2eb66, type: 2}
+  equippedPrefab: {fileID: 8532902971545002087, guid: 435b61f2c81b9a04194c3e35a3deb671, type: 3}
+  weaponRange: 10
+  isRightHanded: 1
+  projectile: {fileID: -490913146649976542, guid: 15d3424e20ca9da4a881a7388d72b014, type: 3}

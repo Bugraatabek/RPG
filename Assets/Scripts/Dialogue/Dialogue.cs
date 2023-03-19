@@ -15,10 +15,16 @@ namespace RPG.Dialogue
         [SerializeField] float newNodeOffset = 300;
        
         
+        private void Awake() 
+        {
+            BuildLookupDict();
+        }
+#if UNITY_EDITOR
         private void OnValidate() 
         {
             BuildLookupDict();    
         }
+#endif
 
         public IEnumerable<DialogueNode> GetAllNodes()
         {
@@ -154,7 +160,6 @@ namespace RPG.Dialogue
         public void OnBeforeSerialize()
         {
 #if UNITY_EDITOR
-
             if (nodes.Count == 0)
             {
                 DialogueNode newNode = MakeNode(null);
@@ -165,7 +170,7 @@ namespace RPG.Dialogue
             UpdateRootNodes();
             SetRootNodePriority();
 
-#endif
+
             if (AssetDatabase.GetAssetPath(this) != "")
             {
                 foreach (DialogueNode node in GetAllNodes())
@@ -176,10 +181,10 @@ namespace RPG.Dialogue
                     }
                 }
             }
+#endif
         }
 
         
-#if UNITY_EDITOR
         private void SetRootNodePriority()
         {
             for (int i = 0; i < rootNodes.Count; i++)
@@ -190,7 +195,6 @@ namespace RPG.Dialogue
 
         private void UpdateRootNodes()
         {
-            
             foreach (DialogueNode node in nodes)
             {
                 if(node.IsARootNode() == true && node.IsPlayerSpeaking())
@@ -215,14 +219,9 @@ namespace RPG.Dialogue
                 }
             }
         }
-#endif        
-
-        
-
+    
         public void OnAfterDeserialize()
         {
         }
-
-        
     }
 }

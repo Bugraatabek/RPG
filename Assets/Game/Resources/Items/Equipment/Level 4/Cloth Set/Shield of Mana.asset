@@ -19,13 +19,29 @@ MonoBehaviour:
     Increases Mana by 100.
 
     Increases
-    Mana Regen by 1.'
+    Mana Regen by 1.
+
+    Requires 5 intelligence and 5 wisdom.'
   icon: {fileID: 21300000, guid: a42b3b2bb82524b4c9e97aca1cb294fe, type: 3}
   pickup: {fileID: 1231055717625040050, guid: 3d16b5ff209866543beace423afc8a79, type: 3}
   stackable: 0
   price: 1250
   shopCategory: 1
   allowedEquipLocation: 6
+  equipCondition:
+    and:
+    - or:
+      - predicate: 5
+        parameters:
+        - Intelligence
+        - 5
+        negate: 0
+    - or:
+      - predicate: 5
+        parameters:
+        - Wisdom
+        - 5
+        negate: 0
   additiveModifiers:
   - stat: 8
     value: 2

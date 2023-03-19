@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using RPG.Inventories;
 using RPG.Saving;
 using UnityEngine;
+using RPG.Utils;
 
 namespace RPG.Stats
 {
-    public class TraitStore : MonoBehaviour, IModifierProvider, ISaveable
+    public class TraitStore : MonoBehaviour, IModifierProvider, ISaveable, IPredicateEvaluator
     {
         [SerializeField] float resetPricePerPoint = 50;
         [SerializeField] TraitBonus[] bonusConfig;
@@ -153,6 +154,17 @@ namespace RPG.Stats
             {
                 yield return percentageBonusCache[stat][trait] * GetAssignedPoints(trait);
             }
+        }
+
+        public bool? Evaluate(EPredicate predicate, string[] parameters)
+        {
+            switch(predicate)
+            {
+                case EPredicate.MinimumTrait:
+                Enum.TryParse<Trait>(parameters[0], out Trait trait);
+                return GetAssignedPoints(trait) >= int.Parse(parameters[1]);
+            }
+            return null;
         }
 
         public object CaptureState()

@@ -11,12 +11,11 @@ namespace RPG.Stats
 
         public event Action onExperienceGained;
 
-        
-
-        
         private void Update() 
         {
+#if UNITY_EDITOR
             GainExperienceWithKey();
+#endif
         }
         
         public void GainExperience(float experience)
@@ -24,7 +23,7 @@ namespace RPG.Stats
             experiencePoints += experience;
             onExperienceGained();
         }
-
+#if UNITY_EDITOR
         private void GainExperienceWithKey()
         {
             if(Input.GetKeyDown(KeyCode.E))
@@ -33,6 +32,8 @@ namespace RPG.Stats
                 player.GetComponent<Experience>().GainExperience(keyEExpAmount);
             }
         }
+#endif
+
         public object CaptureState()
         {
             return experiencePoints;

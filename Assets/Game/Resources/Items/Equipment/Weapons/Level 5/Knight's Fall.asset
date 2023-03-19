@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8674b52e838685446a77969fe40ecf22, type: 3}
+  m_Name: Knight's Fall
+  m_EditorClassIdentifier: 
+  itemID: 1074f99e-caae-4518-ba5a-4814ce60c619
+  displayName: Knight's Fall
+  description: 'Increases Damage by 40.
+
+    Increases Health Points by 500.
+
+    Requires
+    8 defence and 8 constitution.'
+  icon: {fileID: 21300000, guid: eb979bdcd9c0bfa41811e478c6e2db73, type: 3}
+  pickup: {fileID: 1231055717625040050, guid: 3d16b5ff209866543beace423afc8a79, type: 3}
+  stackable: 0
+  price: 15000
+  shopCategory: 2
+  allowedEquipLocation: 5
+  equipCondition:
+    and:
+    - or:
+      - predicate: 5
+        parameters:
+        - Constitution
+        - 8
+        negate: 0
+    - or:
+      - predicate: 5
+        parameters:
+        - Defence
+        - 8
+        negate: 0
+  additiveModifiers: []
+  percentageModifiers: []
+  animatorOverride: {fileID: 22100000, guid: 7a503a29dde5a6f49b78d80429c2eb66, type: 2}
+  equippedPrefab: {fileID: -8698990011527362354, guid: e44bbe1d153b858468b81c7dfd9dc8d5, type: 3}
+  weaponRange: 2
+  isRightHanded: 1
+  projectile: {fileID: 0}

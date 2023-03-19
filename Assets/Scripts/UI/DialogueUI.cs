@@ -40,13 +40,12 @@ namespace RPG.UI
                 gameObject.SetActive(false);
                 return;
             }
-            
-            gameObject.SetActive(true);
-            choiceButtonsTab.gameObject.SetActive(false);
-            AIText.gameObject.SetActive(true);
-            conversantName.text = playerConversant.GetCurrentConversantName();
-            AIText.text = playerConversant.GetText();
-            nextButton.gameObject.SetActive(playerConversant.HasNext());
+                gameObject.SetActive(true);
+                choiceButtonsTab.gameObject.SetActive(false);
+                AIText.gameObject.SetActive(true);
+                conversantName.text = playerConversant.GetCurrentConversantName();
+                AIText.text = playerConversant.GetText();
+                nextButton.gameObject.SetActive(playerConversant.HasNext());
             
             if(playerConversant.IsChoosing())
             {

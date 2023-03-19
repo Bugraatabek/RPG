@@ -19,13 +19,23 @@ MonoBehaviour:
     Increases Health Regen by 2.
 
     Increases
-    Damage by 20%'
+    Damage by 20%
+
+    Requires 10 strength.'
   icon: {fileID: 21300000, guid: 96ac7b09d8455d247a9152e1903ae754, type: 3}
   pickup: {fileID: 1231055717625040050, guid: 3d16b5ff209866543beace423afc8a79, type: 3}
   stackable: 0
   price: 1250
   shopCategory: 1
   allowedEquipLocation: 1
+  equipCondition:
+    and:
+    - or:
+      - predicate: 5
+        parameters:
+        - 
+        - 10
+        negate: 0
   additiveModifiers:
   - stat: 9
     value: 2

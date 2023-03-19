@@ -1,7 +1,5 @@
 {
   "dependencies": {
-    "com.spoiledcat.git": "1.0.12",
-    "com.spoiledcat.git.ui": "1.0.12",
     "com.unity.cinemachine": "2.8.9",
     "com.unity.collab-proxy": "1.17.6",
     "com.unity.feature.development": "1.0.1",

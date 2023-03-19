@@ -48,10 +48,12 @@ namespace RPG.Attributes
 
         private void Update()
         {
+#if UNITY_EDITOR
             if(player != null)
             {
                 HealHack();
             }
+#endif
             maxHealth.value = baseStats.GetStat(Stat.Health);
 
             if(player != null) 
@@ -180,7 +182,7 @@ namespace RPG.Attributes
         {
             return GetComponent<BaseStats>().GetStat(Stat.Health);
         }
-
+#if UNITY_EDITOR
         private void HealHack()
         {
             if (Input.GetKeyDown(KeyCode.H))
@@ -188,6 +190,7 @@ namespace RPG.Attributes
                 playerHealth.Heal(hackHealAmount);
             }
         }
+#endif
 
         public void Heal(float heal)
         { 

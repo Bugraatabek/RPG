@@ -14,13 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: bb61bf6f-78e3-4c5d-8f87-624475080360
   displayName: Dagger of Madness
-  description: Increases Damage by 35.
+  description: 'Increases Damage by 35.
+
+    Requires 10 strength.'
   icon: {fileID: 21300000, guid: d19901b0ee3c38743a7d383bd484b0b5, type: 3}
   pickup: {fileID: 0}
   stackable: 0
   price: 1250
   shopCategory: 2
   allowedEquipLocation: 5
+  equipCondition:
+    and:
+    - or:
+      - predicate: 5
+        parameters:
+        - 
+        - 10
+        negate: 0
   additiveModifiers:
   - stat: 3
     value: 35

@@ -16,13 +16,30 @@ MonoBehaviour:
   displayName: Gloves of Mana
   description: 'Increases Defence by 1
 
-    Increases Mana Regen by %20.'
+    Increases Mana Regen by %20.
+
+    Requires
+    5 intelligence and 5 wisdom.'
   icon: {fileID: 21300000, guid: c49db764686ae57449a25be7397a31d1, type: 3}
   pickup: {fileID: 1231055717625040050, guid: 3d16b5ff209866543beace423afc8a79, type: 3}
   stackable: 0
   price: 1250
   shopCategory: 1
   allowedEquipLocation: 7
+  equipCondition:
+    and:
+    - or:
+      - predicate: 5
+        parameters:
+        - Intelligence
+        - 5
+        negate: 0
+    - or:
+      - predicate: 5
+        parameters:
+        - Wisdom
+        - 5
+        negate: 0
   additiveModifiers:
   - stat: 8
     value: 1

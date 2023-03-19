@@ -47,16 +47,16 @@ MonoBehaviour:
   m_Name: 7f297181-58f3-492e-b1e6-40ff93cbe253
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: 'Mysterious Seer: Greetings, adventurer. I am the mysterious seer, and I
-    have a quest for you. Are you willing to hear me out?'
+  text: Greetings, adventurer. I am the mysterious seer, and I have a quest for you.
+    Are you willing to hear me out?
   isARootNode: 1
-  rootNodePriority: 0
+  rootNodePriority: 1
   children:
   - 539086f3-0707-4631-a91b-aca3e7b9224c
   rect:
     serializedVersion: 2
-    x: 27
-    y: 194
+    x: 30
+    y: 202
     width: 200
     height: 100
   onEnterAction: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   text: Come talk to me when you killed the barbarian captain and finished "Free
     the Garrison" quest.
   isARootNode: 1
-  rootNodePriority: 1
+  rootNodePriority: 0
   children: []
   rect:
     serializedVersion: 2
@@ -167,7 +167,6 @@ MonoBehaviour:
         - Free the Garrison.
         - 
         negate: 1
-    - or:
       - predicate: 3
         parameters:
         - Free the Garrison.
@@ -320,8 +319,8 @@ MonoBehaviour:
   - {fileID: 2790048408549836378}
   - {fileID: 2065593339303049552}
   rootNodes:
-  - {fileID: -6834031361003860781}
   - {fileID: -4818356726085887986}
+  - {fileID: -6834031361003860781}
   - {fileID: 3143834057763547458}
   - {fileID: 2065593339303049552}
   newNodeOffset: 300
@@ -427,7 +426,8 @@ MonoBehaviour:
   m_Name: 000df498-3f04-43c8-bd63-10c6dff8ef1f
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: Goodjob! Here is your reward.
+  text: Goodjob! Here is your reward. Thanks for playing the demo. I hope you liked
+    the game. That's all for now.
   isARootNode: 0
   rootNodePriority: 0
   children: []

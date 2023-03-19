@@ -21,6 +21,8 @@ MonoBehaviour:
     Increases
     Health by 8%.
 
+    Requires 5 constitution and 5 defence.
+
 '
   icon: {fileID: 21300000, guid: cd7b401a96a069e45a2313a33309ef26, type: 3}
   pickup: {fileID: 1231055717625040050, guid: 3d16b5ff209866543beace423afc8a79, type: 3}
@@ -28,6 +30,20 @@ MonoBehaviour:
   price: 1250
   shopCategory: 1
   allowedEquipLocation: 4
+  equipCondition:
+    and:
+    - or:
+      - predicate: 5
+        parameters:
+        - Constitution
+        - 5
+        negate: 0
+    - or:
+      - predicate: 5
+        parameters:
+        - Defence
+        - 5
+        negate: 0
   additiveModifiers:
   - stat: 8
     value: 10

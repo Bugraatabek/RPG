@@ -430,28 +430,28 @@ MonoBehaviour:
   bonusConfig:
   - trait: 0
     stat: 3
-    additiveBonusPerPoint: 0
-    percentageBonusPerPoint: 5
+    additiveBonusPerPoint: 0.7
+    percentageBonusPerPoint: 0
   - trait: 1
     stat: 0
     additiveBonusPerPoint: 0
-    percentageBonusPerPoint: 5
+    percentageBonusPerPoint: 3.2
   - trait: 2
     stat: 7
     additiveBonusPerPoint: 5
     percentageBonusPerPoint: 0
   - trait: 3
     stat: 0
-    additiveBonusPerPoint: 0
-    percentageBonusPerPoint: 5
+    additiveBonusPerPoint: 0.5
+    percentageBonusPerPoint: 0
   - trait: 4
     stat: 4
     additiveBonusPerPoint: 0
     percentageBonusPerPoint: 5
   - trait: 5
     stat: 5
-    additiveBonusPerPoint: 0
-    percentageBonusPerPoint: 5
+    additiveBonusPerPoint: 0.3
+    percentageBonusPerPoint: 0
 --- !u!114 &4612559362837333668
 MonoBehaviour:
   m_ObjectHideFlags: 0

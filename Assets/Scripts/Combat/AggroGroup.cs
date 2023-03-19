@@ -1,16 +1,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using RPG.Saving;
 using UnityEngine;
 
 namespace RPG.Combat
 {
-    public class AggroGroup : MonoBehaviour
+    public class AggroGroup : MonoBehaviour, ISaveable
     {
         List<Fighter> fighters = new List<Fighter>();
         [SerializeField] bool activateOnStart = false;
 
-        private void Start() 
+
+        private void Awake() 
         {
             PopulateFighters();
         }
@@ -26,6 +28,7 @@ namespace RPG.Combat
 
         public void Activate(bool shouldActivate)
         {
+            activateOnStart = shouldActivate;
             foreach (Fighter fighter in fighters)
             {
                 CombatTarget target = fighter.GetComponent<CombatTarget>();
@@ -35,6 +38,17 @@ namespace RPG.Combat
                 }
                 fighter.enabled = shouldActivate;
             }
+        }
+
+        public object CaptureState()
+        {
+            return activateOnStart;
+        }
+
+        public void RestoreState(object state)
+        {
+            bool shouldActivate = (bool)state;
+            Activate(shouldActivate);
         }
     }
 }

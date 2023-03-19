@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using RPG.Inventories;
 using RPG.Shops;
+using RPG.UI.Inventories;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace RPG.UI.Shops
 {
-    public class RowUI : MonoBehaviour
+    public class RowUI : MonoBehaviour, IItemHolder
     {
         [SerializeField] Image icon = null;
         [SerializeField] TextMeshProUGUI itemName = null;
@@ -40,6 +42,11 @@ namespace RPG.UI.Shops
         public void Remove()
         {
             shop.ChangeTransactionQuantity(shopItem.GetInventoryItem(), -1);
+        }
+
+        public InventoryItem GetItem()
+        {
+            return shopItem.GetInventoryItem();
         }
 
         // SETTERS //
