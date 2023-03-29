@@ -16,11 +16,13 @@ MonoBehaviour:
   displayName: Bow
   description: Add +20 to Damage
   icon: {fileID: 21300000, guid: fb1e48043961d8f44948225f539a83bb, type: 3}
-  pickup: {fileID: 423476415788511882, guid: a325487d94ae83848a8dd51dab0c0420, type: 3}
+  pickup: {fileID: 1231055717625040050, guid: 3d16b5ff209866543beace423afc8a79, type: 3}
   stackable: 0
   price: 600
   shopCategory: 2
   allowedEquipLocation: 5
+  equipCondition:
+    and: []
   additiveModifiers:
   - stat: 3
     value: 20

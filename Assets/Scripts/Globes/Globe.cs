@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using RPG.Attributes;
 using RPG.Control;
+using RPG.Core;
+using RPG.Movement;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -29,11 +31,10 @@ using UnityEngine.AI;
             {
                 if(Input.GetMouseButtonDown(0))
                 {
-                    navMeshAgent = callingController.GetComponent<NavMeshAgent>(); 
-                    navMeshAgent.destination = transform.position;
+                    callingController.GetComponent<Mover>().StartMoveAction(transform.position, 1f); 
                 }
                 return true;
-                //return player.GetComponent<PlayerController>().InteractWithMovement();
+                
             }
 
             private void OnTriggerEnter(Collider other) 

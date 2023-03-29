@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 949e075c175726a458d05bf60123d33c, type: 3}
-  m_Name: Fireball
+  m_Name: Poison Arrow
   m_EditorClassIdentifier: 
   itemID: 3a2e1d19-0204-4e32-a99c-13ba2759b9b4
-  displayName: Fireball
-  description: 'Casts a Fireball to the cursor''s direction.
+  displayName: Posion Arrow
+  description: 'Casts a Poison Arrow to the cursor''s direction.
 
-    Deals AOE 20 Damage.
+    Deals 20 Splash
+    Damage.
 
-    Costs
-    60 Mana.
+    Costs 60 Mana.
 
     5 Second cooldown.'
-  icon: {fileID: 21300000, guid: 4a8b11548ae1ade4ba8602f9191f1807, type: 3}
+  icon: {fileID: 21300000, guid: a1ec2c0ddc0da634b85f0f465fec2d0d, type: 3}
   pickup: {fileID: 1231055717625040050, guid: 3d16b5ff209866543beace423afc8a79, type: 3}
   stackable: 0
-  price: 400
+  price: 200
   shopCategory: 5
   consumable: 0
   targetingStrategy: {fileID: 11400000, guid: 33ae7abf41af4114d974bb1d74524702, type: 2}

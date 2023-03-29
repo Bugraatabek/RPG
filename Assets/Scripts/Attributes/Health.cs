@@ -182,7 +182,7 @@ namespace RPG.Attributes
         {
             return GetComponent<BaseStats>().GetStat(Stat.Health);
         }
-#if UNITY_EDITOR
+
         private void HealHack()
         {
             if (Input.GetKeyDown(KeyCode.H))
@@ -190,7 +190,7 @@ namespace RPG.Attributes
                 playerHealth.Heal(hackHealAmount);
             }
         }
-#endif
+
 
         public void Heal(float heal)
         { 

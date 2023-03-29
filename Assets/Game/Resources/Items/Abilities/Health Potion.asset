@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 750ff9d7-54ea-41f9-87ab-7ac865956304
   displayName: Health Potion
-  description: 'Restores 50 Health
+  description: 'Restores 75 Health
 
     2 second cooldown.'
   icon: {fileID: 21300000, guid: aba0f700d91d4fc4fa8c724899ab04ab, type: 3}
   pickup: {fileID: 1231055717625040050, guid: 3d16b5ff209866543beace423afc8a79, type: 3}
   stackable: 1
-  price: 20
+  price: 40
   shopCategory: 3
   consumable: 1
   targetingStrategy: {fileID: 11400000, guid: 35d2f8a1ba9fc4d46aa197243717c158, type: 2}

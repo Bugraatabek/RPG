@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
       propertyPath: die.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.size
@@ -24,6 +24,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: die.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
       propertyPath: die.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: -5191681094279493142}
@@ -31,6 +35,10 @@ PrefabInstance:
       propertyPath: die.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 2639727442501556877}
+    - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: die.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 2716412233427812419}
     - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
       propertyPath: die.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -40,12 +48,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: die.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
       propertyPath: die.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: RandomDrop
       objectReference: {fileID: 0}
     - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
       propertyPath: die.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: DropGlobes
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: die.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -72,6 +88,10 @@ PrefabInstance:
       value: RPG.Globes.GlobeDropper, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: die.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: RPG.Control.AIController, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -84,12 +104,20 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: die.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641707003179559636, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2908623681849247774, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
       propertyPath: characterClass
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320884982869620065, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4255977455995998564, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
       propertyPath: m_RootOrder
@@ -135,6 +163,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5731647602115014801, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 3599174029025407474}
+    - target: {fileID: 6786312051240503564, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.1254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786312051240503564, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.11372549
+      objectReference: {fileID: 0}
     - target: {fileID: 7984152393686730856, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
       propertyPath: leftHand
       value: 
@@ -161,6 +201,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+--- !u!1 &2716412233427812419 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8050769650093325474, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+  m_PrefabInstance: {fileID: 5334714828432047329}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3599174029025407474 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8933562121961966867, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}

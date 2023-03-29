@@ -2153,6 +2153,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3320884982869620065, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4255977455995998564, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2197,6 +2201,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5731647602115014801, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 4846339279613694745}
+    - target: {fileID: 6786312051240503564, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.11372549
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786312051240503564, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.81960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786312051240503564, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.17217627
+      objectReference: {fileID: 0}
     - target: {fileID: 7528788025755374378, guid: 8dfa4151b52076b4a8a08c6ce6b23c5c, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2230,3 +2250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c8b91044eedc34286177c3300adaa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopName: 
+  sellingDiscountPercentage: 10
+  maximumBarterDiscount: 80
+  stockConfig: []

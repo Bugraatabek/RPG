@@ -16,10 +16,10 @@ MonoBehaviour:
   displayName: Fire Arrow
   description: 'Casts a Fire Arrow at the cursor''s direction.
 
-    Deals 60 Damage.
+    Deals 60 Splash
+    Damage.
 
-    Costs
-    80 Mana.
+    Costs 80 Mana.
 
     1 Second cooldown.'
   icon: {fileID: 21300000, guid: 4a8b11548ae1ade4ba8602f9191f1807, type: 3}

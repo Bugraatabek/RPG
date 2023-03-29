@@ -246,7 +246,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 1569
-    y: 222
+    y: 223
     width: 200
     height: 100
   onEnterAction: 0
@@ -312,7 +312,7 @@ MonoBehaviour:
     y: 312
     width: 200
     height: 100
-  onEnterAction: 2
+  onEnterAction: 0
   onExitAction: 0
   condition:
     and: []

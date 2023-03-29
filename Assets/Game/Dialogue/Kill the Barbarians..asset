@@ -124,7 +124,7 @@ MonoBehaviour:
     y: 457
     width: 200
     height: 100
-  onEnterAction: 7
+  onEnterAction: 8
   onExitAction: 4
   condition:
     and: []
@@ -363,8 +363,8 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 623
-    y: 255
+    x: 649
+    y: 239
     width: 200
     height: 100
   onEnterAction: 0

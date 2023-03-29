@@ -22,6 +22,7 @@ namespace RPG.Control
         
         [SerializeField] CursorMapping[] cursorMappings;
         Dictionary<CursorType, CursorMapping> cursorDict;
+        [SerializeField] GameObject clickEffect;
 
         [SerializeField] int numberOfAbilities = 6;
         ActionStore actionStore;
@@ -116,6 +117,7 @@ namespace RPG.Control
                     if(raycastable.HandleRaycast(this))
                     {
                         SetCursor(raycastable.GetCursorType());
+                        //ClickEffect();
                         return true;
                     }
                 }
@@ -146,6 +148,7 @@ namespace RPG.Control
                 {
                     if(raycastable.HandleRaycast(this))
                     {
+                        //ClickEffect();
                         SetCursor(raycastable.GetCursorType());
                         return true;
                     }
@@ -167,6 +170,7 @@ namespace RPG.Control
                     GetComponent<Mover>().StartMoveAction(target, 1f);
                 }
                 SetCursor(CursorType.Movement);
+                //ClickEffect();
                 return true; // so when we hover around or click if hashit == true then bool returns true
             }
             return false;
@@ -210,6 +214,16 @@ namespace RPG.Control
         {
             return Camera.main.ScreenPointToRay(Input.mousePosition);
             
+        }
+
+        private void ClickEffect()
+        {
+            if (clickEffect != null)
+            {
+                print(Input.mousePosition);
+                GameObject clickFX = Instantiate(clickEffect, Input.mousePosition, transform.rotation);
+                Destroy(clickFX, 2f);
+            }
         }
     } 
 }

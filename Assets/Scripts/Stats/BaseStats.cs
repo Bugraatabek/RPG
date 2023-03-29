@@ -2,6 +2,7 @@ using System;
 using RPG.Utils;
 using RPG.Attributes;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace RPG.Stats
 {
@@ -13,6 +14,7 @@ namespace RPG.Stats
         [SerializeField] GameObject levelUpEffect = null;
         [SerializeField] bool shouldUseModifiers = false;
 
+        [SerializeField] UnityEvent levelUp;
         public event Action onLevelUp;
         Experience experience = null;
         LazyValue<int> currentLevel;
@@ -53,6 +55,7 @@ namespace RPG.Stats
             {
                 currentLevel.value = newLevel;
                 newLevel = level;
+                levelUp.Invoke();
                 LevelUpEffect();
                 onLevelUp();
             }
@@ -138,6 +141,11 @@ namespace RPG.Stats
                 return playerLevel >= levelToCheck;
             }
             return null;
+        }
+
+        public CharacterClass GetCharacterClass()
+        {
+            return characterClass;
         }
     }
 }

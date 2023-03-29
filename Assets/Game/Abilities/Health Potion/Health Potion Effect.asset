@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4159ab545d702d4398e273a8240b711, type: 3}
   m_Name: Health Potion Effect
   m_EditorClassIdentifier: 
-  healthChange: 50
+  healthChange: 75

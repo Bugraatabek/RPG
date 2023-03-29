@@ -6,6 +6,9 @@ namespace RPG.Stats
         Grunt,
         GruntCaptain,
         Mage,
-        Archer
+        Archer,
+        SkeletonMage,
+        SkeletonWarrior,
+        SkeletonArcher
     }
 }

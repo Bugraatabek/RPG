@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e59e5d102a8f17043bf21d6d0ba8e79c, type: 3}
   m_Name: Spawn Fireball
   m_EditorClassIdentifier: 
-  projectileToSpawn: {fileID: -490913146649976542, guid: 15d3424e20ca9da4a881a7388d72b014, type: 3}
+  projectileToSpawn: {fileID: -490913146649976542, guid: 037f5320fb34ec347822930f980fc634, type: 3}
   damage: 20
   isRightHand: 0
   useTargetPoint: 1

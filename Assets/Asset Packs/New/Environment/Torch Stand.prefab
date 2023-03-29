@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1720110295255822435}
   - component: {fileID: 8778785913062031775}
   - component: {fileID: 3043095645338378238}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wood_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1433161226639101756}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Torch Stand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 9014589077546146984}
   - component: {fileID: 9014589077547146856}
   - component: {fileID: 3986188580617267736}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Branch_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

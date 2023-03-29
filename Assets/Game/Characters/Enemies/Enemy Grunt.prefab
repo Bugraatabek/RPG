@@ -19,6 +19,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Grunt
       objectReference: {fileID: 0}
+    - target: {fileID: 6683400177161246261, guid: 9e407101b7a77784fb6743bf6e7bde3a, type: 3}
+      propertyPath: die.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683400177161246261, guid: 9e407101b7a77784fb6743bf6e7bde3a, type: 3}
+      propertyPath: die.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683400177161246261, guid: 9e407101b7a77784fb6743bf6e7bde3a, type: 3}
+      propertyPath: die.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 8165067224649823341}
+    - target: {fileID: 6683400177161246261, guid: 9e407101b7a77784fb6743bf6e7bde3a, type: 3}
+      propertyPath: die.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683400177161246261, guid: 9e407101b7a77784fb6743bf6e7bde3a, type: 3}
+      propertyPath: die.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683400177161246261, guid: 9e407101b7a77784fb6743bf6e7bde3a, type: 3}
+      propertyPath: die.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683400177161246261, guid: 9e407101b7a77784fb6743bf6e7bde3a, type: 3}
+      propertyPath: die.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7860932181428899087, guid: 9e407101b7a77784fb6743bf6e7bde3a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -77,3 +105,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e407101b7a77784fb6743bf6e7bde3a, type: 3}
+--- !u!1 &8165067224649823341 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2716412233427812419, guid: 9e407101b7a77784fb6743bf6e7bde3a, type: 3}
+  m_PrefabInstance: {fileID: 6116600682353161262}
+  m_PrefabAsset: {fileID: 0}

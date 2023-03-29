@@ -19,11 +19,16 @@ MonoBehaviour:
   - description: Kill the barbarian captain at the Square of Torture.
     reference: 2
     triggerType: 6
+  - description: Clear the Street Camp from the barbarians.
+    reference: 3
+    triggerType: 7
   - description: The Captain holds the secret ingridient kill him and bring back
       the secret ingridient from the Captain's House. Pass through the marketplace
       at the behind you can find the Captain's house.
-    reference: 3
-    triggerType: 7
+    reference: 4
+    triggerType: 8
   rewards:
-  - number: 10000
+  - number: 12000
     item: {fileID: 11400000, guid: 1decf509028130a44a050d7b819ae34d, type: 2}
+  - number: 1
+    item: {fileID: 11400000, guid: ec4ba08f1f53b1842b8c4987349637e8, type: 2}

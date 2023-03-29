@@ -4,6 +4,7 @@ using RPG.Saving;
 using RPG.Stats;
 using RPG.Utils;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace RPG.Attributes
 {
@@ -11,6 +12,8 @@ namespace RPG.Attributes
     {
         LazyValue<float> mana;
         BaseStats baseStats;
+        [SerializeField] UnityEvent noMana;
+
 
         private void Awake() 
         {
@@ -42,11 +45,17 @@ namespace RPG.Attributes
         {
             return baseStats.GetStat(Stat.ManaRegenRate);
         }
+        
+        public float GetFraction()
+        {
+            return (mana.value / GetMaxMana());
+        }
 
         public bool UseMana(float manaToUse)
         {
             if(manaToUse > mana.value)
             {
+                noMana.Invoke();
                 return false;
             }
             mana.value -= manaToUse;
